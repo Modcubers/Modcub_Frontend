@@ -52,7 +52,14 @@ const CreateProduct = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        if(parseFloat(originalPrice)<50 ){
+            toast.error("Original price must be at least 50 Rs");
+            return;
+        }
+        if(parseFloat(discountPrice)<50){
+            toast.error("Discount Price  must be at least 50 Rs");
+            return;
+        }
         const newForm = new FormData();
 
         images.forEach((image, index) => {
