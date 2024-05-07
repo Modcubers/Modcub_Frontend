@@ -16,12 +16,10 @@ const WithdrawMoney = () => {
     const [paymentMethod, setPaymentMethod] = useState(false);
     const [withdrawAmount, setWithdrawAmount] = useState(50);
     const [bankInfo, setBankInfo] = useState({
-        bankName: "",
+        IFSC: "",
         bankCountry: "",
-        bankSwiftCode: null,
         bankAccountNumber: null,
         bankHolderName: "",
-        bankAddress: "",
     });
 
     useEffect(() => {
@@ -30,19 +28,22 @@ const WithdrawMoney = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        try{
+            const response =await axios.get(`https://ifsc.razorpay.com/${bankInfo.IFSC}`);
+            const userDetails=response.data;
+            if(!userDetails){
+                toast.error("Please Input IFSC Code")
+                return
+            }
 
-        const withdrawMethod = {
-            bankName: bankInfo.bankName,
-            bankCountry: bankInfo.bankCountry,
-            bankSwiftCode: bankInfo.bankSwiftCode,
-            bankAccountNumber: bankInfo.bankAccountNumber,
-            bankHolderName: bankInfo.bankHolderName,
-            bankAddress: bankInfo.bankAddress,
-        };
-
-        setPaymentMethod(false);
-
-        await axios
+            const withdrawMethod = {
+                bankCountry: bankInfo.bankCountry,
+                bankAccountNumber: bankInfo.bankAccountNumber,
+                bankHolderName: bankInfo.bankHolderName,
+                ...userDetails,
+            };
+            setPaymentMethod(false);
+            await axios
             .put(
                 `${server}/shop/update-payment-methods`,
                 {
@@ -65,6 +66,13 @@ const WithdrawMoney = () => {
             .catch((error) => {
                 console.log(error.response.data.message);
             });
+
+        }catch(error){
+            console.log("Error fetching bank details:", error);
+            toast.error("Error fetching bank details. Please Check IFSC Code.");
+        }
+
+
     };
 
     const deleteHandler = async () => {
@@ -142,7 +150,7 @@ const WithdrawMoney = () => {
                                 <form onSubmit={handleSubmit}>
                                     <div>
                                         <label>
-                                            Bank Name{" "}
+                                            IFSC
                                             <span className="text-red-500">
                                                 *
                                             </span>
@@ -151,15 +159,15 @@ const WithdrawMoney = () => {
                                             type="text"
                                             name=""
                                             required
-                                            value={bankInfo.bankName}
+                                            value={bankInfo.IFSC}
                                             onChange={(e) =>
                                                 setBankInfo({
                                                     ...bankInfo,
-                                                    bankName: e.target.value,
+                                                    IFSC: e.target.value,
                                                 })
                                             }
                                             id=""
-                                            placeholder="Enter your Bank name!"
+                                            placeholder="Enter your IFSC Code! "
                                             className={`${styles.input} mt-2`}
                                         />
                                     </div>
@@ -181,32 +189,8 @@ const WithdrawMoney = () => {
                                                 })
                                             }
                                             id=""
-                                            required
+                                            defaultValue={"INDIA"}
                                             placeholder="Enter your bank Country!"
-                                            className={`${styles.input} mt-2`}
-                                        />
-                                    </div>
-                                    <div className="pt-2">
-                                        <label>
-                                            Bank Swift Code{" "}
-                                            <span className="text-red-500">
-                                                *
-                                            </span>
-                                        </label>
-                                        <input
-                                            type="text"
-                                            name=""
-                                            id=""
-                                            required
-                                            value={bankInfo.bankSwiftCode}
-                                            onChange={(e) =>
-                                                setBankInfo({
-                                                    ...bankInfo,
-                                                    bankSwiftCode:
-                                                        e.target.value,
-                                                })
-                                            }
-                                            placeholder="Enter your Bank Swift Code!"
                                             className={`${styles.input} mt-2`}
                                         />
                                     </div>
@@ -260,30 +244,6 @@ const WithdrawMoney = () => {
                                         />
                                     </div>
 
-                                    <div className="pt-2">
-                                        <label>
-                                            Bank Address{" "}
-                                            <span className="text-red-500">
-                                                *
-                                            </span>
-                                        </label>
-                                        <input
-                                            type="text"
-                                            name=""
-                                            required
-                                            id=""
-                                            value={bankInfo.bankAddress}
-                                            onChange={(e) =>
-                                                setBankInfo({
-                                                    ...bankInfo,
-                                                    bankAddress: e.target.value,
-                                                })
-                                            }
-                                            placeholder="Enter your bank address!"
-                                            className={`${styles.input} mt-2`}
-                                        />
-                                    </div>
-
                                     <button
                                         type="submit"
                                         className={`${styles.button} mb-3 text-white`}
@@ -317,7 +277,7 @@ const WithdrawMoney = () => {
                                                     Bank Name:{" "}
                                                     {
                                                         seller?.withdrawMethod
-                                                            .bankName
+                                                            .BANK
                                                     }
                                                 </h5>
                                             </div>
