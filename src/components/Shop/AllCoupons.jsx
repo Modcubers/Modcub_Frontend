@@ -123,6 +123,7 @@ const AllCoupons = () => {
         <Loader />
       ) : (
         <div className="w-full mx-8 pt-1 mt-10 bg-white">
+          <h1 className="text-[44px] font-Poppins pb-2 font-semibold ">Coupons</h1>
           <div className="w-full flex justify-end">
             <div
               className={`${styles.button} !w-max !h-[45px] px-3 !rounded-[5px] mr-3 mb-3`}
@@ -232,7 +233,7 @@ const AllCoupons = () => {
                     <input
                       type="submit"
                       value="Create"
-                      className="mt-2 appearance-none block w-full px-3 h-[35px] border border-gray-300 rounded-[3px] placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                      className={`${styles.button} text-white w-full px-3 !rounded-[5px] mr-3 mb-3`}
                     />
                   </div>
                 </form>

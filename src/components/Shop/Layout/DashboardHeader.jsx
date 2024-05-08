@@ -38,13 +38,13 @@ const DashboardHeader = () => {
                             className="mx-5 cursor-pointer"
                         />
                     </Link> */}
-                    <Link to="/dashboard-events" className="800px:block hidden">
+                    {/* <Link to="/dashboard-events" className="800px:block hidden">
                         <MdOutlineLocalOffer
                             color="#555"
                             size={30}
                             className="mx-5 cursor-pointer"
                         />
-                    </Link>
+                    </Link> */}
                     <Link
                         to="/dashboard-products"
                         className="800px:block hidden"

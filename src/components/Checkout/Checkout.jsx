@@ -46,6 +46,14 @@ const Checkout = () => {
                 country,
                 city,
             };
+            if (phone.length !== 10) {
+                toast.error("Phone number must be 10 digits long.");
+                return;
+            }
+            if (zipCode.length !== 6) {
+                toast.error("Zip code must be 6 digits long.");
+                return;
+            }
 
             // console.log("|||||||||||||||||||||||||||||||||||||||");
             // console.log(shippingAddress);
@@ -77,6 +85,7 @@ const Checkout = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const name = couponCode;
+       
 
         await axios
             .get(`${server}/coupon/get-coupon-value/${name}`)

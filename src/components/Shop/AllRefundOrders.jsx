@@ -94,6 +94,9 @@ const AllRefundOrders = () => {
                 <Loader />
             ) : (
                 <div className="w-full mx-8 pt-1 mt-10 bg-white">
+                     <h1 className="text-[44px] font-Poppins pb-2 font-semibold">
+            Refunds
+          </h1>
                     <DataGrid
                         rows={row}
                         columns={columns}

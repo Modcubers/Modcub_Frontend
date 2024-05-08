@@ -9,19 +9,19 @@ const Hero = () => {
             <div className="h-[400px] sm:h-[600px]">
                 <Carousel indicators={false}>
                     <img
-                        src="https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074076.jpg?w=1380&t=st=1714400149~exp=1714400749~hmac=9678fc191ad28977e94e6cf2aa38d5ed303236186cb910a8d2946e4dc8244f24"
+                        src="https://t3.ftcdn.net/jpg/02/75/23/70/360_F_275237026_qVTrrqF9SkSiZ8tRDjwk78DRd1Wu3hRk.jpg"
                         alt="..."
                     />
                     <img
-                        src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b2ZmaWNlfGVufDB8fDB8fHww"
+                        src="https://img.freepik.com/free-photo/image-modern-guy-holding-shopping-bag-shoulder-turn-shushing-camera-telling-se_1258-154586.jpg?w=996&t=st=1715159576~exp=1715160176~hmac=9f1cb2ba7df4ca2a69487af8f01823128f343f1aa8846121bb464661f891035f"
                         alt="..."
                     />
                     <img
-                        src="https://i.pinimg.com/564x/69/87/6a/69876a2c445a4d4c95775610b9ad8bf8.jpg"
+                        src="https://img.freepik.com/premium-photo/arabic-family-shopping-holding-bags-pointing-finger-aside-yellow-background_116547-9699.jpg"
                         alt="..."
                     />
                     <img
-                        src="https://img.freepik.com/premium-photo/glass-wall-modern-office-lobby-interior_6091-4326.jpg?size=626&ext=jpg&ga=GA1.1.553209589.1714089600&semt=ais"
+                        src="https://t3.ftcdn.net/jpg/02/71/77/56/360_F_271775672_yo8ZgraN2IHGbfqP2k0PsLjwvmatUNUJ.jpg"
                         alt="..."
                     />
                 </Carousel>

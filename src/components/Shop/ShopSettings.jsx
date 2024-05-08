@@ -176,7 +176,7 @@ const ShopSettings = () => {
             <input
               type="submit"
               value="Update Shop"
-              className={`${styles.input} !w-[95%] mb-4 800px:mb-0`}
+              className={`${styles.button} text-white w-full px-3 !rounded-[5px] mr-3 mb-3`}
               required
               readOnly
             />

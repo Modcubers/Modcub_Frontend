@@ -143,8 +143,8 @@ const OrderDetails = () => {
             </div>
             <br />
             <br />
-            <h4 className="pt-3 text-[20px] font-[600]">Order Status:</h4>
-            {data?.status !== "Processing refund" &&
+            {/* <h4 className="pt-3 text-[20px] font-[600]">Order Status:</h4> */}
+            {/* {data?.status !== "Processing refund" &&
                 data?.status !== "Refund Success" && (
                     <select
                         value={status}
@@ -175,8 +175,8 @@ const OrderDetails = () => {
                                 </option>
                             ))}
                     </select>
-                )}
-            {data?.status === "Processing refund" ||
+                )} */}
+            {/* {data?.status === "Processing refund" ||
             data?.status === "Refund Success" ? (
                 <select
                     value={status}
@@ -206,7 +206,7 @@ const OrderDetails = () => {
                 }
             >
                 Update Status
-            </div>
+            </div> */}
         </div>
     );
 };

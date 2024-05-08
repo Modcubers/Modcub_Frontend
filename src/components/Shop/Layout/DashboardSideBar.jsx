@@ -13,7 +13,7 @@ const DashboardSideBar = ({ active }) => {
     return (
         <div className="w-full h-[90vh] bg-white shadow-sm overflow-y-scroll sticky top-0 left-0 z-10">
             {/* single item */}
-            <div className="w-full flex items-center p-4">
+            <div className={`w-full flex items-center p-4 ${active===1? "bg-slate-200":"bg-white"}`}>
                 <Link to="/dashboard" className="w-full flex items-center">
                     <RxDashboard
                         size={30}
@@ -29,7 +29,7 @@ const DashboardSideBar = ({ active }) => {
                 </Link>
             </div>
 
-            <div className="w-full flex items-center p-4">
+            <div className={`w-full flex items-center p-4 ${active===2? "bg-slate-200":"bg-white"}`}>
                 <Link
                     to="/dashboard-orders"
                     className="w-full flex items-center"
@@ -48,7 +48,7 @@ const DashboardSideBar = ({ active }) => {
                 </Link>
             </div>
 
-            <div className="w-full flex items-center p-4">
+            <div className={`w-full flex items-center p-4 ${active===3? "bg-slate-200":"bg-white"}`}>
                 <Link
                     to="/dashboard-products"
                     className="w-full flex items-center"
@@ -67,7 +67,7 @@ const DashboardSideBar = ({ active }) => {
                 </Link>
             </div>
 
-            <div className="w-full flex items-center p-4">
+            <div className={`w-full flex items-center p-4 ${active===4? "bg-slate-200":"bg-white"}`}>
                 <Link
                     to="/dashboard-create-product"
                     className="w-full flex items-center"
@@ -86,7 +86,7 @@ const DashboardSideBar = ({ active }) => {
                 </Link>
             </div>
 
-            <div className="w-full flex items-center p-4">
+            {/* <div className="w-full flex items-center p-4">
                 <Link
                     to="/dashboard-events"
                     className="w-full flex items-center"
@@ -103,9 +103,9 @@ const DashboardSideBar = ({ active }) => {
                         All Events
                     </h5>
                 </Link>
-            </div>
+            </div> */}
 
-            <div className="w-full flex items-center p-4">
+            {/* <div className="w-full flex items-center p-4">
                 <Link
                     to="/dashboard-create-event"
                     className="w-full flex items-center"
@@ -122,9 +122,9 @@ const DashboardSideBar = ({ active }) => {
                         Create Event
                     </h5>
                 </Link>
-            </div>
+            </div> */}
 
-            <div className="w-full flex items-center p-4">
+            <div className={`w-full flex items-center p-4 ${active===7? "bg-slate-200":"bg-white"}`}>
                 <Link
                     to="/dashboard-withdraw-money"
                     className="w-full flex items-center"
@@ -143,7 +143,7 @@ const DashboardSideBar = ({ active }) => {
                 </Link>
             </div>
 
-            <div className="w-full flex items-center p-4">
+            <div className={`w-full flex items-center p-4 ${active===8? "bg-slate-200":"bg-white"}`}>
                 <Link
                     to="/dashboard-messages"
                     className="w-full flex items-center"
@@ -162,7 +162,7 @@ const DashboardSideBar = ({ active }) => {
                 </Link>
             </div>
 
-            <div className="w-full flex items-center p-4">
+            <div className={`w-full flex items-center p-4 ${active===9? "bg-slate-200":"bg-white"}`}>
                 <Link
                     to="/dashboard-coupouns"
                     className="w-full flex items-center"
@@ -181,7 +181,7 @@ const DashboardSideBar = ({ active }) => {
                 </Link>
             </div>
 
-            <div className="w-full flex items-center p-4">
+            <div className={`w-full flex items-center p-4 ${active===10? "bg-slate-200":"bg-white"}`}>
                 <Link
                     to="/dashboard-refunds"
                     className="w-full flex items-center"
@@ -200,7 +200,7 @@ const DashboardSideBar = ({ active }) => {
                 </Link>
             </div>
 
-            <div className="w-full flex items-center p-4">
+            <div className={`w-full flex items-center p-4 ${active===11? "bg-slate-200":"bg-white"}`}>
                 <Link to="/settings" className="w-full flex items-center">
                     <CiSettings
                         size={30}
