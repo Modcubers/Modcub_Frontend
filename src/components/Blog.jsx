@@ -24,24 +24,21 @@ const Blog = () => {
                     <span class="text-sm">14 days ago</span>
                 </div>
                 <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    <a href="#">Our first project with React</a>
+                    <a href="#">Trend Reports</a>
                 </h2>
                 <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
-                    Static websites are now used to bootstrap lots of websites
-                    and are becoming the basis for a variety of tools that even
-                    influence both web designers and developers influence both
-                    web designers and developers.
+                Stay ahead of the curve with our comprehensive trend reports. From seasonal fashion forecasts to emerging tech trends, we've got you covered.
                 </p>
                 <div class="flex justify-between items-center">
                     <div class="flex items-center space-x-4">
-                        <img
+                        {/* <img
                             class="w-7 h-7 rounded-full"
-                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+                            // src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
                             alt="Bonnie Green avatar"
-                        />
-                        <span class="font-medium dark:text-white">
-                            Bonnie Green
-                        </span>
+                        /> */}
+                        {/* <span class="font-medium dark:text-white">
+                           By: Rajat Khanna
+                        </span> */}
                     </div>
                     {/* <a
                         href="#"

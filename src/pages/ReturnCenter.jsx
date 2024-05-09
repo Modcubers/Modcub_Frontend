@@ -37,68 +37,44 @@ const ReturCenter = () => {
                 <div className="container mx-auto py-8 flex flex-col md:flex-row">
                     <div className="max-w-4xl mx-auto px-4">
                         <h1 className="text-3xl font-bold mb-4">
-                            Welcome to Modcub
+                        🛍️ Welcome to the ModCub Return Center! 📦
                         </h1>
                         <p className="text-lg mb-6">
-                            Welcome to Modcub, your vibrant multivendor
-                            e-commerce destination curated by the passionate
-                            team at Viral Production Studio. We're not just
-                            another marketplace; we're a dynamic hub where
-                            creativity meets convenience, dedicated to
-                            championing the talents of independent sellers from
-                            around the globe.
+                        We understand that sometimes purchases don't meet expectations, and we're here to make the return process as seamless as possible. Our Return Center is designed to guide you through the steps to initiate a return, exchange, or refund for your ModCub purchases.
+
                         </p>
                         <p className="text-lg mb-6">
-                            At the heart of Modcub is Viral Production Studio, a
-                            forward-thinking collective committed to fostering
-                            innovation and originality in the digital sphere.
-                            With a keen eye for emerging trends and a commitment
-                            to excellence, our team tirelessly curates a diverse
-                            array of products that inspire and delight.
+                        *Our Return Policy:*
+- We want you to shop with confidence at ModCub, which is why we offer a hassle-free return policy for most items within [insert number] days of delivery.
+- To be eligible for a return, your item must be unused, in the same condition that you received it, and in its original packaging.
+- Certain items, such as perishable goods, personalized items, and final sale items, may not be eligible for return. Please refer to the product description or contact our customer support team for more information.
+                        </p>
+
+                        <ol className="text-lg mb-6 ">
+                        *How to Initiate a Return:*
+                        <li>1. Log In to Your Account: Navigate to the "My Orders" section of your ModCub account and select the order containing the item(s) you wish to return.</li>
+                        <li>2. Choose the item(s) you'd like to return and indicate the reason for the return. containing the item(s) you wish to return.</li>
+                        <li>3. Follow the prompts to submit your return request. You'll receive a confirmation email with further instructions on how to proceed.</li>
+                        <li>4. Carefully package the item(s) you're returning, ensuring they're securely packed to prevent damage during transit.</li>
+                        <li>5. Use the provided shipping label or instructions to send your return back to the designated return address. Please note that return shipping costs may apply, unless the return is due to a mistake on our part.</li>
+                        <li>6. Keep an eye on your return shipment's tracking information to monitor its progress.</li>
+                        <li>7.  Once we receive and inspect your return, we'll process your refund or exchange according to our return policy. Refunds will be issued to the original payment method used for the purchase.
+</li>
+                        </ol>
+                        <p className="text-lg mb-6">
+                        If you have any questions or need assistance with your return, our dedicated customer support team is here to help. Contact us via email at  viralproduction.studios@gmail.com or through our online chat support for prompt assistance.
                         </p>
                         <p className="text-lg mb-6">
-                            Our vision is to redefine the online shopping
-                            experience by connecting discerning shoppers with
-                            unique products that spark joy and inspire
-                            imagination. By empowering independent sellers and
-                            fostering collaboration, we create a vibrant
-                            ecosystem where creativity thrives and boundaries
-                            are broken.
+                        *Please Note:*
+- Returns that do not meet our return policy criteria may be subject to additional fees or refusal.
+- Processing times for refunds and exchanges may vary depending on your location and the nature of your return.
+- For exchanges, availability of replacement items may be subject to stock availability.
                         </p>
+                       
                         <p className="text-lg mb-6">
-                            Quality is our top priority. Every product featured
-                            on [Platform Name] undergoes a rigorous selection
-                            process to ensure it meets our standards of
-                            excellence. From the finest materials to impeccable
-                            craftsmanship, we stand behind the quality and
-                            authenticity of each item available for purchase.
-                        </p>
-                        <p className="text-lg mb-6">
-                            We believe in the power of small businesses and
-                            independent creators to make a big impact. That's
-                            why we're dedicated to providing a platform where
-                            sellers can showcase their talents and reach a
-                            global audience. With customizable storefronts and
-                            marketing resources, we're here to help you turn
-                            your passion into profit.
-                        </p>
-                        <p className="text-lg mb-6">
-                            Shopping with Modcub is a seamless experience. Our
-                            user-friendly interface, advanced search filters,
-                            personalized recommendations, and secure payment
-                            options make it easy to find and enjoy your new
-                            favorites. Plus, with fast and reliable shipping,
-                            your treasures will be on their way to you in no
-                            time.
-                        </p>
-                        <p className="text-lg mb-6">
-                            Join the Modcub community today and discover a world
-                            of possibilities. Whether you're a seller looking to
-                            expand your reach or a shopper in search of
-                            something special, we invite you to be a part of our
-                            growing community of creators and connoisseurs.
-                            Welcome to Modcub. Welcome to the future of
-                            e-commerce.
+                        Thank you for shopping with ModCub. We appreciate your business and strive to make every shopping experience a positive one. If there's anything else we can do to assist you, please don't hesitate to reach out.
+
+Happy Shopping
                         </p>{" "}
                     </div>
 

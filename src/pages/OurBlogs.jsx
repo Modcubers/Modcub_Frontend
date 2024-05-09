@@ -38,9 +38,9 @@ const OurBlogs = () => {
                 <div className="container mx-auto py-8 flex flex-col md:flex-row">
                     <div className="max-w-4xl mx-auto px-4">
                         <Blog />
+                        {/* <Blog />
                         <Blog />
-                        <Blog />
-                        <Blog />
+                        <Blog /> */}
                     </div>
 
                     {/* Show sidebar only on medium and larger screens */}

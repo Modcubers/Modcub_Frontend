@@ -44,13 +44,13 @@ const Terms = () => {
                         provisions of Rule 3 (1) of the Information Technology
                         (Intermediaries guidelines) Rules, 2011 that require
                         publishing the rules and regulations, privacy policy and
-                        Terms of Use for access or usage of careers.modcub.com,
-                        life.mpdcub.com & blog.modcub.com website.
+                        Terms of Use for access or usage of careers.Modcub.in,
+                        life.mpdcub.com & blog.Modcub.in website.
                     </p>
                     <p>
                         The use of any product, service or feature (the
-                        “Materials”) available through careers.modcub.com,
-                        life.modcub.com & blog.modcub.com (hereinafter referred
+                        “Materials”) available through careers.Modcub.in,
+                        life.Modcub.in & blog.Modcub.in (hereinafter referred
                         to as “Website”) is owned by Modcub Designs Private
                         Limited, a company incorporated under the Companies Act,
                         1956 with its registered office at ground floor, 11752/4
@@ -405,7 +405,7 @@ const Terms = () => {
                                 You shall not make any negative, denigrating or
                                 defamatory statement(s) or comment(s) about Us
                                 or the brand name or domain name used by Us
-                                including the terms Modcub, Modcub.com, or
+                                including the terms Modcub, Modcub.in, or
                                 otherwise engage in any conduct or action that
                                 might tarnish the image or reputation, of Modcub
                                 or otherwise tarnish or dilute any Modcub’s
