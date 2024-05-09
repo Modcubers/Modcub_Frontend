@@ -17,7 +17,7 @@ const UserOrderDetails = () => {
     const [open, setOpen] = useState(false);
     const [comment, setComment] = useState("");
     const [selectedItem, setSelectedItem] = useState(null);
-    const [rating, setRating] = useState(1);
+    const [rating, setRating] = useState(5);
     //inbox?663465d1dec585455a7f843d
     const { id } = useParams();
 
@@ -107,7 +107,7 @@ const UserOrderDetails = () => {
                                 </h5>
                             </div>
                             {!item.isReviewed &&
-                            data?.status === "Delivered" ? (
+                            data?.status === "Received" ? (
                                 <div
                                     className={`${styles.button} text-[#fff]`}
                                     onClick={() =>
@@ -245,7 +245,7 @@ const UserOrderDetails = () => {
                             : "Not Paid"}
                     </h4>
                     <br />
-                    {data?.status === "Delivered" && (
+                    {data?.status === "Received" && (
                         <div
                             className={`${styles.button} text-white`}
                             onClick={refundHandler}
