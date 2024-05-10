@@ -6,6 +6,7 @@ import styles from "../../styles/styles";
 import Loader from "../Layout/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProductsShop } from "../../redux/actions/product";
+import { toast } from "react-toastify";
 
 const ShopInfo = ({ isOwner }) => {
   const [data,setData] = useState({});
@@ -28,10 +29,15 @@ const ShopInfo = ({ isOwner }) => {
   }, [])
   
 
-  const logoutHandler = async () => {
-   const res= axios.get(`${server}/shop/logout`,{
+  const logoutHandler =  () => {
+    axios.get(`${server}/shop/logout`,{
       withCredentials: true,
+    }).then(()=>{
+      navigate("/shop-login")
+    }).catch((error)=>{
+         toast.error("Logout unsucessfull")
     })
+    
     // Remove seller_token cookie
     // document.cookie = "seller_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
       // window.location.reload();
