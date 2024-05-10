@@ -31,6 +31,7 @@ const ShopInfo = ({ isOwner }) => {
     axios.get(`${server}/shop/logout`,{
       withCredentials: true,
     });
+    //i have to solve the issue
     window.location.reload();
   };
 
