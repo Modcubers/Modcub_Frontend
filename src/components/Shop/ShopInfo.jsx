@@ -32,9 +32,10 @@ const ShopInfo = ({ isOwner }) => {
    const res= axios.get(`${server}/shop/logout`,{
       withCredentials: true,
     })
+    // Remove seller_token cookie
+    document.cookie = "seller_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
       window.location.reload();
-    
-    
+
   };
 
   const totalReviewsLength =
