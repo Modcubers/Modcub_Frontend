@@ -6,7 +6,6 @@ import styles from "../../styles/styles";
 import Loader from "../Layout/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProductsShop } from "../../redux/actions/product";
-import { toast } from "react-toastify";
 
 const ShopInfo = ({ isOwner }) => {
   const [data,setData] = useState({});
@@ -33,13 +32,10 @@ const ShopInfo = ({ isOwner }) => {
    const res= axios.get(`${server}/shop/logout`,{
       withCredentials: true,
     })
-    window.location.reload();
-    // if((await res).status===200){
-    //   navigate("/shop-login")
-    //   window.location.reload();
-    // }else{
-    //   toast.error("Try reloading ")
-    // }
+    if((await res).status===200){
+      navigate("/shop-login")
+      window.location.reload();
+    }
     
   };
 

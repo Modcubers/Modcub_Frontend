@@ -25,9 +25,6 @@ const ShopLogin = () => {
                 { withCredentials: true }
             )
             .then((res) => {
-                const { token } = response.data;
-                // Store token in local storage
-                localStorage.setItem('store_token', token);
                 toast.success("Login Success!");
                 navigate("/dashboard");
                 window.location.reload(true);
