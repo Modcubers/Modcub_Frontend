@@ -33,8 +33,8 @@ const ShopInfo = ({ isOwner }) => {
       withCredentials: true,
     })
     // Remove seller_token cookie
-    document.cookie = "seller_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-      window.location.reload();
+    // document.cookie = "seller_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      // window.location.reload();
 
   };
 
