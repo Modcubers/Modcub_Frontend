@@ -33,6 +33,7 @@ const ShopInfo = ({ isOwner }) => {
     axios.get(`${server}/shop/logout`,{
       withCredentials: true,
     }).then(()=>{
+      window.location.reload();
       navigate("/shop-login")
     }).catch((error)=>{
          toast.error("Logout unsucessfull")
