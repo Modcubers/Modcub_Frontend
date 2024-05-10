@@ -27,6 +27,7 @@ const Login = () => {
                 }
             )
             .then((res) => {
+                localStorage.setItem('token', res.data.token);
                 toast.success("Login Success!");
                 navigate("/");
                 window.location.reload(true);

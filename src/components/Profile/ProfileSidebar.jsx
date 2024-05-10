@@ -23,6 +23,7 @@ const ProfileSidebar = ({ setActive, active }) => {
             .get(`${server}/user/logout`, { withCredentials: true })
             .then((res) => {
                 toast.success(res.data.message);
+                localStorage.clear();
                 window.location.reload(true);
                 navigate("/login");
             })
