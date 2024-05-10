@@ -32,10 +32,8 @@ const ShopInfo = ({ isOwner }) => {
    const res= axios.get(`${server}/shop/logout`,{
       withCredentials: true,
     })
-    if((await res).status===200){
-      navigate("/shop-login")
       window.location.reload();
-    }
+    
     
   };
 
