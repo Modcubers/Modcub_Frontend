@@ -143,7 +143,7 @@ const DashboardSideBar = ({ active }) => {
                 </Link>
             </div>
 
-            <div className={`w-full flex items-center p-4 ${active===8? "bg-slate-200":"bg-white"}`}>
+            {/* <div className={`w-full flex items-center p-4 ${active===8? "bg-slate-200":"bg-white"}`}>
                 <Link
                     to="/dashboard-messages"
                     className="w-full flex items-center"
@@ -160,7 +160,7 @@ const DashboardSideBar = ({ active }) => {
                         Shop Inbox
                     </h5>
                 </Link>
-            </div>
+            </div> */}
 
             <div className={`w-full flex items-center p-4 ${active===9? "bg-slate-200":"bg-white"}`}>
                 <Link

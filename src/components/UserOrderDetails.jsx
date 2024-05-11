@@ -256,11 +256,11 @@ const UserOrderDetails = () => {
                 </div>
             </div>
             <br />
-            <Link to={`/inbox?${data.cart[0]._id}`}>
+            {/* <Link to={`/inbox?${data.cart[0]._id}`}>
                 <div className={`${styles.button} text-white`}>
                     Send Message
                 </div>
-            </Link>
+            </Link> */}
             <br />
             <br />
         </div>

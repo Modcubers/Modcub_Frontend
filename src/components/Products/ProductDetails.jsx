@@ -227,9 +227,9 @@ const ProductDetails = ({ data }) => {
                     className={`${styles.button} bg-[#6443d1] mt-4 !rounded !h-11`}
                     onClick={handleMessageSubmit}
                   >
-                    <span className="text-white flex items-center">
+                    {/* <span className="text-white flex items-center">
                       Send Message <AiOutlineMessage className="ml-1" />
-                    </span>
+                    </span> */}
                   </div>
                 </div>
               </div>
