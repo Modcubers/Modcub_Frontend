@@ -47,8 +47,7 @@ const Footer = () => {
                     />
                     <br />
                     <p>
-                        The home and elements needeed to create beatiful
-                        products.
+                    Discover, Shop, Delight - Your world, curated by Modcub.
                     </p>
                     <div className="flex items-center mt-[15px]">
                         <a href="https://www.facebook.com/profile.php?id=61559028762884" target="/"> <AiFillFacebook size={25} className="cursor-pointer" /></a>
