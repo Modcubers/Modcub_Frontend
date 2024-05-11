@@ -62,7 +62,7 @@ const DashboardHeader = () => {
                             className="mx-5 cursor-pointer"
                         />
                     </Link>
-                    <Link
+                    {/* <Link
                         to="/dashboard-messages"
                         className="800px:block hidden"
                     >
@@ -71,7 +71,7 @@ const DashboardHeader = () => {
                             size={30}
                             className="mx-5 cursor-pointer"
                         />
-                    </Link>
+                    </Link> */}
                     <Link to={`/shop/${seller._id}`}>
                         <img
                             src={`${seller.avatar?.url}`}
