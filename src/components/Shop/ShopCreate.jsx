@@ -16,7 +16,7 @@ const ShopCreate = () => {
   const [avatar, setAvatar] = useState(null);
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
-  
+  const navigate=useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -49,6 +49,7 @@ const ShopCreate = () => {
         setZipCode();
         setAddress("");
         setPhoneNumber();
+        navigate("/shop-login")
       })
       .catch((error) => {
         toast.error(error.response.data.message);

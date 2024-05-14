@@ -47,23 +47,29 @@ const Footer = () => {
                     />
                     <br />
                     <p>
-                        The home and elements needeed to create beatiful
-                        products.
+                    Discover, Shop, Delight - Your world, curated by Modcub.
                     </p>
                     <div className="flex items-center mt-[15px]">
-                        <AiFillFacebook size={25} className="cursor-pointer" />
-                        <AiOutlineTwitter
+                        <a href="https://www.facebook.com/profile.php?id=61559028762884" target="/"> <AiFillFacebook size={25} className="cursor-pointer" /></a>
+                       
+                         <a href="https://twitter.com/Rajat_khanna123" target="/">
+                         <AiOutlineTwitter
                             size={25}
                             style={{ marginLeft: "15px", cursor: "pointer" }}
                         />
+                         </a>
+                       
                         <AiFillInstagram
                             size={25}
                             style={{ marginLeft: "15px", cursor: "pointer" }}
                         />
+                        <a href="https://youtube.com/@Modcub-by6zj?si=NqLR1sfIz3Ej_EQf" target="/">
                         <AiFillYoutube
                             size={25}
                             style={{ marginLeft: "15px", cursor: "pointer" }}
                         />
+                        </a>
+                        
                     </div>
                 </ul>
 
