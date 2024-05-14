@@ -250,7 +250,29 @@ export const categoriesData = [
             "https://static.vecteezy.com/system/resources/previews/011/996/555/original/3d-black-headphone-illustration-ecommerce-icon-png.png",
     },
     {
-        id: 10,
+       
+        id: 11,
+        title: "Books",
+        subTitle: "",
+        image_Url:
+            "https://pixabay.com/photos/books-stack-literature-knowledge-5937823/",
+    },
+    {
+        id: 12,
+        title: "House Keeping",
+        subTitle: "",
+        image_Url:
+            "https://media.istockphoto.com/id/922038702/photo/cleaning-equipment-on-kitchen-floor.jpg?s=612x612&w=0&k=20&c=LPvE2Xo9ORUtSzd5pGU6rUwMQcwltSTnCtj9ZJKgO9w=",
+    },
+    {
+        id: 13,
+        title: "Sanatary",
+        subTitle: "",
+        image_Url:
+            "hhttps://media.istockphoto.com/id/1958581370/photo/a-set-of-metal-and-copper-water-pipe-parts-a-water-wrench-and-pipe-elbows-blue-and-red-colors.jpg?s=612x612&w=0&k=20&c=1TWuwWW93tDRl723eldkJmveYNHScNgbaOTRC8hwBtM=",
+    },
+    {
+        id: 14,
         title: "Others",
         subTitle: "",
         image_Url:
