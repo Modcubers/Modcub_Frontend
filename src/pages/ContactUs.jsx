@@ -24,6 +24,8 @@ const ContactUs = () => {
                         <h1 className="text-3xl font-bold mb-4">
                             Welcome to Modcub contact Us
                         </h1>
+                        <h4>Email: <a href="viralproduction.studios@gmail.com">viralproduction.studios@gmail.com</a></h4>
+                        <h4>ph no:+91 95601 54974</h4>
                         <p className="text-lg mb-6">
                             Welcome to Modcub, your vibrant multivendor
                             e-commerce destination curated by the passionate
