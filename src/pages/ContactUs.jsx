@@ -58,7 +58,7 @@ const ContactUs = () => {
                         </p>
                         <p className="text-lg mb-6">
                             Quality is our top priority. Every product featured
-                            on [Platform Name] undergoes a rigorous selection
+                            on Modcub undergoes a rigorous selection
                             process to ensure it meets our standards of
                             excellence. From the finest materials to impeccable
                             craftsmanship, we stand behind the quality and
