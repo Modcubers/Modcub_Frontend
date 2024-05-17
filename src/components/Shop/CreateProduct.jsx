@@ -16,6 +16,7 @@ const CreateProduct = () => {
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
     const [category, setCategory] = useState("");
+    const [size,setSize]=useState("")
     const [tags, setTags] = useState("");
     const [originalPrice, setOriginalPrice] = useState();
     const [discountPrice, setDiscountPrice] = useState();
@@ -49,7 +50,10 @@ const CreateProduct = () => {
             reader.readAsDataURL(file);
         });
     };
-
+   //handle change for setting the size of the product 
+   const handleChangeSize = (e) => {
+    setSize(e.target.value);
+};
     const handleSubmit = (e) => {
         e.preventDefault();
         if(parseFloat(originalPrice)<50 ){
@@ -73,6 +77,7 @@ const CreateProduct = () => {
         newForm.append("discountPrice", discountPrice);
         newForm.append("stock", stock);
         newForm.append("shopId", seller._id);
+        newForm.append("size",size)
 
         dispatch(
             createProduct({
@@ -85,6 +90,7 @@ const CreateProduct = () => {
                 stock,
                 shopId: seller._id,
                 images,
+                size
             })
         );
     };
@@ -148,6 +154,23 @@ const CreateProduct = () => {
                             ))}
                     </select>
                 </div>
+                {category === "Cloths" || category === "Shoes" ? (
+                <div>
+                    <label className="pb-2">Size</label>
+                    <select
+                        className="w-full mt-2 border h-[35px] rounded-[5px]"
+                        value={size}
+                        onChange={handleChangeSize}
+                    >
+                        <option value="">Choose a size</option>
+                        {categoriesData.find((i) => i.title === category).sizes.map((s) => (
+                            <option value={s} key={s}>
+                                {s}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+            ) : null}
                 <br />
                 <div>
                     <label className="pb-2">Tags</label>

@@ -213,6 +213,7 @@ export const categoriesData = [
         subTitle: "",
         image_Url:
             "https://www.shift4shop.com/2015/images/industries/clothing/clothing-apparel.png",
+        sizes: ["S", "M", "L", "XL", "XXL"]
     },
     {
         id: 5,
@@ -220,6 +221,7 @@ export const categoriesData = [
         subTitle: "",
         image_Url:
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvBQPQMVNRd6TtDkGs2dCri0Y-rxKkFOiEWw&usqp=CAU",
+        sizes: ["5", "6", "7", "8", "9", "10","11"]
     },
     {
         id: 6,

@@ -303,6 +303,7 @@ const ProductDetailsInfo = ({
       {active === 1 ? (
         <>
           <p className="py-2 text-[18px] leading-8 pb-10 whitespace-pre-line">
+            {data.size ?<h4>size:{data.size}</h4>:<></>}
             {data.description}
           </p>
         </>
