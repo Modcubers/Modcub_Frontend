@@ -16,13 +16,12 @@ const CreateProduct = () => {
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
     const [category, setCategory] = useState("");
-    const [size,setSize]=useState("")
     const [tags, setTags] = useState("");
     const [originalPrice, setOriginalPrice] = useState();
     const [discountPrice, setDiscountPrice] = useState();
     const [stock, setStock] = useState();
+    const [selectedSizes, setSelectedSizes] = useState([]);
 
-    // console.log(images);
     useEffect(() => {
         if (error) {
             toast.error(error);
@@ -32,7 +31,18 @@ const CreateProduct = () => {
             navigate("/dashboard");
             window.location.reload();
         }
-    }, [dispatch, error, success]);
+    }, [dispatch, error, success, navigate]);
+
+    const handleCheckboxChange = (event) => {
+        const { value, checked } = event.target;
+        if (checked) {
+            setSelectedSizes((prevSelected) => [...prevSelected, value]);
+        } else {
+            setSelectedSizes((prevSelected) =>
+                prevSelected.filter((size) => size !== value)
+            );
+        }
+    };
 
     const handleImageChange = (e) => {
         const files = Array.from(e.target.files);
@@ -50,10 +60,7 @@ const CreateProduct = () => {
             reader.readAsDataURL(file);
         });
     };
-   //handle change for setting the size of the product 
-   const handleChangeSize = (e) => {
-    setSize(e.target.value);
-};
+
     const handleSubmit = (e) => {
         e.preventDefault();
         if(parseFloat(originalPrice)<50 ){
@@ -77,7 +84,7 @@ const CreateProduct = () => {
         newForm.append("discountPrice", discountPrice);
         newForm.append("stock", stock);
         newForm.append("shopId", seller._id);
-        newForm.append("size",size)
+        newForm.append("sizes", JSON.stringify(selectedSizes));
 
         dispatch(
             createProduct({
@@ -90,7 +97,7 @@ const CreateProduct = () => {
                 stock,
                 shopId: seller._id,
                 images,
-                size
+                size: selectedSizes,
             })
         );
     };
@@ -154,23 +161,26 @@ const CreateProduct = () => {
                             ))}
                     </select>
                 </div>
-                {category === "Cloths" || category === "Shoes" ? (
-                <div>
-                    <label className="pb-2">Size</label>
-                    <select
-                        className="w-full mt-2 border h-[35px] rounded-[5px]"
-                        value={size}
-                        onChange={handleChangeSize}
-                    >
-                        <option value="">Choose a size</option>
-                        {categoriesData.find((i) => i.title === category).sizes.map((s) => (
-                            <option value={s} key={s}>
-                                {s}
-                            </option>
-                        ))}
-                    </select>
-                </div>
-            ) : null}
+                {(category === "Cloths" || category === "Shoes") && (
+                    <div>
+                        <label className="pb-2">Size</label>
+                        <div className="w-full mt-2 border h-[60px] rounded-[5px] p-2 overflow-y-scroll">
+                            {categoriesData
+                                .find((i) => i.title === category)
+                                .sizes.map((s) => (
+                                    <div key={s}>
+                                        <input
+                                            type="checkbox"
+                                            value={s}
+                                            checked={selectedSizes.includes(s)}
+                                            onChange={handleCheckboxChange}
+                                        />
+                                        <label className="ml-2">{s}</label>
+                                    </div>
+                                ))}
+                        </div>
+                    </div>
+                )}
                 <br />
                 <div>
                     <label className="pb-2">Tags</label>

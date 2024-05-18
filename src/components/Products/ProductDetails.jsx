@@ -303,7 +303,28 @@ const ProductDetailsInfo = ({
       {active === 1 ? (
         <>
           <p className="py-2 text-[18px] leading-8 pb-10 whitespace-pre-line">
-            {data.size ?<h4>size:{data.size}</h4>:<></>}
+          {data.size && data.size.length > 0 && (
+        <div>
+            <h4>Available  Sizes:</h4>
+            {/* <ul> */}
+                {data.size.map((size, index) => (
+                  <p key={index}>{size +" "}</p>
+                    // <li key={index}>
+                    //     <label>
+                    //         {/* <input
+                    //             type="checkbox"
+                    //             value={size}
+                    //             // Handle checkbox changes here
+                    //             // e.g., onChange={(e) => handleCheckboxChange(e, size)}
+                    //         /> */}
+                    //         {size}
+                    //     </label>
+                    // </li>
+                ))}
+            {/* </ul> */}
+          </div>
+        )}
+
             {data.description}
           </p>
         </>
