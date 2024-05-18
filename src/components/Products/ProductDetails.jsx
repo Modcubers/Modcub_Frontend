@@ -29,6 +29,21 @@ const ProductDetails = ({ data }) => {
   const [select, setSelect] = useState(0);
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  const [selectedSizes,setSelectedSizes]=useState([])
+
+  const handleButtonClick = (size) => {
+    console.log(size)
+    const isSelected = selectedSizes.includes(size);
+    if (!isSelected) {
+      // If the clicked size is not already selected, replace the selected size with the new one
+      setSelectedSizes([size]);
+  } else {
+      // If the clicked size is already selected, deselect it (clear the selection)
+      setSelectedSizes([]);
+  }
+};
+
   useEffect(() => {
     dispatch(getAllProductsShop(data && data?.shop._id));
     if (wishlist && wishlist.find((i) => i._id === data?._id)) {
@@ -66,7 +81,7 @@ const ProductDetails = ({ data }) => {
       if (data.stock < 1) {
         toast.error("Product stock limited!");
       } else {
-        const cartData = { ...data, qty: count };
+        const cartData = { ...data, qty: count,size:selectedSizes[0] };
         dispatch(addTocart(cartData));
         toast.success("Item added to cart successfully!");
       }
@@ -197,6 +212,25 @@ const ProductDetails = ({ data }) => {
                     )}
                   </div>
                 </div>
+                
+                <div>
+                {data.size && data.size.length > 0 && (
+                <div className=" mt-4 "> 
+                    <h4>Available  Sizes:</h4>
+
+                        {data.size.map((size, index) => (
+
+                           <button key ={index}  value={size}
+                          onClick={() => handleButtonClick(size)}    className={`p-2 border m-2 rounded-lg hover:border-teal-400 ${
+                            selectedSizes.includes(size) ? 'border-teal-400' : 'border-gray-300'
+                        }  focus:border-teal-400 focus:ring-1 focus:ring-teal-400`}> {size} </button>
+
+                        ))}
+                      
+                  </div>
+        )}
+                </div>
+
                 <div
                   className={`${styles.button} !mt-6 !rounded !h-11 flex items-center`}
                   onClick={() => addToCartHandler(data._id)}
@@ -256,7 +290,7 @@ const ProductDetailsInfo = ({
   averageRating,
 }) => {
   const [active, setActive] = useState(1);
-
+ 
   return (
     <div className="bg-[#f5f6fb] px-3 800px:px-10 py-2 rounded">
       <div className="w-full flex justify-between border-b pt-10 pb-2">
@@ -303,27 +337,6 @@ const ProductDetailsInfo = ({
       {active === 1 ? (
         <>
           <p className="py-2 text-[18px] leading-8 pb-10 whitespace-pre-line">
-          {data.size && data.size.length > 0 && (
-        <div>
-            <h4>Available  Sizes:</h4>
-            {/* <ul> */}
-                {data.size.map((size, index) => (
-                  <p key={index}>{size +" "}</p>
-                    // <li key={index}>
-                    //     <label>
-                    //         {/* <input
-                    //             type="checkbox"
-                    //             value={size}
-                    //             // Handle checkbox changes here
-                    //             // e.g., onChange={(e) => handleCheckboxChange(e, size)}
-                    //         /> */}
-                    //         {size}
-                    //     </label>
-                    // </li>
-                ))}
-            {/* </ul> */}
-          </div>
-        )}
 
             {data.description}
           </p>
