@@ -257,7 +257,7 @@ export const categoriesData = [
         title: "Books",
         subTitle: "",
         image_Url:
-            "https://pixabay.com/photos/books-stack-literature-knowledge-5937823/",
+            "https://cdn.pixabay.com/photo/2021/01/21/16/49/books-5937823_1280.jpg",
     },
     {
         id: 12,
@@ -271,7 +271,7 @@ export const categoriesData = [
         title: "Sanatary",
         subTitle: "",
         image_Url:
-            "hhttps://media.istockphoto.com/id/1958581370/photo/a-set-of-metal-and-copper-water-pipe-parts-a-water-wrench-and-pipe-elbows-blue-and-red-colors.jpg?s=612x612&w=0&k=20&c=1TWuwWW93tDRl723eldkJmveYNHScNgbaOTRC8hwBtM=",
+            "https://cdn.pixabay.com/photo/2016/03/27/22/59/wc-1284608_640.jpg",
     },
     {
         id: 14,
