@@ -53,6 +53,36 @@ const AdminDashboardOrders = () => {
             minWidth: 130,
             flex: 0.8,
         },
+        {
+            field: "address1",
+            headerName: "address1",
+            minWidth: 200,
+            flex: 1,
+        },
+        {
+            field: "address2",
+            headerName: "address2",
+            minWidth: 200,
+            flex: 1,
+        },
+        {
+            field: "ZipCode",
+            headerName: "ZipCode",
+            minWidth: 200,
+            flex: 1,
+        },
+        {
+            field: "Phone",
+            headerName: "Phone",
+            minWidth: 200,
+            flex: 1,
+        },
+        {
+            field: "City",
+            headerName: "City",
+            minWidth: 200,
+            flex: 1,
+        },
     ];
 
     const row = [];
@@ -64,6 +94,12 @@ const AdminDashboardOrders = () => {
                 total: item?.totalPrice + " $",
                 status: item?.status,
                 createdAt: item?.createdAt.slice(0, 10),
+                address1:item.shippingAddress?.address1,
+                address2:item.shippingAddress?.address2,
+                ZipCode:item.shippingAddress?.zipCode,
+                Phone:item.shippingAddress?.phone,
+                City:item.shippingAddress?.city,
+
             });
         });
     return (

@@ -213,6 +213,7 @@ export const categoriesData = [
         subTitle: "",
         image_Url:
             "https://www.shift4shop.com/2015/images/industries/clothing/clothing-apparel.png",
+        sizes: ["S", "M", "L", "XL", "XXL"]
     },
     {
         id: 5,
@@ -220,6 +221,7 @@ export const categoriesData = [
         subTitle: "",
         image_Url:
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvBQPQMVNRd6TtDkGs2dCri0Y-rxKkFOiEWw&usqp=CAU",
+        sizes: ["5", "6", "7", "8", "9", "10","11"]
     },
     {
         id: 6,
@@ -250,7 +252,29 @@ export const categoriesData = [
             "https://static.vecteezy.com/system/resources/previews/011/996/555/original/3d-black-headphone-illustration-ecommerce-icon-png.png",
     },
     {
-        id: 10,
+       
+        id: 11,
+        title: "Books",
+        subTitle: "",
+        image_Url:
+            "https://cdn.pixabay.com/photo/2021/01/21/16/49/books-5937823_1280.jpg",
+    },
+    {
+        id: 12,
+        title: "House Keeping",
+        subTitle: "",
+        image_Url:
+            "https://media.istockphoto.com/id/922038702/photo/cleaning-equipment-on-kitchen-floor.jpg?s=612x612&w=0&k=20&c=LPvE2Xo9ORUtSzd5pGU6rUwMQcwltSTnCtj9ZJKgO9w=",
+    },
+    {
+        id: 13,
+        title: "Sanatary",
+        subTitle: "",
+        image_Url:
+            "https://cdn.pixabay.com/photo/2016/03/27/22/59/wc-1284608_640.jpg",
+    },
+    {
+        id: 14,
         title: "Others",
         subTitle: "",
         image_Url:

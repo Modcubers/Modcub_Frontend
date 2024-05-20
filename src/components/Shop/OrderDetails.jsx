@@ -102,6 +102,9 @@ const OrderDetails = () => {
                             <h5 className="pl-3 text-[20px] text-[#00000091]">
                                 Rs {item.discountPrice} x {item.qty}
                             </h5>
+                            <h5 className="pl-3 text-[20px] text-[#00000091]">{
+                                item.size &&  <div>Size:{item.size}</div>
+                                }</h5>
                         </div>
                     </div>
                 ))}
