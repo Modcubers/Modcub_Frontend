@@ -127,8 +127,7 @@ const PaymentInfo = ({
 
     return (
         <div className="w-full 800px:w-[95%] bg-[#fff] rounded-md p-5 pb-8">
-            {/* cash on delivery */}
-            <div>
+            {/* <div>
                 <div className="flex w-full pb-5 border-b mb-2">
                     <div
                         className="w-[25px] h-[25px] rounded-full bg-transparent border-[3px] border-[#1d1a1ab4] relative flex items-center justify-center"
@@ -142,8 +141,6 @@ const PaymentInfo = ({
                         Pay with Razorpay
                     </h4>
                 </div>
-
-                {/* cash on delivery */}
                 {select === 3 ? (
                     <div className="w-full flex">
                         <RazorpayClient
@@ -152,7 +149,8 @@ const PaymentInfo = ({
                         />
                     </div>
                 ) : null}
-            </div>
+            </div> */}
+
             <div>
                 <div className="flex w-full pb-5 border-b mb-2">
                     <div
