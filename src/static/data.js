@@ -280,6 +280,62 @@ export const categoriesData = [
         image_Url:
             "https://searchspring.com/wp-content/uploads/2022/10/Hero-Image-Platform-Others-2.png",
     },
+    {
+        id: 17,
+        title: "Furniture",
+        subTitle: "",
+        image_Url:
+            "https://dummyimage.com/200x200/000/fff",
+    },
+    {
+        id: 18,
+        title: "Showpiece",
+        subTitle: "",
+        image_Url:
+            "https://dummyimage.com/200x200/000/fff",
+    },
+    {
+        id: 19,
+        title: "Chandelier/Lamps",
+        subTitle: "",
+        image_Url:
+            "https://dummyimage.com/200x200/000/fff",
+    },
+    {
+        id: 20,
+        title: "Watches",
+        subTitle: "",
+        image_Url:
+            "https://dummyimage.com/200x200/000/fff",
+    },
+    {
+        id: 21,
+        title: "Jewellery",
+        subTitle: "",
+        image_Url:
+            "https://dummyimage.com/200x200/000/fff",
+    },
+    {
+        id: 22,
+        title: "Crockery",
+        subTitle: "",
+        image_Url:
+            "https://dummyimage.com/200x200/000/fff",
+    },
+    {
+        id: 23,
+        title: "Perfumes",
+        subTitle: "",
+        image_Url:
+            "https://dummyimage.com/200x200/000/fff",
+    },
+    {
+        id: 24,
+        title: "home decor",
+        subTitle: "",
+        image_Url:
+            "https://dummyimage.com/200x200/000/fff",
+    },
 ];
 
 // product Data
