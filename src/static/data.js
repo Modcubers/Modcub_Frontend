@@ -273,68 +273,69 @@ export const categoriesData = [
         image_Url:
             "https://cdn.pixabay.com/photo/2016/03/27/22/59/wc-1284608_640.jpg",
     },
-    {
-        id: 14,
-        title: "Others",
-        subTitle: "",
-        image_Url:
-            "https://searchspring.com/wp-content/uploads/2022/10/Hero-Image-Platform-Others-2.png",
-    },
+   
     {
         id: 17,
         title: "Furniture",
         subTitle: "",
         image_Url:
-            "https://dummyimage.com/200x200/000/fff",
+            "https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     {
         id: 18,
         title: "Showpiece",
         subTitle: "",
         image_Url:
-            "https://dummyimage.com/200x200/000/fff",
+            "https://images.pexels.com/photos/4161111/pexels-photo-4161111.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     {
         id: 19,
         title: "Chandelier/Lamps",
         subTitle: "",
         image_Url:
-            "https://dummyimage.com/200x200/000/fff",
+            "https://images.pexels.com/photos/37869/lamps-light-lampshade-screen-37869.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     {
         id: 20,
         title: "Watches",
         subTitle: "",
         image_Url:
-            "https://dummyimage.com/200x200/000/fff",
+            "https://images.pexels.com/photos/125779/pexels-photo-125779.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     {
         id: 21,
         title: "Jewellery",
         subTitle: "",
         image_Url:
-            "https://dummyimage.com/200x200/000/fff",
+            "https://images.pexels.com/photos/5370640/pexels-photo-5370640.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
         id: 22,
         title: "Crockery",
         subTitle: "",
         image_Url:
-            "https://dummyimage.com/200x200/000/fff",
+            "https://images.pexels.com/photos/5975/food-fashion-meal-white.jpg?auto=compress&cs=tinysrgb&w=600",
     },
     {
         id: 23,
         title: "Perfumes",
         subTitle: "",
         image_Url:
-            "https://dummyimage.com/200x200/000/fff",
+            "https://images.pexels.com/photos/1190829/pexels-photo-1190829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
         id: 24,
         title: "home decor",
         subTitle: "",
         image_Url:
-            "https://dummyimage.com/200x200/000/fff",
+            "https://images.pexels.com/photos/2631746/pexels-photo-2631746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+        id: 25,
+        title: "suppliment",
+        subTitle: "",
+        image_Url:
+            "https://images.pexels.com/photos/3873141/pexels-photo-3873141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
 ];
 
