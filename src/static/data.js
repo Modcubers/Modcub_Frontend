@@ -220,7 +220,7 @@ export const categoriesData = [
         title: "Shoes",
         subTitle: "",
         image_Url:
-            "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
+            "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         sizes: ["5", "6", "7", "8", "9", "10","11"]
     },
     {
@@ -242,7 +242,7 @@ export const categoriesData = [
         title: "Mobile and Tablets",
         subTitle: "",
         image_Url:
-            "https://img.freepik.com/free-vector/mobile-phone-accessories-cartoon-illustration-set-vr-glasses-3d-model-cellphones-case-charger-battery-headphones-smart-watch-memory-card-selfie-stick-technology-smartphone-concept_74855-23119.jpg",
+            "https://images.pexels.com/photos/47261/pexels-photo-47261.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
         id: 9,
