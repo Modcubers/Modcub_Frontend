@@ -202,7 +202,7 @@ export const categoriesData = [
     },
     {
         id: 3,
-        title: "Accesories",
+        title: "Mobile Accesories",
         subTitle: "",
         image_Url:
             "https://img.freepik.com/free-vector/mobile-phone-accessories-cartoon-illustration-set-vr-glasses-3d-model-cellphones-case-charger-battery-headphones-smart-watch-memory-card-selfie-stick-technology-smartphone-concept_74855-23119.jpg",
