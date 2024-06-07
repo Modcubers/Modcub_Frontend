@@ -246,10 +246,10 @@ export const categoriesData = [
     },
     {
         id: 9,
-        title: "Music and Gaming",
+        title: " Gaming",
         subTitle: "",
         image_Url:
-            "https://static.vecteezy.com/system/resources/previews/011/996/555/original/3d-black-headphone-illustration-ecommerce-icon-png.png",
+            "https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
        
@@ -290,7 +290,7 @@ export const categoriesData = [
     },
     {
         id: 19,
-        title: "Chandelier/Lamps",
+        title: "Lamps",
         subTitle: "",
         image_Url:
             "https://images.pexels.com/photos/37869/lamps-light-lampshade-screen-37869.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -336,6 +336,13 @@ export const categoriesData = [
         subTitle: "",
         image_Url:
             "https://images.pexels.com/photos/3873141/pexels-photo-3873141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+        id: 26,
+        title: "Music ",
+        subTitle: "",
+        image_Url:
+            "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
 ];
 
