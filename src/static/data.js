@@ -220,7 +220,7 @@ export const categoriesData = [
         title: "Shoes",
         subTitle: "",
         image_Url:
-            "https://images.pexels.com/photos/6461325/pexels-photo-6461325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
         sizes: ["5", "6", "7", "8", "9", "10","11"]
     },
     {
