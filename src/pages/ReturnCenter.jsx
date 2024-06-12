@@ -27,7 +27,7 @@ const ReturCenter = () => {
                         className="w-full h-auto rounded-md mb-6 md:mb-0 h-[700px]"
                     />
                     <div className="absolute bottom-10 md:bottom-56 left-4 md:left-40 text-gray-100 text-5xl md:text-6xl font-Poppins font-bold">
-                        Retur Center
+                        Return Center
                         <div className="text-base md:text-xl font-medium">
                             Learn what we are all about
                         </div>
@@ -39,13 +39,15 @@ const ReturCenter = () => {
                         <h1 className="text-3xl font-bold mb-4">
                         🛍️ Welcome to the ModCub Return Center! 📦
                         </h1>
+                        <span className="text-red-800">*Your product returned within the 7 working days & refund will be intiated in 14 working days*</span>
+                        <span></span>
                         <p className="text-lg mb-6">
                         We understand that sometimes purchases don't meet expectations, and we're here to make the return process as seamless as possible. Our Return Center is designed to guide you through the steps to initiate a return, exchange, or refund for your ModCub purchases.
 
                         </p>
                         <p className="text-lg mb-6">
                         *Our Return Policy:*
-- We want you to shop with confidence at ModCub, which is why we offer a hassle-free return policy for most items within [insert number] days of delivery.
+                        <b>- We want you to shop with confidence at ModCub, which is why we offer a hassle-free return policy for most items within 7 days of delivery.</b>
 - To be eligible for a return, your item must be unused, in the same condition that you received it, and in its original packaging.
 - Certain items, such as perishable goods, personalized items, and final sale items, may not be eligible for return. Please refer to the product description or contact our customer support team for more information.
                         </p>
@@ -56,7 +58,7 @@ const ReturCenter = () => {
                         <li>2. Choose the item(s) you'd like to return and indicate the reason for the return. containing the item(s) you wish to return.</li>
                         <li>3. Follow the prompts to submit your return request. You'll receive a confirmation email with further instructions on how to proceed.</li>
                         <li>4. Carefully package the item(s) you're returning, ensuring they're securely packed to prevent damage during transit.</li>
-                        <li>5. Use the provided shipping label or instructions to send your return back to the designated return address. Please note that return shipping costs may apply, unless the return is due to a mistake on our part.</li>
+                        <li>5. Use the provided shipping label or instructions to send your return back to the designated return address. <b>Please note that return shipping costs may apply, unless the return is due to a mistake on our part.</b> </li>
                         <li>6. Keep an eye on your return shipment's tracking information to monitor its progress.</li>
                         <li>7.  Once we receive and inspect your return, we'll process your refund or exchange according to our return policy. Refunds will be issued to the original payment method used for the purchase.
 </li>

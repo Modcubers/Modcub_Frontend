@@ -53,8 +53,8 @@ const Terms = () => {
                         life.Modcub.in & blog.Modcub.in (hereinafter referred
                         to as “Website”) is owned by Modcub Designs Private
                         Limited, a company incorporated under the Companies Act,
-                        1956 with its registered office at ground floor, 11752/4
-                        Sat Nagar Karol Bagh, New Delhi, India (hereinafter
+                        1956 with its registered office at ground floor,<b>11752/4
+                        Sat Nagar Karol Bagh, New Delhi, India </b> (hereinafter
                         referred to as “Modcub”).
                     </p>
                     <p className="mb-4">
