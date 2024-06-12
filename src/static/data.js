@@ -1,22 +1,17 @@
-// navigation Data
-export const navItems = [
-    {
-        title: "Home",
-        url: "/",
-    },
-    {
-        title: "Best Selling",
-        url: "/best-selling",
-    },
-    {
-        title: "Products",
-        url: "/products",
-    },
+import champion from "../Assests/Company_logos/champion.png";
+import jbl from "../Assests/Company_logos/jbl.png";
+import nb from "../Assests/Company_logos/nb.png";
+import nike from "../Assests/Company_logos/nike.png";
+import puma from "../Assests/Company_logos/puma.png";
+import sony from "../Assests/Company_logos/sony.png";
 
-    {
-        title: "FAQ",
-        url: "/faq",
-    },
+export const brandImages = [
+    { src: sony, alt: "Sony Logo" },
+    { src: jbl, alt: "JBL Logo" },
+    { src: puma, alt: "Puma Logo" },
+    { src: champion, alt: "Champion Logo" },
+    { src: nb, alt: "New Balance Logo" },
+    { src: nike, alt: "Nike Logo" },
 ];
 
 // branding data
