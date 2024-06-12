@@ -186,28 +186,28 @@ export const categoriesData = [
         title: "Computers and Laptops",
         subTitle: "",
         image_Url:
-            "https://cdn.shopify.com/s/files/1/1706/9177/products/NEWAppleMacbookProwithM1ProChip14InchLaptop2021ModelMKGQ3LL_A_16GB_1TBSSD_custommacbd.jpg?v=1659592838",
+            "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
         id: 2,
         title: "cosmetics and body care",
         subTitle: "",
         image_Url:
-            "https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2021-07/kosme1.png",
+            "https://images.pexels.com/photos/2533266/pexels-photo-2533266.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
         id: 3,
-        title: "Accesories",
+        title: "Mobile Accesories",
         subTitle: "",
         image_Url:
-            "https://img.freepik.com/free-vector/ordering-goods-online-internet-store-online-shopping-niche-e-commerce-website-mother-buying-babies-clothes-footwear-toys-infant-accessories_335657-2345.jpg?w=2000",
+            "https://img.freepik.com/free-vector/mobile-phone-accessories-cartoon-illustration-set-vr-glasses-3d-model-cellphones-case-charger-battery-headphones-smart-watch-memory-card-selfie-stick-technology-smartphone-concept_74855-23119.jpg",
     },
     {
         id: 4,
         title: "Cloths",
         subTitle: "",
         image_Url:
-            "https://www.shift4shop.com/2015/images/industries/clothing/clothing-apparel.png",
+            "https://images.pexels.com/photos/6461325/pexels-photo-6461325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         sizes: ["S", "M", "L", "XL", "XXL"]
     },
     {
@@ -215,7 +215,7 @@ export const categoriesData = [
         title: "Shoes",
         subTitle: "",
         image_Url:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvBQPQMVNRd6TtDkGs2dCri0Y-rxKkFOiEWw&usqp=CAU",
+            "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         sizes: ["5", "6", "7", "8", "9", "10","11"]
     },
     {
@@ -223,28 +223,28 @@ export const categoriesData = [
         title: "Gifts",
         subTitle: "",
         image_Url:
-            "https://icons.iconarchive.com/icons/lovuhemant/merry-christmas/256/Gift-icon.png",
+            "https://images.pexels.com/photos/264985/pexels-photo-264985.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
         id: 7,
         title: "Pet Care",
         subTitle: "",
         image_Url:
-            "https://as1.ftcdn.net/v2/jpg/05/58/18/24/1000_F_558182456_7zDecX2F22p22kK2LP5Gw3EUsZomwkJg.jpg",
+            "https://images.pexels.com/photos/5667223/pexels-photo-5667223.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
         id: 8,
         title: "Mobile and Tablets",
         subTitle: "",
         image_Url:
-            "https://st-troy.mncdn.com/mnresize/1500/1500/Content/media/ProductImg/original/mpwp3tua-apple-iphone-14-256gb-mavi-mpwp3tua-637986832343472449.jpg",
+            "https://images.pexels.com/photos/47261/pexels-photo-47261.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
         id: 9,
-        title: "Music and Gaming",
+        title: " Gaming",
         subTitle: "",
         image_Url:
-            "https://static.vecteezy.com/system/resources/previews/011/996/555/original/3d-black-headphone-illustration-ecommerce-icon-png.png",
+            "https://images.pexels.com/photos/3945659/pexels-photo-3945659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
        
@@ -259,7 +259,7 @@ export const categoriesData = [
         title: "House Keeping",
         subTitle: "",
         image_Url:
-            "https://media.istockphoto.com/id/922038702/photo/cleaning-equipment-on-kitchen-floor.jpg?s=612x612&w=0&k=20&c=LPvE2Xo9ORUtSzd5pGU6rUwMQcwltSTnCtj9ZJKgO9w=",
+            "https://images.pexels.com/photos/4108723/pexels-photo-4108723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
         id: 13,
@@ -268,12 +268,76 @@ export const categoriesData = [
         image_Url:
             "https://cdn.pixabay.com/photo/2016/03/27/22/59/wc-1284608_640.jpg",
     },
+   
     {
-        id: 14,
-        title: "Others",
+        id: 17,
+        title: "Furniture",
         subTitle: "",
         image_Url:
-            "https://searchspring.com/wp-content/uploads/2022/10/Hero-Image-Platform-Others-2.png",
+            "https://images.pexels.com/photos/4352247/pexels-photo-4352247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+        id: 18,
+        title: "Showpiece",
+        subTitle: "",
+        image_Url:
+            "https://images.pexels.com/photos/1001831/pexels-photo-1001831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+        id: 19,
+        title: "Lamps",
+        subTitle: "",
+        image_Url:
+            "https://images.pexels.com/photos/37869/lamps-light-lampshade-screen-37869.jpeg?auto=compress&cs=tinysrgb&w=600",
+    },
+    {
+        id: 20,
+        title: "Watches",
+        subTitle: "",
+        image_Url:
+            "https://images.pexels.com/photos/8327950/pexels-photo-8327950.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+        id: 21,
+        title: "Jewellery",
+        subTitle: "",
+        image_Url:
+            "https://images.pexels.com/photos/5370640/pexels-photo-5370640.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+        id: 22,
+        title: "Crockery",
+        subTitle: "",
+        image_Url:
+            "https://images.pexels.com/photos/291767/pexels-photo-291767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+        id: 23,
+        title: "Perfumes",
+        subTitle: "",
+        image_Url:
+            "https://images.pexels.com/photos/1190829/pexels-photo-1190829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+        id: 24,
+        title: "home decor",
+        subTitle: "",
+        image_Url:
+            "https://images.pexels.com/photos/2631746/pexels-photo-2631746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+        id: 25,
+        title: "suppliment",
+        subTitle: "",
+        image_Url:
+            "https://images.pexels.com/photos/3873141/pexels-photo-3873141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+        id: 26,
+        title: "Music ",
+        subTitle: "",
+        image_Url:
+            "https://images.pexels.com/photos/3428498/pexels-photo-3428498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
 ];
 
