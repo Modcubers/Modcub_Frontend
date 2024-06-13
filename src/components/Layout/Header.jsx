@@ -147,7 +147,7 @@ const Header = ({ activeHeading }) => {
                         </div>
                     </div> */}
           {/* navitems */}
-          <div className={`${styles.noramlFlex}`}>
+          <div className={`${styles.noramlFlex} justify-center w-full`}>
             <Navbar active={activeHeading} />
           </div>
 

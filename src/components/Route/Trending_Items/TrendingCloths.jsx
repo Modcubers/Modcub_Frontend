@@ -64,8 +64,10 @@ const TrendingCloths = () => {
             })}
         </div> */}
       </div>
-      <div className={`${styles.section} hidden sm:block shadow-xl`}>
-        <div className="branding my-12 flex justify-between w-full shadow-sm bg-white p-5 rounded-md">
+      <div
+        className={`${styles.section} hidden sm:block shadow-xl whitespace-nowrap rounded-lg bg-white overflow-clip `}
+      >
+        <div className="branding my-12 flex justify-between w-full shadow-sm p-5 rounded-md animate-scrollHorizontal">
           {brandImages.map((brand, index) => (
             <div className="flex items-start" key={brand.src || index}>
               <img src={brand.src} alt={brand.alt} className="max-h-12" />
@@ -77,4 +79,4 @@ const TrendingCloths = () => {
   );
 };
 
-export default TrendingCloths ;
+export default TrendingCloths;

@@ -24,9 +24,9 @@ const HomePage = () => {
             {/* <div className=" w-[1400px] h-1 my-20 bg-amber-900  rounded-full m-auto"></div> */}
             {/* <Events /> */}
             <TrendingDiscounts/>
-            <NewArrivals/>
             {/* <div className=" w-auto h-1 my-20 bg-amber-900  rounded-full m-auto"></div> */}
             <FeaturedProduct />
+            <NewArrivals/>
             {/* <Sponsored /> */}
             <Footer />
         </div>

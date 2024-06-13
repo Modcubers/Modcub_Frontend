@@ -71,7 +71,7 @@ const Navbar = ({ active }) => {
       </div>
       <div className="flex">
         <Link
-          to="/"
+          to="/contactus"
           className={`${
             active === 3 ? "text-orange-500" : "text-black 800px:text-[#000000]"
           } pb-[30px] 800px:pb-0 font-[500] px-6 cursor-pointer}`}
@@ -81,7 +81,7 @@ const Navbar = ({ active }) => {
       </div>
       <div className="flex">
         <Link
-          to="/"
+          to="/about"
           className={`${
             active === 4 ? "text-orange-500" : "text-black 800px:text-[#000000]"
           } pb-[30px] 800px:pb-0 font-[500] px-6 cursor-pointer}`}
