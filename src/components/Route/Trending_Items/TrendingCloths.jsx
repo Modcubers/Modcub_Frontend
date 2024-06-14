@@ -15,7 +15,7 @@ const TrendingCloths = () => {
   useEffect(() => {
     if (allProducts) {
       const clothingProducts = allProducts.filter(
-        (product) => product.category === "cloths"
+        (product) => product.category === "Cloths"
       );
       const sortedClothing = clothingProducts.sort(
         (a, b) => b.sold_out - a.sold_out
