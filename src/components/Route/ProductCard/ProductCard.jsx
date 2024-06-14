@@ -63,7 +63,7 @@ const ProductCard = ({ data, isEvent }) => {
 
     return (
         <>
-            <div className="w-full h-[370px] bg-orange-50 shadow-xl rounded-lg  p-3 relative cursor-pointer">
+            <div className="w-full h-[370px] bg-white shadow-xl rounded-lg  p-3 relative cursor-pointer">
                 <div className="flex justify-end"></div>
                 <Link
                     to={`${

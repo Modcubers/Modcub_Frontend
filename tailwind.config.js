@@ -18,7 +18,7 @@ module.exports = {
                 "400px": "400px",
             },
             animation: {
-                scrollHorizontal: "scrollHorizontal 10s linear infinite",
+                scrollHorizontal: "scrollHorizontal 20s linear infinite",
             },
             keyframes: {
                 scrollHorizontal: {

@@ -9,7 +9,7 @@ const TrendingElectronics = () => {
   useEffect(() => {
     if (allProducts) {
       const electronicsProducts = allProducts.filter(
-        (product) => product.category === "electronics"
+        (product) => product.category === "Computers and Laptops"
       );
       const sortedElectronics = electronicsProducts.sort(
         (a, b) => b.sold_out - a.sold_out

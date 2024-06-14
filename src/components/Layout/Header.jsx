@@ -54,7 +54,7 @@ const Header = ({ activeHeading }) => {
 
   return (
     <>
-      <div className={`${styles.section}`}>
+      <div className={`${styles.section}  bg-[#E7F2F9]`}>
         <div className="hidden 800px:h-[90px] 800px:flex items-center justify-between">
           <div>
             <Link to="/">

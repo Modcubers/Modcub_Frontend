@@ -1,9 +1,10 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import styles from "../../../styles/styles";
 import ProductCard from "../ProductCard/ProductCard";
 
 import clothes_img from "../../../Assests/Images/clothes_1.png";
+import { all } from "axios";
 
 const FeaturedProduct = () => {
   //   const { allProducts } = useSelector((state) => state.products);
@@ -28,36 +29,7 @@ const FeaturedProduct = () => {
   //   );
   // };
 
-  const [minPricedItems, setMinPricedItems] = useState([]);
   const { allProducts } = useSelector((state) => state.products);
-
-  useEffect(() => {
-    if (allProducts && allProducts.length > 0) {
-      const uniqueCategories = [
-        ...new Set(allProducts.map((product) => product.category)),
-      ];
-      const minPricedByCategory = uniqueCategories.map((category) => {
-        const productsInCategory = allProducts.filter(
-          (product) => product.category === category
-        );
-        const sortedProducts = productsInCategory.sort((a, b) => {
-          if (a.price === b.price) {
-            return new Date(a.addedDate) - new Date(b.addedDate);
-          }
-          return a.price - b.price;
-        });
-        const minPricedProduct = sortedProducts[0];
-
-        return {
-          category,
-          product: minPricedProduct,
-        };
-      });
-      setMinPricedItems(minPricedByCategory);
-    } else {
-      setMinPricedItems([]);
-    }
-  }, [allProducts]);
 
   return (
     <div
@@ -77,29 +49,13 @@ const FeaturedProduct = () => {
         <p className="text-black">Starts with $20</p>
       </div>
     </div> */}
-        {minPricedItems.length > 0 ? (
-          minPricedItems.map((item, index) => (
-            <div
-              key={index}
-              className="border p-2 w-[30%] my-2 mx-2 flex flex-col items-center rounded-lg"
-            >
-              {/* <h2 className="text-lg font-bold text-center">{item.category}</h2> */}
-              <img
-                src={item.product.imageUrl}
-                alt={item.product.name}
-                className="w-[100px] h-[100px] rounded-lg my-2"
-              />
-              <div>
-                <p className="text-black">{item.category}</p>
-                <p className="text-black">
-                  Starting at: Rs{item.product.price}
-                </p>
-              </div>
-            </div>
-          ))
-        ) : (
-          <p>No new arrivals available.</p>
-        )}
+        {
+            allProducts && allProducts.length !== 0 &&(
+              <>
+               {allProducts && allProducts.map((i, index) => <ProductCard data={i} key={index} />)}
+              </>
+            )
+           }
       </div>
 
       <div className="w-[30%] relative">
