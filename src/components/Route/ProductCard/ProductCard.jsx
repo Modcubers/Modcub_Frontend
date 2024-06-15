@@ -78,9 +78,9 @@ const ProductCard = ({ data, isEvent }) => {
                         className="w-full h-[170px] object-contain"
                     />
                 </Link>
-                <Link to={`/shop/preview/${data?.shop._id}`}>
+                {/* <Link to={`/shop/preview/${data?.shop._id}`}>
                     <h5 className={`${styles.shop_name}`}>{data.shop.name}</h5>
-                </Link>
+                </Link> */}
                 <Link
                     to={`${
                         isEvent === true
@@ -94,9 +94,9 @@ const ProductCard = ({ data, isEvent }) => {
                             : data.name}
                     </h4>
 
-                    <div className="flex">
+                    {/* <div className="flex">
                         <Ratings rating={data?.ratings} />
-                    </div>
+                    </div> */}
 
                     <div className="py-2 flex items-center justify-between">
                         <div className="flex">
@@ -115,12 +115,12 @@ const ProductCard = ({ data, isEvent }) => {
                         {/* <span className="font-[400] text-[17px] text-[#68d284]">
                             {data?.sold_out} sold
                         </span> */}
-                        <button
+                        {/* <button
                             type="button"
                             class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900"
                         >
                             Buy
-                        </button>{" "}
+                        </button>{" "} */}
                     </div>
                 </Link>
 

@@ -20,7 +20,7 @@ const TrendingCloths = () => {
       const sortedClothing = clothingProducts.sort(
         (a, b) => b.sold_out - a.sold_out
       );
-      const topFiveClothing = sortedClothing.slice(0, 3);
+      const topFiveClothing = sortedClothing.slice(0, 5);
       setData(topFiveClothing);
     } else {
       setData([]);
@@ -47,7 +47,9 @@ const TrendingCloths = () => {
         id="categories"
       >
         <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-4 lg:gap-[25px] xl:grid-cols-5 xl:gap-[30px] mb-12 border-0">
-          <h1 className="text-black underline text-xl">Trending Clothes</h1>
+          <div>
+            <h1 className="text-black underline text-xl">Trending Clothes</h1>
+          </div>
           {data && data.length !== 0 && (
             <>
               {data &&
