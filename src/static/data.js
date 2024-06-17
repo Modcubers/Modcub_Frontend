@@ -188,24 +188,23 @@ export const brandingData = [
 export const categoriesData = [
     {
         id: 1,
-        title: "Computers and Laptops",
+        title: "Electronics",
         subTitle: "",
         image_Url:
-            "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://www.wallpaperuse.com/wallp/34-342029_m.jpg",
     },
     {
         id: 2,
-        title: "cosmetics and body care",
+        title: "Cosmetics & Body Care",
         subTitle: "",
-        image_Url:
-            "https://images.pexels.com/photos/2533266/pexels-photo-2533266.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/xif0q/lipstick/3/m/0/4-2-creamy-matte-long-stay-lipstick-with-murumuru-butter-and-original-imahf4scwv4zqx7r.jpeg?q=70",
     },
     {
         id: 3,
-        title: "Mobile Accesories",
+        title: "Mobile Accessories",
         subTitle: "",
         image_Url:
-            "https://img.freepik.com/free-vector/mobile-phone-accessories-cartoon-illustration-set-vr-glasses-3d-model-cellphones-case-charger-battery-headphones-smart-watch-memory-card-selfie-stick-technology-smartphone-concept_74855-23119.jpg",
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/battery-charger/f/g/r/65-watt-charger-compatible-for-oneplus-6a-5v-warp-charger-original-imahf4h2rgzbssyk.jpeg?q=70",
     },
     {
         id: 4,
@@ -220,7 +219,7 @@ export const categoriesData = [
         title: "Shoes",
         subTitle: "",
         image_Url:
-            "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://m.media-amazon.com/images/I/71Qf4GyEQ9L._AC_UY1000_.jpg",
         sizes: ["5", "6", "7", "8", "9", "10","11"]
     },
     {
@@ -235,21 +234,20 @@ export const categoriesData = [
         title: "Pet Care",
         subTitle: "",
         image_Url:
-            "https://images.pexels.com/photos/5667223/pexels-photo-5667223.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/pet-food/j/s/p/-original-imagzwy3nnh8fyqh.jpeg?q=70",
     },
     {
         id: 8,
-        title: "Mobile and Tablets",
+        title: "Mobile & Tablet",
         subTitle: "",
         image_Url:
-            "https://images.pexels.com/photos/47261/pexels-photo-47261.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://5.imimg.com/data5/SELLER/Default/2023/3/296178163/GX/GL/SD/186724856/vivo-mobile-phone.jpg",
     },
     {
         id: 9,
-        title: " Gaming",
+        title: "Gaming",
         subTitle: "",
-        image_Url:
-            "https://images.pexels.com/photos/3945659/pexels-photo-3945659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/kxm5qq80/kit/f/a/v/popular-kit-6-no-2-scoop-2-scoop-11-barood-84-original-imagafyngpgz5ddg.jpeg?q=70",
     },
     {
        
@@ -257,7 +255,7 @@ export const categoriesData = [
         title: "Books",
         subTitle: "",
         image_Url:
-            "https://cdn.pixabay.com/photo/2021/01/21/16/49/books-5937823_1280.jpg",
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/regionalbooks/d/j/t/phychology-of-money-book-rich-dad-original-imahyn2bjjzmvnrj.jpeg?q=70",
     },
     {
         id: 12,
@@ -268,7 +266,7 @@ export const categoriesData = [
     },
     {
         id: 13,
-        title: "Sanatary",
+        title: "Sanitary",
         subTitle: "",
         image_Url:
             "https://cdn.pixabay.com/photo/2016/03/27/22/59/wc-1284608_640.jpg",
@@ -278,15 +276,13 @@ export const categoriesData = [
         id: 17,
         title: "Furniture",
         subTitle: "",
-        image_Url:
-            "https://images.pexels.com/photos/4352247/pexels-photo-4352247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/xif0q/sofa-sectional/r/k/8/symmetrical-91-blue-109-silk-no-18-sofa1276-artistic-interior-original-imahfcgqgephzetx.jpeg?q=70",
     },
     {
         id: 18,
         title: "Showpiece",
         subTitle: "",
-        image_Url:
-            "https://images.pexels.com/photos/1001831/pexels-photo-1001831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/kkprmvk0/showpiece-figurine/l/s/0/r43ramopanch-scooty-krishnagallery1-original-imafzzvukzfpa2gh.jpeg?q=70",
     },
     {
         id: 19,
@@ -300,11 +296,11 @@ export const categoriesData = [
         title: "Watches",
         subTitle: "",
         image_Url:
-            "https://images.pexels.com/photos/8327950/pexels-photo-8327950.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/watch/i/5/c/1-antique-2-0-day-date-softest-silicone-strap-analog-rustet-men-original-imagyzf8ykw8vtkm.jpeg?q=70",
     },
     {
         id: 21,
-        title: "Jewellery",
+        title: "Jewelry",
         subTitle: "",
         image_Url:
             "https://images.pexels.com/photos/5370640/pexels-photo-5370640.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -320,29 +316,112 @@ export const categoriesData = [
         id: 23,
         title: "Perfumes",
         subTitle: "",
-        image_Url:
-            "https://images.pexels.com/photos/1190829/pexels-photo-1190829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/xif0q/perfume/1/l/x/50-black-perfume-eau-de-toilette-the-man-company-men-original-imahf2dfzawrr7bc.jpeg?q=70",
     },
     {
         id: 24,
-        title: "home decor",
+        title: "Home Decor",
         subTitle: "",
-        image_Url:
-            "https://images.pexels.com/photos/2631746/pexels-photo-2631746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/ksxjs7k0hlty2aw/curtain/z/o/4/pt2c-308-eyelet-panipat-textile-hub-original-imag6h68enpzxvjx.jpeg?q=70",
     },
     {
         id: 25,
-        title: "suppliment",
+        title: "Supplement",
         subTitle: "",
-        image_Url:
-            "https://images.pexels.com/photos/3873141/pexels-photo-3873141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/xif0q/protein-supplement/c/f/a/weight-gainers-mass-gainers-mass-gainer-for-muscle-mass-gain-original-imagnefnggx4xzpr.jpeg?q=70",
     },
     {
         id: 26,
-        title: "Music ",
+        title: "Music",
         subTitle: "",
-        image_Url:
-            "https://images.pexels.com/photos/3428498/pexels-photo-3428498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/xif0q/electric-guitar/j/1/2/r-701-blue-beginner-professional-full-size-rosewood-fretboard-original-imaghk7dxenynsrk.jpeg?q=70",
+    },
+    {
+        id:27,
+        title:"Belt and Wallet",
+        subTitle:"",
+        image_Url:"https://st3.depositphotos.com/6097600/13145/i/450/depositphotos_131456490-stock-photo-mens-wallet-and-belt.jpg",
+    },
+    {
+        id:28,
+        title:"Sunglasses",
+        subTitle:"",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/xif0q/sunglass/b/w/n/p429gr3v-one-size-fits-all-fastrack-original-imagp3eugdafnpdq.jpeg?q=70",
+    },{
+        id:29,
+        title:"Bag and Luggage",
+        subTitle:"",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/kk76wsw0/suitcase/x/j/p/78-triprism-spinner-3pc-set-black-hk3-2-09-004-cabin-check-in-original-imafzhhenqcxh4yb.jpeg?q=70",
+    },
+    {
+        id:30,
+        title:"Hand Bag",
+        subTitle:"",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/xif0q/hand-messenger-bag/x/w/v/women-handbags-shoulder-bags-32-sm-10-shoulder-bag-perfect-original-imahyfgvynuvmymp.jpeg?q=70",
+    },
+    {
+        id:31,
+        title:"Office & Stationary",
+        subTitle:"",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/l1tmf0w0/art-set/l/u/4/blue-kids-smart-kit-combo-bag-by-the-mark-stationery-doms-original-imagdarfqgg8uqcu.jpeg?q=70",
+    },
+    {
+        id:32,
+        title:"Car Accessories",
+        subTitle:"",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/xif0q/car-mat/p/u/2/bu-4dblmat28-bu4dblnmat28-3d-mat-arneja-original-imahygfkgngqyzrf.jpeg?q=70",
+    },
+    {
+        id:33,
+        title:"Cycle & Gym Equipments",
+        subTitle:"",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/xif0q/exercise-bike/z/i/x/llf45-llf45-fit-pro-exercise-spin-bike-120-lifelong-32-28-7-original-imahfmh4yryjzswx.jpeg?q=70",
+    },
+    {
+        id:34,
+        title:"Daily Use",
+        subTitle:"",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/kkimfm80/tea/z/n/1/premium-pouch-regular-tea-powder-tata-original-imafzuf2mnubzphd.jpeg?q=70",
+    },
+    {
+        id:35,
+        title:"Filter & Accessories",
+        subTitle:"",
+        image_Url:"https://t4.ftcdn.net/jpg/04/60/10/51/360_F_460105107_1dkr8vFnWai35wkUPX5DFxW5a39VgrEJ.jpg",
+    },
+    {
+        id:36,
+        title:"Packaging",
+        subTitle:"",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/xif0q/packaging-security-bag/o/j/k/6-x-8-1-heavy-40ft-air-bubble-wrap-roll-for-packing-purposes-original-imagz5v8jqb8vrkf.jpeg?q=70",
+    },
+    {
+        id:37,
+        title:"Industrial Chemical",
+        subTitle:"",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/l1nwnm80/wall-paint/q/s/s/20-03-san-severo-paints-original-imagd6a4ftxebggm.jpeg?q=70",
+    },
+    {
+        id:38,
+        title:"Tools & Equipments",
+        subTitle:"",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/xif0q/wrench-set/j/k/m/wrs005-home-professional-tata-agrico-original-imagk7pzpq9vrxvy.jpeg?q=70",
+    },
+    {
+        id:39,
+        title:"Software",
+        subTitle:"",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/xif0q/digital-security-softwr/v/i/n/-original-imagt75z3g6zvgey.jpeg?q=70",
+    },{
+        id:40,
+        title:"Ayurvedic Products",
+        subTitle:"",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/xif0q/ayurvedic/v/l/y/shatavari-granules-asparagus-racemosus-herbal-product-100g-x-2-original-imagge5f5yyquqtz.jpeg?q=70",
+    },{
+        id:41,
+        title:"IT Equipments",
+        subTitle:"",
+        image_Url:"-original-imagppnc2eeg6wk8.jpeg (612×574) (flixcart.com)",
     },
 ];
 
