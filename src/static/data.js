@@ -423,6 +423,12 @@ export const categoriesData = [
         subTitle:"",
         image_Url:"-original-imagppnc2eeg6wk8.jpeg (612×574) (flixcart.com)",
     },
+    {
+        id:42,
+        title:"Karigar & Saheli",
+        subTitle:"",
+        image_Url:"https://images.app.goo.gl/dhC8EkZP4eviki4g9",
+    }
 ];
 
 // product Data
