@@ -63,7 +63,7 @@ const ProductCard = ({ data, isEvent }) => {
 
     return (
         <>
-            <div className="w-full h-[370px] bg-white shadow-xl rounded-lg  p-3 relative cursor-pointer">
+            <div className="w-[250px] h-max bg-white rounded-lg  p-3 relative cursor-pointer">
                 <div className="flex justify-end"></div>
                 <Link
                     to={`${
@@ -99,7 +99,7 @@ const ProductCard = ({ data, isEvent }) => {
                     </div> */}
 
                     <div className="py-2 flex items-center justify-between">
-                        <div className="flex">
+                        <div className="flex items-center">
                             <h5 className={`${styles.productDiscountPrice}`}>
                                 {data.originalPrice === 0
                                     ? data.originalPrice

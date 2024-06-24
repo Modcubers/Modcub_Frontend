@@ -9,12 +9,12 @@ const TrendingElectronics = () => {
   useEffect(() => {
     if (allProducts) {
       const electronicsProducts = allProducts.filter(
-        (product) => product.category === "Computers and Laptops"
+        (product) => product.category === "Electronics"
       );
       const sortedElectronics = electronicsProducts.sort(
         (a, b) => b.sold_out - a.sold_out
       );
-      const topThreeElectronics = sortedElectronics.slice(0, 4);
+      const topThreeElectronics = sortedElectronics.slice(0, 5);
       setData(topThreeElectronics);
     } else {
       setData([]);
@@ -27,7 +27,7 @@ const TrendingElectronics = () => {
         className={`${styles.section} bg-white p-6 rounded-lg mb-12 shadow-xl mt-5`}
       >
         <h1 className="text-black underline text-xl">Electronics</h1>
-        <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-4 lg:gap-[25px] xl:grid-cols-5 xl:gap-[30px] mb-12 border-0">
+        <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-4 lg:gap-[25px] xl:grid-cols-5 xl:gap-[30px] my-3 border-0">
           {data && data.length !== 0 && (
             <>
               {data &&
