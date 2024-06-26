@@ -26,6 +26,13 @@ module.exports = {
                     "100%": { transform: "translateX(-100%)" },
                 },
             },
+            hideScrollbar: {
+                '::-webkit-scrollbar': {
+                  display: 'none',
+                },
+                '-ms-overflow-style': 'none',  /* IE and Edge */
+                'scrollbar-width': 'none',  /* Firefox */
+              },
         },
     },
     plugins: [flowbite.plugin()],

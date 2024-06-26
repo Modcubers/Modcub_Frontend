@@ -5,28 +5,38 @@ import NewArrivalsCard from "../ProductCard/NewArrivalsCard";
 import clothes_img from "../../../Assests/Images/clothes_1.png";
 
 const FeaturedProduct = () => {
-  const { allProducts } = useSelector((state) => state.products);
-  const [lowestPricedProducts, setLowestPricedProducts] = useState([]);
+  // const { allProducts } = useSelector((state) => state.products);
+  // const [lowestPricedProducts, setLowestPricedProducts] = useState([]);
 
-  useEffect(() => {
-    if (allProducts && allProducts.length > 0) {
-      const calculatedProducts = Object.values(
-        allProducts.reduce((acc, product) => {
-          if (
-            !acc[product.category] ||
-            product.discountPrice < acc[product.category].discountPrice
-          ) {
-            acc[product.category] = product;
-          }
-          return acc;
-        }, {})
-      )
-        .slice(0, 12)
-        .sort((a, b) => a.discountPrice - b.discountPrice);
+  // useEffect(() => {
+  //   if (allProducts && allProducts.length > 0) {
+  //     const calculatedProducts = Object.values(
+  //       allProducts.reduce((acc, product) => {
+  //         if (
+  //           !acc[product.category] ||
+  //           product.discountPrice < acc[product.category].discountPrice
+  //         ) {
+  //           acc[product.category] = product;
+  //         }
+  //         return acc;
+  //       }, {})
+  //     )
+  //       .slice(0, 12)
+  //       .sort((a, b) => a.discountPrice - b.discountPrice);
 
-      setLowestPricedProducts(calculatedProducts);
-    }
-  }, [allProducts]);
+  //     setLowestPricedProducts(calculatedProducts);
+  //   }
+  // }, [allProducts]);
+  const [data, setData] = useState([]);
+    const { allProducts } = useSelector((state) => state.products);
+    useEffect(() => {
+        const allProductsData = allProducts ? [...allProducts] : [];
+        const sortedData = allProductsData?.sort(
+            (a, b) => b.sold_out - a.sold_out
+        );
+        const firstFive = sortedData && sortedData.slice(0, 12);
+        setData(firstFive);
+    }, [allProducts]);
 
   return (
     <div
@@ -36,13 +46,13 @@ const FeaturedProduct = () => {
         <h1 className="text-black underline text-xl w-full mb-4">
           New Arrivals
         </h1>
-        {lowestPricedProducts &&
-          lowestPricedProducts.map((product) => (
+        {data &&
+          data.map((product,index) => (
             <div
               key={product.id}
               className="m-2 w-[280px] border rounded-lg bg-white"
             >
-              <NewArrivalsCard data={product} />
+              <NewArrivalsCard data={product} key={index} />
             </div>
           ))}
       </div>

@@ -46,19 +46,19 @@ const TrendingCloths = () => {
         className={`${styles.section} flex flex-row justify-between bg-white p-6 rounded-lg mb-12 shadow-xl mt-5`}
         id="categories"
       >
-        <div className="flex flex-col w-full gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-4 lg:gap-[25px] xl:grid-cols-5 xl:gap-[30px] mb-12 border-0">
+        <div className="flex flex-col w-full gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-4 lg:gap-[25px] xl:grid-cols-5 xl:gap-[30px]  border-0">
           <div>
             <h1 className="text-black underline text-xl">Trending Clothes</h1>
           </div>
             {data && data.length !== 0 && (
-              <div className="flex w-[98%] justify-between mb-5 overflow-scroll">
+              <div className="flex w-[98%] justify-between mb-5 ">
                 {data &&
                   data.map((i, index) => <ProductCard data={i} key={index} />)}
               </div>
             )}
         </div>
         <div className="relative w-[30%] h-full max-lg:flex max-lg:w-[35%] items-center flex-col">
-              <img src={ad_img} alt="" className="w-full h-full" />
+              <img src={ad_img} alt="" className="w-full h-[350px]" />
               <p className="absolute text-white w-max bottom-1 right-0 p-2 bg-red-700  max-lg:p-1 max-lg:text-xs max-sm:text-[8px]">
                 Get 30% discount on <br />
                 Bombay Shirt Company

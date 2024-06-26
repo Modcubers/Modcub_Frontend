@@ -18,7 +18,7 @@ const About = () => {
 
     return (
         <>
-            <div className="font-Poppins">
+            <div className="bg-[#E7F2F9]">
                 <Header activeHeading={0} />
                 <div className="relative">
                     <img
@@ -34,8 +34,8 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className="container mx-auto py-8 flex flex-col md:flex-row">
-                    <div className="max-w-4xl mx-auto px-4">
+                <div className="container mx-auto py-8 flex flex-col md:flex-row bg-white">
+                    <div className="max-w-4xl mx-auto px-4 ">
                         <h1 className="text-3xl font-bold mb-4">
                             Welcome to Modcub
                         </h1>

@@ -17,9 +17,9 @@ const ContactUs = () => {
 
     return (
         <>
-            <div>
+            <div className="bg-[#E7F2F9]">
                 <Header activeHeading={0} />
-                <div className="container mx-auto py-8">
+                <div className="container mx-auto py-8 bg-white">
                     <div className="max-w-4xl mx-auto px-4">
                         <h1 className="text-3xl font-bold mb-4">
                             Welcome to Modcub contact Us

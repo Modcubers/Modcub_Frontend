@@ -18,7 +18,7 @@ const Help = () => {
 
     return (
         <>
-            <div className="font-Poppins">
+            <div className="bg-[#E7F2F9]">
                 <Header activeHeading={0} />
                 <div className="relative">
                     <img

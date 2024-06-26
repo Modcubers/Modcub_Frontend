@@ -1,54 +1,64 @@
-import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "../../../styles/styles";
-import ProductCard from "../ProductCard/ProductCard";
-import clothes_img from "../../../Assests/Images/clothes_1.png";
 import { categoriesData } from "../../../static/data";
 
 const NewArrivals = () => {
-  // const { allProducts } = useSelector((state) => state.products);
+  const navigate = useNavigate();
   const halfLength = Math.ceil(categoriesData.length / 2);
+
+  // Function to handle category click and navigate to the desired route
+  const handleCategoryClick = (categoryName) => {
+    navigate(`/products?category=${categoryName}`);
+  };
+
   return (
     <>
-      <div
-        className={`${styles.section} bg-white p-6 rounded-t-lg shadow-xl mt-5`}
-      >
-        <h1 className="text-black underline text-xl">Featured Products</h1>
-
-        <div className="h-full w-full">
+      <div className="w-11/12 mx-auto bg-white p-6 rounded-t-lg shadow-xl mt-5">
+        <h1 className="text-black underline text-xl">Our Categories</h1>
+        <div className="hideScrollbar h-full w-full overflow-x-scroll flex justify-start items-center">
           {categoriesData.length > 0 ? (
-            <div className="w-full flex justify-evenly overflow-scroll">
-              {categoriesData.slice(0,halfLength).map((category) => (
-                <img
-                  src={category.image_Url}
-                  alt={category.title}
-                  className="h-32 w-max m-5"
-                />
-                // <p>{category.title}</p>
+            <>
+              {categoriesData.slice(0, halfLength).map((category) => (
+                <div
+                  key={category.id}
+                  className="w-[300px] mx-5 flex justify-center items-center flex-col cursor-pointer" // Added cursor-pointer for indicating clickable
+                  onClick={() => handleCategoryClick(category.title)} // Click event added
+                >
+                  <img
+                    src={category.image_Url}
+                    alt={category.title}
+                    className="min-w-[200px] max-h-[200px]"
+                  />
+                  <p className="mt">{category.title}</p>
+                </div>
               ))}
-              ;
-            </div>
+            </>
           ) : (
             <p className="text-center text-gray-500">No products available</p>
           )}
         </div>
       </div>
-      <div
-        className={`${styles.section} bg-white p-6 rounded-b-lg mb-12 shadow-xl`}
-      >
-        <div className="h-full w-full">
+
+      <div className={`${styles.section} bg-white p-6 rounded-b-lg mb-12 shadow-xl`}>
+        <div className="hideScrollbar h-full w-full overflow-x-scroll flex justify-start items-center">
           {categoriesData.length > 0 ? (
-            <div className="w-full flex justify-evenly overflow-scroll">
+            <>
               {categoriesData.slice(halfLength).map((category) => (
-                <img
-                  src={category.image_Url}
-                  alt={category.title}
-                  className="h-32 w-max m-5"
-                />
-                // <p>{category.title}</p>
+                <div
+                  key={category.id}
+                  className="w-[300px] mx-5 flex justify-center items-center flex-col cursor-pointer" // Added cursor-pointer for indicating clickable
+                  onClick={() => handleCategoryClick(category.title)} // Click event added
+                >
+                  <img
+                    src={category.image_Url}
+                    alt={category.title}
+                    className="min-w-[200px] max-h-[200px]"
+                  />
+                  <p className="mt">{category.title}</p>
+                </div>
               ))}
-              ;
-            </div>
+            </>
           ) : (
             <p className="text-center text-gray-500">No products available</p>
           )}

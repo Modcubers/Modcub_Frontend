@@ -190,7 +190,7 @@ export const categoriesData = [
     },
     {
         id: 2,
-        title: "Cosmetics & Body Care",
+        title: "Cosmetics and Body Care",
         subTitle: "",
         image_Url:"https://rukminim2.flixcart.com/image/612/612/xif0q/lipstick/3/m/0/4-2-creamy-matte-long-stay-lipstick-with-murumuru-butter-and-original-imahf4scwv4zqx7r.jpeg?q=70",
     },
@@ -233,7 +233,7 @@ export const categoriesData = [
     },
     {
         id: 8,
-        title: "Mobile & Tablet",
+        title: "Mobile and Tablet",
         subTitle: "",
         image_Url:
             "https://5.imimg.com/data5/SELLER/Default/2023/3/296178163/GX/GL/SD/186724856/vivo-mobile-phone.jpg",
@@ -356,7 +356,7 @@ export const categoriesData = [
     },
     {
         id:31,
-        title:"Office & Stationary",
+        title:"Office and Stationary",
         subTitle:"",
         image_Url:"https://rukminim2.flixcart.com/image/612/612/l1tmf0w0/art-set/l/u/4/blue-kids-smart-kit-combo-bag-by-the-mark-stationery-doms-original-imagdarfqgg8uqcu.jpeg?q=70",
     },
@@ -368,7 +368,7 @@ export const categoriesData = [
     },
     {
         id:33,
-        title:"Cycle & Gym Equipments",
+        title:"Cycle and Gym Equipments",
         subTitle:"",
         image_Url:"https://rukminim2.flixcart.com/image/612/612/xif0q/exercise-bike/z/i/x/llf45-llf45-fit-pro-exercise-spin-bike-120-lifelong-32-28-7-original-imahfmh4yryjzswx.jpeg?q=70",
     },
@@ -380,7 +380,7 @@ export const categoriesData = [
     },
     {
         id:35,
-        title:"Filter & Accessories",
+        title:"Filter and Accessories",
         subTitle:"",
         image_Url:"https://t4.ftcdn.net/jpg/04/60/10/51/360_F_460105107_1dkr8vFnWai35wkUPX5DFxW5a39VgrEJ.jpg",
     },
@@ -398,7 +398,7 @@ export const categoriesData = [
     },
     {
         id:38,
-        title:"Tools & Equipments",
+        title:"Tools and Equipments",
         subTitle:"",
         image_Url:"https://rukminim2.flixcart.com/image/612/612/xif0q/wrench-set/j/k/m/wrs005-home-professional-tata-agrico-original-imagk7pzpq9vrxvy.jpeg?q=70",
     },

@@ -1,11 +1,14 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import {
   AiFillFacebook,
   AiFillInstagram,
   AiFillYoutube,
   AiOutlineTwitter,
   AiOutlineMail,
-  AiOutlinePhone
+  AiOutlinePhone,
+  AiOutlineQuestionCircle,
+  AiFillDashboard
 } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import {
@@ -13,10 +16,12 @@ import {
   footerProductLinks,
   footerSupportLinks,
 } from "../../static/data";
-
+import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 import modcub from "../../Assests/modcub.jpg";
 
 const Footer = () => {
+  const { isSeller } = useSelector((state) => state.seller);
+  const { isAuthenticated, user } = useSelector((state) => state.user);
   return (
     <div className="bg-[#000] text-white">
       {/* <div className="md:flex md:justify-between md:items-center sm:px-12 px-4 bg-[#342ac8] py-7">
@@ -131,8 +136,8 @@ const Footer = () => {
             className="text-gray-400 hover:text-teal-400 duration-300
                    text-sm cursor-pointer leading-6"
           >
-            Rajpura Gurmandi near Udhbav Boys Hostel, Roop nagar, New Delhi,
-            Delhi, 110007
+            11752/4, Sat Nagar, Karol Bagh, <br />
+            New Delhi-110005
           </li>
           <li
             className="flex justify-start items-center text-gray-400 hover:text-teal-400 duration-300
@@ -140,9 +145,9 @@ const Footer = () => {
           >
             <AiOutlineMail
               size={20}
-              style={{marginRight:"5px",cursor: "pointer" }}
+              style={{ marginRight: "5px", cursor: "pointer" }}
             ></AiOutlineMail>
-            email@gmail.com
+            viralproduction.studios@gmail.com
           </li>
           <li
             className="flex justify-start items-center text-gray-400 hover:text-teal-400 duration-300
@@ -150,11 +155,24 @@ const Footer = () => {
           >
             <AiOutlinePhone
               size={20}
-              style={{marginRight:"5px",cursor: "pointer" }}
+              style={{ marginRight: "5px", cursor: "pointer" }}
             ></AiOutlinePhone>
-            7231987257
+            9560154974
           </li>
         </ul>
+      </div>
+
+      <div className="w-full flex justify-center items-center mb-10">
+        <Link to={`${isSeller ? "/dashboard" : "/shop-create"}`}>
+          <button className="bg-[#005DC9] h-[50px] w-[200px] rounded-lg flex items-center justify-evenly px-3">
+            {isSeller ? "Go Dashboard" : "Become Seller"}{" "}
+          </button>
+        </Link>
+      </div>
+
+      <div className="w-full flex justify-evenly items-center mb-10">
+        <Link className="flex justify-start items-center">For Advertisement</Link>
+        <Link to={"/help"} className="flex justify-evenly items-center"><AiOutlineQuestionCircle /> Help Center</Link>
       </div>
 
       <div
