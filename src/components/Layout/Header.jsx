@@ -96,7 +96,7 @@ const Header = ({ activeHeading }) => {
           </div>
 
           <div className="w-[150px] h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer">
-            <Link to={`${isSeller ? "/dashboard" : "/shop-create"}`}>
+            <Link to={`${isSeller ? "/dashboard" : "/login"}`}>
               <h1
                 className={`${
                   isAuthenticated ? "hidden" : "block"
@@ -177,9 +177,9 @@ const Header = ({ activeHeading }) => {
             </div>
 
             <div className={`${styles.noramlFlex}`}>
-              <div className="relative cursor-pointer mr-[15px]  rounded-full border-black border-2">
+              <div className="relative cursor-pointer mr-[15px]">
                 {isAuthenticated ? (
-                  <Link to="/profile" className=" bg-black">
+                  <Link to="/profile" className=" bg-black rounded-full border-2 border-black">
                     <img
                       src={`${user?.avatar?.url}`}
                       className="w-[35px] h-[35px] rounded-full"
@@ -188,7 +188,7 @@ const Header = ({ activeHeading }) => {
                   </Link>
                 ) : (
                   <Link to="/login">
-                    <CgProfile size={30} color="rgb(255 255 255 / 83%)" />
+                    <CgProfile size={30} color="rgb(0 0 0 / 100%)" />
                   </Link>
                 )}
               </div>

@@ -94,6 +94,7 @@ const Footer = () => {
                 className="text-gray-400 hover:text-teal-400 duration-300
                    text-sm cursor-pointer leading-6"
                 to={link.link}
+                onClick={() => window.scrollTo(0, 0)}
               >
                 {link.name}
               </Link>
@@ -109,6 +110,7 @@ const Footer = () => {
                 className="text-gray-400 hover:text-teal-400 duration-300
                    text-sm cursor-pointer leading-6"
                 to={link.link}
+                onClick={() => window.scrollTo(0, 0)}
               >
                 {link.name}
               </Link>
@@ -124,6 +126,7 @@ const Footer = () => {
                 className="text-gray-400 hover:text-teal-400 duration-300
                    text-sm cursor-pointer leading-6"
                 to={link.link}
+                onClick={() => window.scrollTo(0, 0)}
               >
                 {link.name}
               </Link>
@@ -163,7 +166,7 @@ const Footer = () => {
       </div>
 
       <div className="w-full flex justify-center items-center mb-10">
-        <Link to={`${isSeller ? "/dashboard" : "/shop-create"}`}>
+        <Link to={`${isSeller ? "/dashboard" : "/shop-create"}`} onClick={() => window.scrollTo(0, 0)} >
           <button className="bg-[#005DC9] h-[50px] w-[200px] rounded-lg flex items-center justify-evenly px-3">
             {isSeller ? "Go Dashboard" : "Become Seller"}{" "}
           </button>
@@ -171,8 +174,8 @@ const Footer = () => {
       </div>
 
       <div className="w-full flex justify-evenly items-center mb-10">
-        <Link className="flex justify-start items-center">For Advertisement</Link>
-        <Link to={"/help"} className="flex justify-evenly items-center"><AiOutlineQuestionCircle /> Help Center</Link>
+        <Link onClick={() => window.scrollTo(0, 0)} className="flex justify-start items-center">For Advertisement</Link>
+        <Link to={"/help"} onClick={() => window.scrollTo(0, 0)} className="flex justify-evenly items-center"><AiOutlineQuestionCircle /> Help Center</Link>
       </div>
 
       <div

@@ -12,13 +12,13 @@ const Privacy = () => {
         "https://www.maidwale.com/images/about/istockphoto-1283119095-170667a.jpg",
     ];
     return (
-        <>
+        <div className="bg-[#E7F2F9]">
             <Header activeHeading={0} />
             <div className=" relative ">
                 <img
                     src={`${demoImages[0]}`}
                     alt="Demo Image 1"
-                    className="w-full h-auto rounded-md mb-6 h-[700px] "
+                    className="w-full h-[700px] "
                 />
                 <div className=" absolute bottom-56 left-40 text-gray-100 text-5xl font-Poppins font-bold">
                     Privacy Policy
@@ -27,7 +27,7 @@ const Privacy = () => {
                     </div>
                 </div>
             </div>
-            <div className="container mx-auto py-8 flex flex-col md:flex-row">
+            <div className="container mx-auto py-8 bg-white flex flex-col md:flex-row">
                 <div className="max-w-4xl mx-auto px-4">
                     <h1 className="text-3xl font-bold mb-4 text-gray-700">
                         Privacy Policy
@@ -240,7 +240,7 @@ const Privacy = () => {
                 </div>
             </div>
             <Footer />
-        </>
+        </div>
     );
 };
 

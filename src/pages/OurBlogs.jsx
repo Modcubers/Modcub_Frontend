@@ -19,13 +19,13 @@ const OurBlogs = () => {
 
     return (
         <>
-            <div className="font-Poppins">
+            <div className="bg-[#E7F2F9]">
                 <Header activeHeading={0} />
                 <div className="relative">
                     <img
                         src={`${demoImages[0]}`}
                         alt="Demo Image 1"
-                        className="w-full h-auto rounded-md mb-6 md:mb-0 h-[700px]"
+                        className="w-full rounded-md mb-6 md:mb-0 h-[700px]"
                     />
                     <div className="absolute bottom-10 md:bottom-56 left-4 md:left-40 text-gray-100 text-5xl md:text-6xl font-Poppins font-bold">
                         Our Blogs
@@ -35,7 +35,7 @@ const OurBlogs = () => {
                     </div>
                 </div>
 
-                <div className="container mx-auto py-8 flex flex-col md:flex-row">
+                <div className="bg-white container mx-auto py-8 flex flex-col md:flex-row">
                     <div className="max-w-4xl mx-auto px-4">
                         <Blog />
                         {/* <Blog />

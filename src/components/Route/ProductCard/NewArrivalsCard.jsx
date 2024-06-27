@@ -23,8 +23,7 @@ const NewArrivalsCard = ({ data,isEvent }) => {
             {data.name.length > 20 ? data.name.slice(0, 18) + ".." : data.name}
           </p>
           <p className="text-black mt-1">
-            Rs
-            <span className="font-bold"> {data.discountPrice}</span>{" "}
+            <span className="font-bold"> {data.discountPrice} Rs</span>{" "}
           </p>
         </div>
       </div>

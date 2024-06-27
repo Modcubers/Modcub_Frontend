@@ -11,7 +11,7 @@ const Terms = () => {
         "https://www.maidwale.com/images/about/istockphoto-1283119095-170667a.jpg",
     ];
     return (
-        <>
+        <div className="bg-[#E7F2F9]">
             <Header activeHeading={0} />
             <div className="relative">
                 <img
@@ -27,7 +27,7 @@ const Terms = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto py-8 flex flex-col md:flex-row">
+            <div className="container mx-auto py-8 flex flex-col md:flex-row bg-white">
                 <div className=" max-w-4xl m-auto px-7">
                     <h1 className="text-3xl font-bold mb-4">TERMS OF USE</h1>
                     <p className="mb-4">
@@ -551,7 +551,7 @@ const Terms = () => {
                 </div>
             </div>
             <Footer />
-        </>
+        </div>
     );
 };
 
