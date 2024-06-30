@@ -18,16 +18,6 @@ const TrendingCloths = () => {
   };
 
   useEffect(() => {
-    // Set up event listener for window resize
-    window.addEventListener("resize", handleResize);
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  useEffect(() => {
     if (allProducts) {
       const clothingProducts = allProducts.filter(
         (product) => product.category === "Cloths"
@@ -35,8 +25,7 @@ const TrendingCloths = () => {
       const sortedClothing = clothingProducts.sort(
         (a, b) => b.sold_out - a.sold_out
       );
-      const numberOfItems = windowWidth < 1025 ? 3 : 4;
-      const topClothing = sortedClothing.slice(0, numberOfItems);
+      const topClothing = sortedClothing.slice(0, 4);
       setData(topClothing);
     } else {
       setData([]);
@@ -59,23 +48,40 @@ const TrendingCloths = () => {
   return (
     <>
       <div
-        className={`${styles.section} flex flex-row justify-between bg-white p-6 rounded-lg mb-12 shadow-xl mt-5`}
+        className={`${styles.section} hidden sm:block shadow-xl rounded-lg bg-white overflow-clip `}
+      >
+        <div className="branding my-12 flex justify-between w-full shadow-sm p-5 rounded-md animate-scrollHorizontal">
+          {images.map((brand, index) => (
+            <div className="flex items-start" key={brand.src || index}>
+              <img src={brand.src} alt={brand.alt} className="max-h-12" />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div
+        className={`${styles.section} flex flex-row justify-between bg-white p-6 rounded-lg mb-12 shadow-xl mt-5 max-800px:mt-2 max-450px:p-3`}
         id="categories"
       >
-        <div className="flex flex-col w-full border-0">
+        <div className="flex flex-col w-[80%] border-0 max-450px:w-full">
           <div>
-            <h1 className="text-black underline text-xl">Trending Clothes</h1>
+            <h1 className="text-black underline text-xl max-800px:text-lg">
+              Trending Clothes
+            </h1>
           </div>
           {data && data.length !== 0 && (
-            <div className="flex w-[98%] justify-between mb-5 ">
+            <div className="flex w-[95%] justify-between mb-5 overflow-x-scroll max-450px:w-full">
               {data &&
                 data.map((i, index) => <ProductCard data={i} key={index} />)}
             </div>
           )}
         </div>
-        <div className="relative w-[30%] h-full max-lg:flex max-lg:w-[35%] items-center justify-center flex-col">
-          <img src={ad_img} alt="" className="w-full h-full" />
-          <p className="absolute text-white w-max bottom-1 right-0 p-2 bg-red-700  max-lg:p-1 max-lg:text-xs max-sm:text-[8px]">
+        <div className="relative w-[20%] max-1000px:flex max-1000px:w-[35%] items-center justify-center max-450px:hidden">
+          <img
+            src={ad_img}
+            alt=""
+            className="w-full h-[full] max-1000px:h-[250px]"
+          />
+          <p className="absolute text-white w-max bottom-10 right-0 p-2 bg-red-700  max-lg:p-1 max-lg:text-xs max-sm:text-[8px] ">
             Get 30% discount on <br />
             Bombay Shirt Company
           </p>
@@ -103,17 +109,6 @@ const TrendingCloths = () => {
               );
             })}
         </div> */}
-      </div>
-      <div
-        className={`${styles.section} hidden sm:block shadow-xl rounded-lg bg-white overflow-clip `}
-      >
-        <div className="branding my-12 flex justify-between w-full shadow-sm p-5 rounded-md animate-scrollHorizontal">
-          {images.map((brand, index) => (
-            <div className="flex items-start" key={brand.src || index}>
-              <img src={brand.src} alt={brand.alt} className="max-h-12" />
-            </div>
-          ))}
-        </div>
       </div>
     </>
   );

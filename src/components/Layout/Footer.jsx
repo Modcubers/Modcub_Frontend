@@ -142,8 +142,8 @@ const Footer = () => {
             11752/4, Sat Nagar, Karol Bagh, <br />
             New Delhi-110005
           </li>
-          <li
-            className="flex justify-start items-center text-gray-400 hover:text-teal-400 duration-300
+          {/* <li
+            className="flex max-1000px:flex-col max-1000px:items-start justify-start items-center text-gray-400 hover:text-teal-400 duration-300
                    text-sm cursor-pointer leading-6"
           >
             <AiOutlineMail
@@ -151,7 +151,7 @@ const Footer = () => {
               style={{ marginRight: "5px", cursor: "pointer" }}
             ></AiOutlineMail>
             viralproduction.studios@gmail.com
-          </li>
+          </li> */}
           <li
             className="flex justify-start items-center text-gray-400 hover:text-teal-400 duration-300
                    text-sm cursor-pointer leading-6"

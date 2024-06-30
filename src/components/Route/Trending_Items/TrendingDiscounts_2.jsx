@@ -1,15 +1,21 @@
 import React from "react";
 import styles from "../../../styles/styles";
-import discountimg from "../../../Assests/Images/clothes.png";
+import discountimg from "../../../Assests/Images/jeans.png";
 
 const TrendingDiscounts_2 = () => {
   return (
     <div
-      className={`${styles.section} flex justify-evenly max-400px:justify-between max-sm:justify-between items-center bg-[#047BBE] p-6 rounded-sm mb-12 shadow-xl mt-5`}
+      className={`w-11/12 mx-auto h-[300px] flex justify-evenly max-400px:justify-between max-sm:justify-between items-center bg-[#047BBE] p-6 rounded-sm mb-12 shadow-xl mt-5`}
       id="categories"
     >
-      <img src={discountimg} alt="Discount image" className="w-5/12 max-sm:w-5/12" />
-      <p className="text-[20px] max-800px:text-lg max-sm:text-[10px]">40% discount on Seasons T Shirts <br /> Shop Now , Only for this week</p>
+      <img
+        src={discountimg}
+        alt="Discount image"
+        className="w-3/12 h-auto object-contain max-sm:w-5/12"
+      />
+      <p className="text-[30px] text-white max-800px:text-lg max-sm:text-[10px]">
+        Black Jeans for Men <br />With  <span className="text-red-600">40%</span> Discount @ 1200 Rs
+      </p>
     </div>
   );
 };

@@ -179,7 +179,10 @@ const Header = ({ activeHeading }) => {
             <div className={`${styles.noramlFlex}`}>
               <div className="relative cursor-pointer mr-[15px]">
                 {isAuthenticated ? (
-                  <Link to="/profile" className=" bg-black rounded-full border-2 border-black">
+                  <Link
+                    to="/profile"
+                    className=" bg-black rounded-full border-2 border-black"
+                  >
                     <img
                       src={`${user?.avatar?.url}`}
                       className="w-[35px] h-[35px] rounded-full"

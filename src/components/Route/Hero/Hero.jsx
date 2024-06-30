@@ -8,7 +8,7 @@ const Hero = () => {
     <div
       className={` min-h-[5vh] w-full sm:min-h-[5vh] bg-no-repeat flex justify-center`}
     >
-      <div className="w-11/12 h-max sm:h-[250px]">
+      <div className="w-11/12 h-[250px] max-1000px:h-[180px] max-800px:h-[150px] max-450px:h-[100px]">
         <Carousel indicators={false}>
           <a href="" className="w-full" >
             <img
@@ -24,25 +24,6 @@ const Hero = () => {
           />
         </Carousel>
       </div>
-      {/* <div
-                className={`${styles.section} w-[90%] sm:w-[60%] sm:absolute top-1/4 left-1/4`}
-            >
-                <h1
-                    className={`text-[25px] sm:text-[35px] md:text-[40px] lg:text-[60px] leading-[1.2] text-[#3d3a3a] font-[600] capitalize`}
-                >
-                    Welcome to Your Ultimate Shopping Destination
-                </h1>
-                <p className="pt-5 text-[14px] sm:text-[16px] font-[Poppins] font-[400] text-[#000000ba]">
-                " ModCub, where each purchase narrates a unique tale. Dive into our diverse marketplace curated by passionate vendors globally. From fashion to electronics, home decor to gourmet delights, discover treasures to enrich every moment. Join our dynamic community and embark on a voyage of exploration, inspiration, and boundless potential."
-                </p>
-                <Link to="/products" className="inline-block">
-                    <div className={`${styles.button} mt-5`}>
-                        <span className="text-[#fff] font-[Poppins] text-[14px] sm:text-[18px]">
-                            Shop Now
-                        </span>
-                    </div>
-                </Link>
-            </div> */}
     </div>
   );
 };

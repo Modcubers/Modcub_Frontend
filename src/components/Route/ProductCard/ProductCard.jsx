@@ -63,8 +63,11 @@ const ProductCard = ({ data, isEvent }) => {
 
   return (
     <>
-      <div className="w-[250px] max-h-[330px] bg-white rounded-lg  p-3 relative cursor-pointer duration-[0.5s] ease-in-out hover:shadow-[0_0_50px_-15px_rgba(0,0,0,0.3)]">
-        <div className="w-full h-full flex flex-col justify-end">
+      <div
+        className="min-w-[250px] max-h-[350px] bg-white rounded-lg m-3  p-3 relative cursor-pointer duration-[0.5s] ease-in-out hover:shadow-[0_0_25px_-10px_rgba(0,0,0,0.3)] 
+      max-800px:min-w-[200px] max-800px:max-h-[290px] max-450px:min-w-[130px] max-450px:max-h-[230px]"
+      >
+        <div className="w-full h-full flex flex-col justify-end max-450px:justify-center">
           <Link
             to={`${
               isEvent === true
@@ -75,7 +78,7 @@ const ProductCard = ({ data, isEvent }) => {
             <img
               src={`${data.images && data.images[0]?.url}`}
               alt=""
-              className="w-full h-[170px] object-contain"
+              className="w-full h-[170px] object-contain max-800px:h-[140px] max-450px:h-[70px]"
             />
           </Link>
           {/* <Link to={`/shop/preview/${data?.shop._id}`}>
@@ -88,7 +91,7 @@ const ProductCard = ({ data, isEvent }) => {
                 : `/product/${data._id}`
             }`}
           >
-            <h4 className="pb-3 font-[500]">
+            <h4 className="pb-3 font-[500] max-1000px:h-[50px] max-1000px:overflow-y-hidden max-800px:text-md max-450px:text-sm max-450px:h-[40px]">
               {data.name.length > 40
                 ? data.name.slice(0, 50) + "..."
                 : data.name}
@@ -98,15 +101,19 @@ const ProductCard = ({ data, isEvent }) => {
                         <Ratings rating={data?.ratings} />
                     </div> */}
 
-            <div className="py-2 flex items-center justify-between">
+            <div className="py-2 flex items-center justify-between max-450px:py-1">
               <div className="flex items-center ">
-                <h5 className={`${styles.productDiscountPrice}`}>
+                <h5
+                  className={`${styles.productDiscountPrice} max-800px:font-[500] max-450px:text-sm`}
+                >
                   {data.originalPrice === 0
                     ? data.originalPrice
                     : data.discountPrice}{" "}
                   Rs
                 </h5>
-                <h4 className={`${styles.price}`}>
+                <h4
+                  className={`${styles.price} max-800px:font-[600] max-450px:text-xs`}
+                >
                   {data.originalPrice ? data.originalPrice + " " + " Rs" : null}
                 </h4>
               </div>
@@ -123,7 +130,7 @@ const ProductCard = ({ data, isEvent }) => {
           </Link>
           <button
             type="button"
-            className="bg-[#005DC9] text-white h-[40px] w-[150px] rounded-lg"
+            className="bg-[#005DC9] text-white h-[40px] w-[150px] rounded-lg max-800px:h-[35px] max-800px:w-[120px] max-450px:h-[25px] max-450px:text-xs max-450px:w-[100px] max-450px:hidden"
             onClick={() => addToCartHandler(data._id)}
           >
             Add to Cart

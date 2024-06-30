@@ -24,10 +24,10 @@ const TrendingElectronics = () => {
   return (
     <>
       <div
-        className={`${styles.section} bg-white p-6 rounded-lg mb-12 shadow-xl mt-5 overflow-hidden`}
+        className={`${styles.section} bg-white p-6 rounded-lg mb-12 shadow-xl mt-5`}
       >
-        <h1 className="text-black underline text-xl">Trending Electronics</h1>
-        <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-4 lg:gap-[25px] xl:grid-cols-5 xl:gap-[30px] my-3 border-0">
+        <h1 className="text-black underline text-xl max-800px:text-lg">Trending Electronics</h1>
+        <div className="flex w-full justify-between mb-5 overflow-x-scroll">
           {data && data.length !== 0 && (
             <>
               {data &&

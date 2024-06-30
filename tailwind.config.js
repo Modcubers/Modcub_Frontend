@@ -15,7 +15,7 @@ module.exports = {
                 "1100px": "1110px",
                 "800px": "800px",
                 "1300px": "1300px",
-                "400px": "400px",
+                "450px": "450px",
             },
             animation: {
                 scrollHorizontal: "scrollHorizontal 20s linear infinite",
@@ -28,11 +28,11 @@ module.exports = {
             },
             hideScrollbar: {
                 '::-webkit-scrollbar': {
-                  display: 'none',
+                    display: 'none',
                 },
                 '-ms-overflow-style': 'none',  /* IE and Edge */
                 'scrollbar-width': 'none',  /* Firefox */
-              },
+            },
         },
     },
     plugins: [flowbite.plugin()],

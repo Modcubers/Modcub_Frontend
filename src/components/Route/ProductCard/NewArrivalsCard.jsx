@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NewArrivalsCard = ({ data,isEvent }) => {
+const NewArrivalsCard = ({ data, isEvent }) => {
   // Check if the product has a price and it's a number
 
   return (
@@ -12,8 +12,11 @@ const NewArrivalsCard = ({ data,isEvent }) => {
           : `/product/${data._id}`
       }`}
     >
-      <div className="flex flex-row items-center justify-between p-2 rounded-lg shadow-md hover:bg-gray-100">
-        <img 
+      <div
+        className="flex w-[275px] h-[116px] my-3 border flex-row items-center justify-between p-2 rounded-lg shadow-md hover:bg-gray-100
+                    max-800px:w-[200px] max-800px:flex-col max-800px:h-auto max-450px:w-[300px] max-450px:flex-row "
+      >
+        <img
           src={data.images && data.images[0]?.url}
           alt={data.category || "Product Image"}
           className="w-[100px] h-[100px] rounded-lg object-contain"

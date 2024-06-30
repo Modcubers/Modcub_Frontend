@@ -14,8 +14,10 @@ const NewArrivals = () => {
 
   return (
     <>
-      <div className="w-11/12 mx-auto bg-white p-6 rounded-t-lg shadow-xl mt-5">
-        <h1 className="text-black underline text-xl">Our Categories</h1>
+      <div className="w-11/12 mx-auto bg-white p-6 rounded-t-lg shadow-xl mt-5 max-800px:py-3">
+        <h1 className="text-black underline text-xl max-800px:text-lg">
+          Our Categories
+        </h1>
         <div className="hideScrollbar h-full w-full overflow-x-scroll flex justify-start items-center">
           {categoriesData.length > 0 ? (
             <>
@@ -28,7 +30,7 @@ const NewArrivals = () => {
                   <img
                     src={category.image_Url}
                     alt={category.title}
-                    className="min-w-[200px] max-h-[200px]"
+                    className="min-w-[200px] max-h-[200px] max-800px:min-w-[150px]"
                   />
                   <p className="mt">{category.title}</p>
                 </div>
@@ -40,7 +42,9 @@ const NewArrivals = () => {
         </div>
       </div>
 
-      <div className={`${styles.section} bg-white p-6 rounded-b-lg mb-12 shadow-xl`}>
+      <div
+        className={`${styles.section} bg-white p-6 rounded-b-lg mb-12 shadow-xl max-800px:py-0`}
+      >
         <div className="hideScrollbar h-full w-full overflow-x-scroll flex justify-start items-center">
           {categoriesData.length > 0 ? (
             <>
@@ -53,7 +57,7 @@ const NewArrivals = () => {
                   <img
                     src={category.image_Url}
                     alt={category.title}
-                    className="min-w-[200px] max-h-[200px]"
+                    className="min-w-[200px] max-h-[200px] max-800px:min-w-[150px]"
                   />
                   <p className="mt">{category.title}</p>
                 </div>

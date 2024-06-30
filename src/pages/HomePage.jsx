@@ -12,29 +12,23 @@ import TrendingElectronics from "../components/Route/Trending_Items/TrendingElec
 import TrendingDiscounts from "../components/Route/Trending_Items/TrendingDiscounts";
 import NewArrivals from "../components/Route/NewArrivals/NewArrivals";
 import TrendingShoes from "../components/Route/Trending_Items/TrendingShoes";
-import TrendingDailyUse from "../components/Route/Trending_Items/TrendingDailyUse";
+import TrendingCosmetics from "../components/Route/Trending_Items/TrendingCosmetics";
 import TrendingDiscounts_2 from "../components/Route/Trending_Items/TrendingDiscounts_2";
-
+import Books from "../components/Route/Trending_Items/Books";
 const HomePage = () => {
     return (
         <div className="bg-[#E7F2F9]">
             <Header activeHeading={1} />
             <Hero />
-            <FeaturedProduct />
-            {/* <div className=" w-auto h-1 my-20 bg-amber-900  rounded-full m-auto"></div> */}
-            <TrendingDiscounts/>
-            <TrendingShoes />
-            <TrendingCloths />
-            {/* <div className=" w-auto h-1 my-20 bg-amber-900  rounded-full m-auto"></div> */}
-            <TrendingDiscounts_2/>
-            <TrendingElectronics />
-            {/* <div className=" w-[1400px] h-1 my-20 bg-amber-900  rounded-full m-auto"></div> */}
-            {/* <Events /> */}
-            {/* <div className=" w-auto h-1 my-20 bg-amber-900  rounded-full m-auto"></div> */}
-            <TrendingDailyUse/>
             <NewArrivals/>
-
-            {/* <Sponsored /> */}
+            <TrendingElectronics />
+            <TrendingCloths />
+            <TrendingDiscounts/>
+            <TrendingCosmetics/>
+            <TrendingShoes />
+            <TrendingDiscounts_2/>
+            <FeaturedProduct />
+            <Books/>
             <Footer />
         </div>
     );
