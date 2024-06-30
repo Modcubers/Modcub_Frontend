@@ -3,13 +3,13 @@ import { useSelector } from "react-redux";
 import styles from "../../../styles/styles";
 import ProductCard from "../ProductCard/ProductCard";
 
-const TrendingElectronics = () => {
+const TrendingShoes = () => {
   const [data, setData] = useState([]);
   const { allProducts } = useSelector((state) => state.products);
   useEffect(() => {
     if (allProducts) {
       const electronicsProducts = allProducts.filter(
-        (product) => product.category === "Electronics"
+        (product) => product.category === "Shoes"
       );
       const sortedElectronics = electronicsProducts.sort(
         (a, b) => b.sold_out - a.sold_out
@@ -26,7 +26,7 @@ const TrendingElectronics = () => {
       <div
         className={`${styles.section} bg-white p-6 rounded-lg mb-12 shadow-xl mt-5 overflow-hidden`}
       >
-        <h1 className="text-black underline text-xl">Trending Electronics</h1>
+        <h1 className="text-black underline text-xl">Trending Shoes</h1>
         <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-4 lg:gap-[25px] xl:grid-cols-5 xl:gap-[30px] my-3 border-0">
           {data && data.length !== 0 && (
             <>
@@ -40,4 +40,4 @@ const TrendingElectronics = () => {
   );
 };
 
-export default TrendingElectronics;
+export default TrendingShoes;

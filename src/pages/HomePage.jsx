@@ -11,22 +11,29 @@ import Footer from "../components/Layout/Footer";
 import TrendingElectronics from "../components/Route/Trending_Items/TrendingElectronics";
 import TrendingDiscounts from "../components/Route/Trending_Items/TrendingDiscounts";
 import NewArrivals from "../components/Route/NewArrivals/NewArrivals";
+import TrendingShoes from "../components/Route/Trending_Items/TrendingShoes";
+import TrendingDailyUse from "../components/Route/Trending_Items/TrendingDailyUse";
+import TrendingDiscounts_2 from "../components/Route/Trending_Items/TrendingDiscounts_2";
 
 const HomePage = () => {
     return (
         <div className="bg-[#E7F2F9]">
             <Header activeHeading={1} />
             <Hero />
+            <FeaturedProduct />
             {/* <div className=" w-auto h-1 my-20 bg-amber-900  rounded-full m-auto"></div> */}
+            <TrendingDiscounts/>
+            <TrendingShoes />
             <TrendingCloths />
             {/* <div className=" w-auto h-1 my-20 bg-amber-900  rounded-full m-auto"></div> */}
+            <TrendingDiscounts_2/>
             <TrendingElectronics />
             {/* <div className=" w-[1400px] h-1 my-20 bg-amber-900  rounded-full m-auto"></div> */}
             {/* <Events /> */}
-            <TrendingDiscounts/>
             {/* <div className=" w-auto h-1 my-20 bg-amber-900  rounded-full m-auto"></div> */}
-            <FeaturedProduct />
+            <TrendingDailyUse/>
             <NewArrivals/>
+
             {/* <Sponsored /> */}
             <Footer />
         </div>

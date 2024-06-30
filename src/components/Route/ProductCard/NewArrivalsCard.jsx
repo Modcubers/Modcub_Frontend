@@ -16,7 +16,7 @@ const NewArrivalsCard = ({ data,isEvent }) => {
         <img 
           src={data.images && data.images[0]?.url}
           alt={data.category || "Product Image"}
-          className="w-[100px] h-[100px] rounded-lg object-cover"
+          className="w-[100px] h-[100px] rounded-lg object-contain"
         />
         <div className="mt-2 text-left">
           <p className="text-gray-700 font-semibold">
