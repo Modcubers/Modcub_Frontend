@@ -69,7 +69,7 @@ const TrendingCloths = () => {
             </h1>
           </div>
           {data && data.length !== 0 && (
-            <div className="flex w-[95%] justify-between mb-5 overflow-x-scroll max-450px:w-full">
+            <div className="flex w-[95%] justify-between mb-5 max-1000px:overflow-x-scroll max-450px:w-full">
               {data &&
                 data.map((i, index) => <ProductCard data={i} key={index} />)}
             </div>

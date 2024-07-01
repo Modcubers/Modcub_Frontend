@@ -2,11 +2,9 @@ import React from "react";
 import Header from "../components/Layout/Header";
 import Hero from "../components/Route/Hero/Hero";
 import TrendingCloths from "../components/Route/Trending_Items/TrendingCloths";
-// import Categories from "../components/Route/Categories/Categories";
-// import BestDeals from "../components/Route/Trending_Items/TrendingElectronics";
 import FeaturedProduct from "../components/Route/FeaturedProduct/FeaturedProduct";
-import Events from "../components/Events/Events";
-import Sponsored from "../components/Route/Sponsored";
+// import Events from "../components/Events/Events";
+// import Sponsored from "../components/Route/Sponsored";
 import Footer from "../components/Layout/Footer";
 import TrendingElectronics from "../components/Route/Trending_Items/TrendingElectronics";
 import TrendingDiscounts from "../components/Route/Trending_Items/TrendingDiscounts";
@@ -15,23 +13,24 @@ import TrendingShoes from "../components/Route/Trending_Items/TrendingShoes";
 import TrendingCosmetics from "../components/Route/Trending_Items/TrendingCosmetics";
 import TrendingDiscounts_2 from "../components/Route/Trending_Items/TrendingDiscounts_2";
 import Books from "../components/Route/Trending_Items/Books";
+
 const HomePage = () => {
-    return (
-        <div className="bg-[#E7F2F9]">
-            <Header activeHeading={1} />
-            <Hero />
-            <NewArrivals/>
-            <TrendingElectronics />
-            <TrendingCloths />
-            <TrendingDiscounts/>
-            <TrendingCosmetics/>
-            <TrendingShoes />
-            <TrendingDiscounts_2/>
-            <FeaturedProduct />
-            <Books/>
-            <Footer />
-        </div>
-    );
+  return (
+    <div className="bg-[#E7F2F9]">
+      <Header activeHeading={1} />
+      <Hero />
+      <NewArrivals />
+      <TrendingElectronics />
+      <TrendingCloths />
+      <TrendingDiscounts />
+      <TrendingCosmetics />
+      <TrendingShoes />
+      <TrendingDiscounts_2 />
+      <FeaturedProduct />
+      <Books />
+      <Footer />
+    </div>
+  );
 };
 
 export default HomePage;

@@ -11,13 +11,13 @@ const ProfilePage = () => {
     const [active, setActive] = useState(1);
 
     return (
-        <div>
+        <div className="bg-[#E7F2F9]">
             {loading ? (
                 <Loader />
             ) : (
                 <>
                     <Header />
-                    <div className={`${styles.section} flex  py-10`}>
+                    <div className={`${styles.section} flex  py-10 bg-white`}>
                         <div className="w-[50px] 800px:w-[335px] sticky 800px:mt-0 mt-[18%]">
                             <ProfileSideBar
                                 active={active}

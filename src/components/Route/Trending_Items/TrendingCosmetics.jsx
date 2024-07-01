@@ -27,7 +27,7 @@ const TrendingCosmetics = () => {
         className={`${styles.section} bg-white p-6 rounded-lg mb-12 shadow-xl mt-5 overflow-hidden`}
       >
         <h1 className="text-black underline text-xl max-800px:text-lg">Cosmetics and Body Care</h1>
-        <div className="flex w-full justify-between mb-5 overflow-x-scroll">
+        <div className="flex w-full justify-between mb-5 max-1000px:overflow-x-scroll">
           {data && data.length !== 0 && (
             <>
               {data &&
