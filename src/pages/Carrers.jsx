@@ -18,9 +18,9 @@ const Carrers = () => {
 
     return (
         <>
-            <div className="font-Poppins">
+            <div className="bg-[#E7F2F9]">
                 <Header activeHeading={0} />
-                <div className="relative">
+                <div className="relativ">
                     <img
                         src={`${demoImages[0]}`}
                         alt="Demo Image 1"
@@ -34,7 +34,7 @@ const Carrers = () => {
                     </div>
                 </div>
 
-                <div className="container mx-auto py-8 flex flex-col md:flex-row">
+                <div className="container mx-auto py-8 flex flex-col md:flex-row bg-white">
                     <div className="max-w-4xl mx-auto px-4">
                         <h1 className="text-3xl font-bold mb-4">
                             Welcome to Modcub

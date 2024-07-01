@@ -128,29 +128,29 @@ const ProductDetails = ({ data }) => {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-[#E7F2F9]">
       {data ? (
-        <div className={`${styles.section} w-[90%] 800px:w-[80%]`}>
+        <div className={`${styles.section} bg-white`}>
           <div className="w-full py-5">
-            <div className="block w-full 800px:flex">
-              <div className="w-full 800px:w-[50%]">
+            <div className="block w-full justify-between 800px:flex">
+              <div className="w-full flex flex-row-reverse justify-evenly items-start  800px:w-[50%]">
                 <img
                   src={`${data && data.images[select]?.url}`}
                   alt=""
-                  className="w-[80%]"
+                  className="w-[60%] object-contain"
                 />
-                <div className="w-full flex">
+                <div className="w-[20%] flex">
                   {data &&
                     data.images.map((i, index) => (
                       <div
                         className={`${
                           select === 0 ? "border" : "null"
-                        } cursor-pointer`}
+                        } cursor-pointer rounded-lg`}
                       >
                         <img
                           src={`${i?.url}`}
                           alt=""
-                          className="h-[200px] overflow-hidden mr-3 mt-3"
+                          className="max-h-[150px] overflow-hidden rounded-lg"
                           onClick={() => setSelect(index)}
                         />
                       </div>

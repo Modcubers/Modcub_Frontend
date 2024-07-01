@@ -185,8 +185,7 @@ export const categoriesData = [
         id: 1,
         title: "Electronics",
         subTitle: "",
-        image_Url:
-            "https://www.wallpaperuse.com/wallp/34-342029_m.jpg",
+        image_Url:"https://rukminim2.flixcart.com/image/312/312/xif0q/monitor/w/w/y/-original-imagysfv56k2rvzh.jpeg?q=70",
     },
     {
         id: 2,
@@ -206,7 +205,7 @@ export const categoriesData = [
         title: "Cloths",
         subTitle: "",
         image_Url:
-            "https://images.pexels.com/photos/6461325/pexels-photo-6461325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://thumbs.dreamstime.com/b/smiling-couple-fashion-models-28442078.jpg",
         sizes: ["S", "M", "L", "XL", "XXL"]
     },
     {
@@ -257,14 +256,14 @@ export const categoriesData = [
         title: "House Keeping",
         subTitle: "",
         image_Url:
-            "https://images.pexels.com/photos/4108723/pexels-photo-4108723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/mop-cleaning-wipe/5/b/b/-original-imagrt32mnzahrbs.jpeg?q=70",
     },
     {
         id: 13,
         title: "Sanitary",
         subTitle: "",
         image_Url:
-            "https://cdn.pixabay.com/photo/2016/03/27/22/59/wc-1284608_640.jpg",
+            "https://rukminim2.flixcart.com/image/612/612/xif0q/wash-basin/1/4/a/42-42-11-scratch-proof-anti-bacterial-with-coupling-wastepipe-original-imahfhzxvtdzmknh.jpeg?q=70",
     },
    
     {
@@ -284,7 +283,7 @@ export const categoriesData = [
         title: "Lamps",
         subTitle: "",
         image_Url:
-            "https://images.pexels.com/photos/37869/lamps-light-lampshade-screen-37869.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "https://rukminim2.flixcart.com/image/612/612/kzn17680/table-lamp/x/o/6/unique-digital-desk-lamp-for-students-sw2-ix-led-lamp-no-1043-original-imagbhpnbzvzyhrx.jpeg?q=70",
     },
     {
         id: 20,
@@ -298,14 +297,14 @@ export const categoriesData = [
         title: "Jewelry",
         subTitle: "",
         image_Url:
-            "https://images.pexels.com/photos/5370640/pexels-photo-5370640.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://rukminim2.flixcart.com/image/612/612/kqb8pzk0/ring/s/l/r/adjustable-r056-ring-giva-original-imag4czhtfdxehrj.jpeg?q=70",
     },
     {
         id: 22,
         title: "Crockery",
         subTitle: "",
         image_Url:
-            "https://images.pexels.com/photos/291767/pexels-photo-291767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://rukminim2.flixcart.com/image/612/612/l3929ow0/dinner-set/w/z/v/yes-44-htecom44dn1pasfl-larah-by-borosil-original-imagef62bzgjzgxy.jpeg?q=70",
     },
     {
         id: 23,
@@ -317,7 +316,7 @@ export const categoriesData = [
         id: 24,
         title: "Home Decor",
         subTitle: "",
-        image_Url:"https://rukminim2.flixcart.com/image/612/612/ksxjs7k0hlty2aw/curtain/z/o/4/pt2c-308-eyelet-panipat-textile-hub-original-imag6h68enpzxvjx.jpeg?q=70",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/xif0q/pillow/5/q/k/10-umang-2-sleepweell-simple-sleeping-pillow-pack-of-2-sleepwell-original-imahf2ncqzaf3k5w.jpeg?q=70",
     },
     {
         id: 25,
@@ -335,7 +334,7 @@ export const categoriesData = [
         id:27,
         title:"Belt and Wallet",
         subTitle:"",
-        image_Url:"https://st3.depositphotos.com/6097600/13145/i/450/depositphotos_131456490-stock-photo-mens-wallet-and-belt.jpg",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/ktuewsw0/accessories-combo/s/5/s/sty-xcbn-44-loopa-original-imag73kxzkvrqsuh.jpeg?q=70",
     },
     {
         id:28,
@@ -356,7 +355,7 @@ export const categoriesData = [
     },
     {
         id:31,
-        title:"Office & Stationary",
+        title:"Office and Stationary",
         subTitle:"",
         image_Url:"https://rukminim2.flixcart.com/image/612/612/l1tmf0w0/art-set/l/u/4/blue-kids-smart-kit-combo-bag-by-the-mark-stationery-doms-original-imagdarfqgg8uqcu.jpeg?q=70",
     },
@@ -416,14 +415,8 @@ export const categoriesData = [
         id:41,
         title:"IT Equipments",
         subTitle:"",
-        image_Url:"-original-imagppnc2eeg6wk8.jpeg (612×574) (flixcart.com)",
+        image_Url:"https://rukminim2.flixcart.com/image/612/612/kbnz8nk0/router/x/y/k/d-link-dir-650in-original-imafsysqj3f3tec5.jpeg?q=70",
     },
-    {
-        id:42,
-        title:"Karigar and Saheli",
-        subTitle:"",
-        image_Url:"https://images.app.goo.gl/dhC8EkZP4eviki4g9",
-    }
 ];
 
 // product Data

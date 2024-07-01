@@ -106,18 +106,18 @@ const AllSellers = () => {
                 </Link>
             ),
         },
-        {
-            field: "deleteSeller",
-            headerName: "Delete Seller",
-            minWidth: 150,
-            flex: 1,
-            sortable: false,
-            renderCell: (params) => (
-                <Button onClick={() => setUserId(params.id) || setOpen(true)}>
-                    <AiOutlineDelete size={20} />
-                </Button>
-            ),
-        },
+        // {
+        //     field: "deleteSeller",
+        //     headerName: "Delete Seller",
+        //     minWidth: 150,
+        //     flex: 1,
+        //     sortable: false,
+        //     renderCell: (params) => (
+        //         <Button onClick={() => setUserId(params.id) || setOpen(true)}>
+        //             <AiOutlineDelete size={20} />
+        //         </Button>
+        //     ),
+        // },
         {
             field: "suspendUser",
             headerName: "Suspend",

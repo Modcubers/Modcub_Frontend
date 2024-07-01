@@ -43,6 +43,7 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
 /* For WebKit browsers */
 ::-webkit-scrollbar {
   width: 12px;
@@ -50,16 +51,16 @@ input[type="number"] {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: white;
+  background: #e7f2f9;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #E7F2F9;
+  background: white;
 }
 
 /* For Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #E7F2F9 white;
+  scrollbar-color: #e7f2f9 white;
 }

@@ -25,7 +25,7 @@ const ProductDetailsPage = () => {
   }, [allProducts, allEvents]);
 
   return (
-    <div>
+    <div className="bg-[#E7F2F9]">
       <Header />
       <ProductDetails data={data} />
         {

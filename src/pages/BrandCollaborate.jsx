@@ -18,13 +18,13 @@ const BrandCollaborate = () => {
 
     return (
         <>
-            <div className="font-Poppins">
+            <div className="bg-[#E7F2F9]">
                 <Header activeHeading={0} />
                 <div className="relative">
                     <img
                         src={`${demoImages[0]}`}
                         alt="Demo Image 1"
-                        className="w-full h-auto rounded-md mb-6 md:mb-0 h-[700px]"
+                        className="w-full rounded-md mb-6 md:mb-0 h-[700px]"
                     />
                     <div className="absolute bottom-10 md:bottom-56 left-4 md:left-40 text-gray-100 text-5xl md:text-6xl font-Poppins font-bold">
                         Brand Collaborate
@@ -34,9 +34,9 @@ const BrandCollaborate = () => {
                     </div>
                 </div>
 
-                <div className="container mx-auto py-8 flex flex-col md:flex-row">
+                <div className="container bg-white mx-auto py-8 flex flex-col md:flex-row">
                     <div className="max-w-4xl mx-auto px-4">
-                        <h1 className="text-3xl font-bold mb-4">
+                        <h1 className="text-3xl font-semibold mb-4">
                         🌟 Collaborate with ModCub: Elevate Your Brand with Us! 🌟
                         </h1>
                         <h4 className="text-3xl  mb-4">

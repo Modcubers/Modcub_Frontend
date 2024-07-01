@@ -101,7 +101,7 @@ const DashboardHero = () => {
                         >
                             Account Balance{" "}
                             <span className="text-[16px]">
-                                (with 7% service charge)
+                                (with 10% service charge)
                             </span>
                         </h3>
                     </div>
