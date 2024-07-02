@@ -30,19 +30,19 @@ const ProductDetails = ({ data }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const [selectedSizes,setSelectedSizes]=useState([])
+  const [selectedSizes, setSelectedSizes] = useState([]);
 
   const handleButtonClick = (size) => {
-    console.log(size)
+    console.log(size);
     const isSelected = selectedSizes.includes(size);
     if (!isSelected) {
       // If the clicked size is not already selected, replace the selected size with the new one
       setSelectedSizes([size]);
-  } else {
+    } else {
       // If the clicked size is already selected, deselect it (clear the selection)
       setSelectedSizes([]);
-  }
-};
+    }
+  };
 
   useEffect(() => {
     dispatch(getAllProductsShop(data && data?.shop._id));
@@ -81,7 +81,7 @@ const ProductDetails = ({ data }) => {
       if (data.stock < 1) {
         toast.error("Product stock limited!");
       } else {
-        const cartData = { ...data, qty: count,size:selectedSizes[0] };
+        const cartData = { ...data, qty: count, size: selectedSizes[0] };
         dispatch(addTocart(cartData));
         toast.success("Item added to cart successfully!");
       }
@@ -100,10 +100,9 @@ const ProductDetails = ({ data }) => {
       0
     );
 
-  const avg =  totalRatings / totalReviewsLength || 0;
+  const avg = totalRatings / totalReviewsLength || 0;
 
   const averageRating = avg.toFixed(2);
-
 
   const handleMessageSubmit = async () => {
     if (isAuthenticated) {
@@ -126,6 +125,8 @@ const ProductDetails = ({ data }) => {
       toast.error("Please login to create a conversation");
     }
   };
+
+  const isInCart = cart && cart.find((item) => item._id === data._id);
 
   return (
     <div className="bg-[#E7F2F9]">
@@ -177,16 +178,16 @@ const ProductDetails = ({ data }) => {
                 <div className="flex items-center mt-12 justify-between pr-3">
                   <div>
                     <button
-                      className="bg-gradient-to-r from-teal-400 to-teal-500 text-white font-bold rounded-l px-4 py-2 shadow-lg hover:opacity-75 transition duration-300 ease-in-out"
+                      className="bg-gradient-to-r from-[#005DC9] to-[#005DC9] text-white font-bold rounded-l px-4 py-2 shadow-lg hover:opacity-75 transition duration-300 ease-in-out"
                       onClick={decrementCount}
                     >
                       -
                     </button>
-                    <span className="bg-gray-200 text-gray-800 font-medium px-4 py-[11px]">
+                    <span className="text-gray-800 font-medium px-4 py-[11px]">
                       {count}
                     </span>
                     <button
-                      className="bg-gradient-to-r from-teal-400 to-teal-500 text-white font-bold rounded-l px-4 py-2 shadow-lg hover:opacity-75 transition duration-300 ease-in-out"
+                      className="bg-gradient-to-r from-[#005DC9] to-[#005DC9] text-white font-bold rounded-r px-4 py-2 shadow-lg hover:opacity-75 transition duration-300 ease-in-out"
                       onClick={incrementCount}
                     >
                       +
@@ -212,33 +213,43 @@ const ProductDetails = ({ data }) => {
                     )}
                   </div>
                 </div>
-                
+
                 <div>
-                {data.size && data.size.length > 0 && (
-                <div className=" mt-4 "> 
-                    <h4>Available  Sizes:</h4>
+                  {data.size && data.size.length > 0 && (
+                    <div className=" mt-4 ">
+                      <h4>Available Sizes:</h4>
 
-                        {data.size.map((size, index) => (
-
-                           <button key ={index}  value={size}
-                          onClick={() => handleButtonClick(size)}    className={`p-2 border m-2 rounded-lg hover:border-teal-400 ${
-                            selectedSizes.includes(size) ? 'border-teal-400' : 'border-gray-300'
-                        }  focus:border-teal-400 focus:ring-1 focus:ring-teal-400`}> {size} </button>
-
-                        ))}
-                      
-                  </div>
-        )}
+                      {data.size.map((size, index) => (
+                        <button
+                          key={index}
+                          value={size}
+                          onClick={() => handleButtonClick(size)}
+                          className={`p-2 border m-2 rounded-lg hover:border-teal-400 ${
+                            selectedSizes.includes(size)
+                              ? "border-teal-400"
+                              : "border-gray-300"
+                          }  focus:border-teal-400 focus:ring-1 focus:ring-teal-400`}
+                        >
+                          {" "}
+                          {size}{" "}
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
                 <div
-                  className={`${styles.button} !mt-6 !rounded !h-11 flex items-center`}
+                  className={`${
+                    styles.button
+                  } !mt-6 !rounded !h-11 flex items-center text-white ${
+                    isInCart ? "cursor-not-allowed bg-gray-500" : ""
+                  }`}
                   onClick={() => addToCartHandler(data._id)}
+                  disabled={isInCart}
                 >
-                  <span className="text-white flex items-center">
-                    Add to cart <AiOutlineShoppingCart className="ml-1" />
-                  </span>
+                  {isInCart ? "In Cart" : "Add to Cart"}
                 </div>
+
                 <div className="flex items-center pt-8">
                   <Link to={`/shop/preview/${data?.shop._id}`}>
                     <img
@@ -290,10 +301,10 @@ const ProductDetailsInfo = ({
   averageRating,
 }) => {
   const [active, setActive] = useState(1);
- 
+
   return (
-    <div className="bg-[#f5f6fb] px-3 800px:px-10 py-2 rounded">
-      <div className="w-full flex justify-between border-b pt-10 pb-2">
+    <div className="bg-white px-3 800px:px-10 py-2 rounded">
+      <div className="w-full flex justify-between border-b pt-3 pb-2">
         <div className="relative">
           <h5
             className={
@@ -336,8 +347,7 @@ const ProductDetailsInfo = ({
       </div>
       {active === 1 ? (
         <>
-          <p className="py-2 text-[18px] leading-8 pb-10 whitespace-pre-line">
-
+          <p className="py-2 text-[18px] leading-8 pb-0 whitespace-pre-line">
             {data.description}
           </p>
         </>

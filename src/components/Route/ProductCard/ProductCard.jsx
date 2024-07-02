@@ -60,6 +60,7 @@ const ProductCard = ({ data, isEvent }) => {
       }
     }
   };
+  const isInCart = cart && cart.find((item) => item._id === data._id);
 
   return (
     <>
@@ -74,6 +75,7 @@ const ProductCard = ({ data, isEvent }) => {
                 ? `/product/${data._id}?isEvent=true`
                 : `/product/${data._id}`
             }`}
+            target="_blank"
           >
             <img
               src={`${data.images && data.images[0]?.url}`}
@@ -93,7 +95,7 @@ const ProductCard = ({ data, isEvent }) => {
           >
             <h4 className="pb-3 font-[500] max-1000px:h-[50px] max-1000px:overflow-y-hidden max-800px:text-md max-450px:text-sm max-450px:h-[40px]">
               {data.name.length > 40
-                ? data.name.slice(0, 50) + "..."
+                ? data.name.slice(0, 45) + "..."
                 : data.name}
             </h4>
 
@@ -130,10 +132,13 @@ const ProductCard = ({ data, isEvent }) => {
           </Link>
           <button
             type="button"
-            className="bg-[#005DC9] text-white h-[40px] w-[150px] rounded-lg max-800px:h-[35px] max-800px:w-[120px] max-450px:h-[25px] max-450px:text-xs max-450px:w-[100px] max-450px:hidden"
+            className={`bg-[#005DC9] text-white h-[40px] w-[150px] rounded-lg max-800px:h-[35px] max-800px:w-[120px] max-450px:h-[25px] max-450px:text-xs max-450px:w-[100px] max-450px:hidden ${
+              isInCart ? "cursor-not-allowed bg-gray-500" : ""
+            }`}
             onClick={() => addToCartHandler(data._id)}
+            disabled={isInCart}
           >
-            Add to Cart
+            {isInCart ? "In Cart" : "Add to Cart"}
           </button>
         </div>
 
