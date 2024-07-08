@@ -16,25 +16,32 @@ const ProductDetailsPage = () => {
 
   useEffect(() => {
     if (eventData !== null) {
-      const data = allEvents && allEvents.find((i) => i._id === id);
-      setData(data);
+      const eventData = allEvents?.find((i) => i._id === id);
+      setData(eventData);
     } else {
-      const data = allProducts && allProducts.find((i) => i._id === id);
-      setData(data);
+      const productData = allProducts?.find((i) => i._id === id);
+      setData(productData);
     }
-  }, [allProducts, allEvents]);
+  }, [id, allProducts, allEvents, eventData]);
+
+  // If data is null, render a loading message or nothing.
+  if (!data) {
+    return (
+      <div className="bg-[#E7F2F9]">
+        <Header />
+        <div className="flex justify-center items-center h-screen">
+          <p>Loading...</p>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="bg-[#E7F2F9]">
       <Header />
       <ProductDetails data={data} />
-        {
-          !eventData && (
-            <>
-            {data && <SuggestedProduct data={data} />}
-            </>
-          )
-        }
+      {!eventData && <SuggestedProduct data={data} />}
       <Footer />
     </div>
   );
