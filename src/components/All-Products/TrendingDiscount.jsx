@@ -35,11 +35,8 @@ const discountsData = {
   },
 };
 
-const TrendingDiscounts = () => {
-  const [searchParams] = useSearchParams();
-  const category = searchParams.get("category");
-  console.log(category);
-  const discount = discountsData[category]; // Default to Shoes if category is not found
+const TrendingDiscounts = ({category}) => {
+  const discount = discountsData[category] || discountsData['Shoes']; // Default to Shoes if category is not found
 
   return (
     <div
@@ -49,7 +46,7 @@ const TrendingDiscounts = () => {
       <img
         src={discount.img}
         alt="Discount image"
-        className="w-[40%] h-auto object-contain max-sm:w-5/12"
+        className="w-[30%] h-auto object-contain max-sm:w-5/12"
       />
       <p className="text-[25px] w-[50%] text-white max-800px:text-lg max-sm:text-[10px]">
         {discount.text} <br />

@@ -44,7 +44,7 @@ const ProductsPage = () => {
           <Header />
           <div className="bg-[#E7F2F9]">
             <Categories />
-            <TrendingDiscounts />
+            <TrendingDiscounts category={categoryData} />
             <div className={`${styles.section} mt-8`}>
               {categoryData ? (
                 // Render this block if a category is specified
