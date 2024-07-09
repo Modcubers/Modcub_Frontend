@@ -40,40 +40,42 @@ const ProductsPage = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        <div className="bg-[#E7F2F9]">
+        <>
           <Header />
-          <Categories/>
-          <TrendingDiscounts /> 
-          <div className={`${styles.section} mt-8`}>
-            {categoryData ? (
-              // Render this block if a category is specified
-              <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-4 lg:gap-[25px] xl:grid-cols-5 xl:gap-[30px] mb-12">
-                {data &&
-                  data.map((product, index) => (
-                    <ProductCard data={product} key={index} />
-                  ))}
-              </div>
-            ) : (
-              // Render these components if no category is specified
-              <>
-                <BestSeller />
-                <NewRelease />
-                <TrendingElectronics />
-                <TrendingDiscounts_2 />
-                <ClothesForMen />
-                <ClothesForWoman />
-                <Cosmetics />
-                <Books />
-              </>
-            )}
-            {data && data.length === 0 && (
-              <h1 className="text-center w-full pb-[100px] text-[20px]">
-                No products Found!
-              </h1>
-            )}
+          <div className="bg-[#E7F2F9]">
+            <Categories />
+            <TrendingDiscounts />
+            <div className={`${styles.section} mt-8`}>
+              {categoryData ? (
+                // Render this block if a category is specified
+                <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-4 lg:gap-[25px] xl:grid-cols-5 xl:gap-[30px] mb-12">
+                  {data &&
+                    data.map((product, index) => (
+                      <ProductCard data={product} key={index} />
+                    ))}
+                </div>
+              ) : (
+                // Render these components if no category is specified
+                <>
+                  <BestSeller />
+                  <NewRelease />
+                  <TrendingElectronics />
+                  <TrendingDiscounts_2 />
+                  <ClothesForMen />
+                  <ClothesForWoman />
+                  <Cosmetics />
+                  <Books />
+                </>
+              )}
+              {data && data.length === 0 && (
+                <h1 className="text-center w-full pb-[100px] text-[20px]">
+                  No products Found!
+                </h1>
+              )}
+            </div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
+        </>
       )}
     </>
   );

@@ -182,11 +182,12 @@ const ProductDetails = ({ data }) => {
                   >
                     {isInCart ? "In Cart" : "Add to Cart"}
                   </div>
-                  <div
+                  <Link
+                  to={"/checkout"}
                     className={`${styles.button} !mt-6 !rounded !h-11 flex items-center text-white`}
                   >
                     Buy Now
-                  </div>
+                  </Link>
                 </div>
               </div>
               <div className="w-full 800px:w-[50%] p-5 bg-white overflow-y-scroll h-[500px]">
@@ -196,7 +197,7 @@ const ProductDetails = ({ data }) => {
                   <Ratings rating={data?.ratings} />
                 </div>
                 <hr></hr>
-                <div className="flex justify-between items-center w-[60%] h-max my-2">
+                <div className="flex justify-between items-center w-full h-max my-2">
                   <div className="flex items-center">
                     <h4 className={`${styles.productDiscountPrice}`}>
                       {data.discountPrice}Rs

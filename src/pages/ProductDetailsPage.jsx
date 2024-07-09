@@ -38,12 +38,14 @@ const ProductDetailsPage = () => {
   }
 
   return (
-    <div className="bg-[#E7F2F9]">
+    <>
       <Header />
-      <ProductDetails data={data} />
-      {!eventData && <SuggestedProduct data={data} />}
-      <Footer />
-    </div>
+      <div className="bg-[#E7F2F9]">
+        <ProductDetails data={data} />
+        {!eventData && <SuggestedProduct data={data} />}
+        <Footer />
+      </div>
+    </>
   );
 };
 
