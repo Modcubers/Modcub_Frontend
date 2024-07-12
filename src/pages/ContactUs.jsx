@@ -21,17 +21,20 @@ const ContactUs = () => {
       <div className="bg-[#E7F2F9]">
         <div className="container mx-auto py-8">
           <div className="max-w-4xl mx-auto px-4">
-            <h1 className="text-3xl font-bold mb-4">
-              Welcome to Modcub contact Us
-            </h1>
-            <h3>Rajat Khanna</h3>
-            <h4>
-              Email:{" "}
-              <a href="viralproduction.studios@gmail.com">
-                viralproduction.studios@gmail.com
-              </a>
-            </h4>
-            <h4>phoneno:+91 95601 54974</h4>
+            <div className="flex justify-around items-center mb-4">
+              <h1 className="text-3xl font-bold mb-4">"Founder"</h1>
+              <div>
+                <h3 className="text-2xl">Mr. Rajat Khanna</h3>
+                <h4 className="text-xl">
+                  Email:{" "}
+                  <a href="viralproduction.studios@gmail.com">
+                    viralproduction.studios@gmail.com
+                  </a>
+                </h4>
+                <h4 className="text-xl">Phone No: 95601 54974</h4>
+                <h4 className="text-xl">Address: 11752/4 sat nagar karol bagh <br/> new delhi,110005</h4>
+              </div>
+            </div>
             <p className="text-lg mb-6">
               Welcome to Modcub, your vibrant multivendor e-commerce destination
               curated by the passionate team at Viral Production Studio. We're
@@ -39,11 +42,11 @@ const ContactUs = () => {
               meets convenience, dedicated to championing the talents of
               independent sellers from around the globe.
             </p>
-            <img
+            {/* <img
               src={`${demoImages[0]}`}
               alt="Demo Image 1"
               className="w-full h-auto rounded-md mb-6"
-            />
+            /> */}
             <p className="text-lg mb-6">
               At the heart of Modcub is Viral Production Studio, a
               forward-thinking collective committed to fostering innovation and

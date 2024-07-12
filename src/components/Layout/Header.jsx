@@ -18,7 +18,7 @@ import Wishlist from "../Wishlist/Wishlist";
 import { RxCross1 } from "react-icons/rx";
 import modcubimage from "../../Assests/new_modcub.png";
 
-const Header = ({ activeHeading }) => {
+const Header = ({ activeHeading,navbar }) => {
   const { isAuthenticated, user } = useSelector((state) => state.user);
   const { isSeller } = useSelector((state) => state.seller);
   const { wishlist } = useSelector((state) => state.wishlist);
@@ -120,7 +120,7 @@ const Header = ({ activeHeading }) => {
       <div
         className={`${
           active === true ? "shadow-sm fixed top-0 left-0 z-10" : null
-        } transition hidden w-full h-[70px] 800px:flex items-center justify-end bg-[#043773]`}
+        } transition hidden w-full h-[70px] items-center justify-end bg-[#043773] ${navbar ? "hidden" : "800px:flex" }`}
       >
         <div
           className={`w-11/12 mx-auto relative float-right ${styles.noramlFlex} justify-between `}
@@ -147,7 +147,7 @@ const Header = ({ activeHeading }) => {
                         </div>
                     </div> */}
           {/* navitems */}
-          <div className={`${styles.noramlFlex} justify-center w-full `}>
+          <div className={`${styles.noramlFlex} justify-center w-full`}>
             <Navbar active={activeHeading} />
           </div>
 

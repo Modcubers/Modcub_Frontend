@@ -22,6 +22,7 @@ const ProductsPage = () => {
   const categoryData = searchParams.get("category");
   const { allProducts, isLoading } = useSelector((state) => state.products);
   const [data, setData] = useState([]);
+  const navbar = true;
 
   useEffect(() => {
     if (categoryData === null) {
@@ -41,7 +42,7 @@ const ProductsPage = () => {
         <Loader />
       ) : (
         <>
-          <Header />
+          <Header navbar = {navbar} />
           <div className="bg-[#E7F2F9]">
             <Categories />
             <TrendingDiscounts category={categoryData} />

@@ -20,7 +20,7 @@ const About = () => {
     <>
       <Header activeHeading={3} />
       <div className="bg-[#E7F2F9]">
-        <div className="relative">
+        {/* <div className="relative">
           <img
             src={`${demoImages[0]}`}
             alt="Demo Image 1"
@@ -32,10 +32,10 @@ const About = () => {
               Learn what we are all about
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="container mx-auto py-8 flex flex-col md:flex-row bg-white">
-          <div className="max-w-4xl mx-auto px-4 ">
+        <div className="container mx-auto py-8 flex flex-col md:flex-row">
+          <div className="w-9/12 mx-auto px-4 ">
             <h1 className="text-3xl font-bold mb-4">Welcome to Modcub</h1>
             <p className="text-lg mb-6">
               Welcome to Modcub, your vibrant multivendor e-commerce destination
@@ -91,9 +91,9 @@ const About = () => {
           </div>
 
           {/* Show sidebar only on medium and larger screens */}
-          <div className="w-full md:w-1/4 ml-0 md:ml-8">
+          {/* <div className="w-full md:w-1/4 ml-0 md:ml-8">
             <SidebarLink />
-          </div>
+          </div> */}
         </div>
         <Footer />
       </div>
