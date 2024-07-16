@@ -18,8 +18,8 @@ const styles = {
         "w-[10px] h-[10px] rounded-full absolute top-0 right-1 bg-[#40d132]",
     noramlFlex: "flex items-center",
     sidebarLink:
-        "block py-2 px-4 bg-gray-100 rounded-md transition-colors duration-300",
-    sidebarLinkHover: "hover:bg-yellow-200 hover:text-yellow-700",
+        "block py-2 px-4 bg-[#E7F2F9] rounded-md transition-colors duration-300",
+    sidebarLinkHover: "hover:bg-[#E7F2F9] hover:text-yellow-700",
 };
 
 export default styles;

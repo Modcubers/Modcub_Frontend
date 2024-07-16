@@ -32,7 +32,9 @@ const ContactUs = () => {
                   </a>
                 </h4>
                 <h4 className="text-xl">Phone No: 95601 54974</h4>
-                <h4 className="text-xl">Address: 11752/4 sat nagar karol bagh <br/> new delhi,110005</h4>
+                <h4 className="text-xl">
+                  Address: 11752/4 sat nagar karol bagh <br /> new delhi,110005
+                </h4>
               </div>
             </div>
             <p className="text-lg mb-6">
@@ -94,6 +96,43 @@ const ContactUs = () => {
               e-commerce.
             </p>
           </div>
+        </div>
+        <div className="w-11/12 800px:w-[40%] mx-auto bg-white p-4 mb-4 flex justify-center flex-col items-center ">
+          <h1 className="text-xl text-center">Get In Touch</h1>
+          <form
+            action=""
+            className="flex justify-center items-center flex-col w-[80%]"
+          >
+            <div className="w-full my-4">
+              {/* <label htmlFor="name">Name</label> */}
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                className="bg-gray-300 w-full border-none rounded-sm"
+              />
+            </div>
+            <div className="w-full my-4">
+              {/* <label htmlFor="">Email</label> */}
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                className="bg-gray-300 w-full border-none rounded-sm"
+              />
+            </div>
+            <div className="w-full my-4">
+              {/* <label htmlFor="message">Message</label> */}
+              <textarea
+                name="message"
+                id=""
+                rows={5}
+                placeholder="Message"
+                className="bg-gray-300 w-full border-none rounded-sm"
+              ></textarea>
+            </div>
+            <button className="h-[40px] w-[150px] bg-[#005DC9] border-none rounded-lg text-white">Submit</button>
+          </form>
         </div>
         <Footer />
       </div>

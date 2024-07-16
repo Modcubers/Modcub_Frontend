@@ -18,7 +18,7 @@ const About = () => {
 
   return (
     <>
-      <Header activeHeading={3} />
+      <Header activeHeading={3}  />
       <div className="bg-[#E7F2F9]">
         {/* <div className="relative">
           <img

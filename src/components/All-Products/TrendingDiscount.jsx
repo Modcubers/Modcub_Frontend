@@ -7,6 +7,9 @@ import MobileAccessories from "../../Assests/Categories/Mobile_Accessories.png";
 import Music from "../../Assests/Categories/Music.png";
 import Supplements from "../../Assests/Categories/Supplements.png";
 import cloths from "../../Assests/Images/clothes.png";
+import Books from "../../Assests/Categories/Books.png";
+import Watches from "../../Assests/Categories/Watches.png";
+import Furniture from "../../Assests/Categories/Furniture.png";
 
 const discountsData = {
   Electronics: {
@@ -14,6 +17,36 @@ const discountsData = {
     discount: "Get at -40%",
     price: "$200",
     img: MobileAccessories,
+  },
+  Supplement:{
+    text:"Whey Protein, Sometimes you need some extra to do Big",
+    discount:"Starting @ 2000 Rs/ Kg",
+    img:Supplements,
+  },
+  Music:{
+    text:"Start your Musical Experience with Guitar",
+    discount:"Starting @ 3000 Rs",
+    img:Music,
+  },
+  "Home Decor":{
+    text:"Paint your imagination on wall",
+    discount:"",
+    img:HomeDecor,  
+  },
+  Books:{
+    text:"Love knows no bounds When hearts collide The truth will haunt you",
+    discount:"Choose your experience and feel it with 300+ Books with 30% Off in each Book",
+    img:Books
+  },
+  Watches:{
+    text:"Increase your Collection of Classic Watches",
+    discount:"See more products on VinayWatches",
+    img:Watches
+  },
+  Furniture:{
+    text:"From old to new modern Chairs",
+    discount:"See more products on VinayWatches",
+    img:Furniture
   },
   Cloths: {
     text: "Fashionable Clothes",
@@ -33,6 +66,7 @@ const discountsData = {
     price: "$60",
     img: shoesimg,
   },
+
 };
 
 const TrendingDiscounts = ({category}) => {
@@ -51,7 +85,7 @@ const TrendingDiscounts = ({category}) => {
       <p className="text-[25px] w-[50%] text-white max-800px:text-lg max-sm:text-[10px]">
         {discount.text} <br />
         <span className="text-white">{discount.discount}</span>{" "}
-        {/* {discount.price} */}
+         {/* {discount.price} */}
       </p>
     </div>
   );

@@ -47,7 +47,7 @@ const StoreLocation = () => {
 
           <div className="flex justify-between">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61101.047920689336!2d77.24807685457401!3d28.63368274228338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfce26ec085ef%3A0x441e32f4fa5002fb!2sRed%20Fort!5e0!3m2!1sen!2sin!4v1714538050166!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.379334729269!2d77.18193167514353!3d28.64835847565607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d02998cd7f811%3A0x9c2d0e5136470489!2s11752%2F4%2C%20Block%205A%2C%20Sat%20Nagar%2C%20Karol%20Bagh%2C%20New%20Delhi%2C%20Delhi%2C%20110005!5e0!3m2!1sen!2sin!4v1721126709743!5m2!1sen!2sin"
               title="Google Maps Embedded Content"
               width="600"
               height="450"

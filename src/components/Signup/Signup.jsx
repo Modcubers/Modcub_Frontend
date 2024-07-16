@@ -48,7 +48,7 @@ const Singup = () => {
   return (
     <div className="min-h-screen bg-[#053C5F] flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       {/* <div className="sm:mx-auto sm:w-full sm:max-w-md"></div> */}
-      <div className="mt-8 bg-[#496da1] rounded-lg sm:mx-auto sm:w-full sm:max-w-md">
+      <div className="mt-8 bg-[#1a4d78] rounded-lg sm:mx-auto sm:w-full sm:max-w-md">
         <h2 className="mt-6 text-center text-3xl font-semibold text-white">
           User Registration
         </h2>
@@ -162,6 +162,22 @@ const Singup = () => {
                   />
                 </label>
               </div>
+            </div>
+            <div className={`flex items-center`}>
+              <input
+                type="checkbox"
+                name="terms"
+                id="terms"
+                className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+              />
+              <label
+                htmlFor="terms"
+                className="ml-2 block text-semibold text-white text-md"
+              >
+                Terms And conditions which you should follow to continue in this
+                platform with out this you can go further, please read all the
+                terms and conditions <a href="#" className="underline">Read More</a>
+              </label>
             </div>
 
             <div className="flex justify-center items-center">

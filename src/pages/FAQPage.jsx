@@ -2,20 +2,23 @@ import React, { useState } from "react";
 import Footer from "../components/Layout/Footer";
 import Header from "../components/Layout/Header";
 import styles from "../styles/styles";
+import headerbg from "../Assests/Images/header.png";
 
 const FAQPage = () => {
+  const navbar = true;
   return (
-    <div className="bg-[#E7F2F9]">
-      <Header activeHeading={5} />
-      <Faq />
-      <Footer />
-    </div>
+    <>
+      <Header navbar={navbar} />
+      <div className="bg-[#E7F2F9]">
+        <Faq />
+        <Footer />
+      </div>
+    </>
   );
 };
 
 const Faq = () => {
   const [activeTab, setActiveTab] = useState(0);
-
   const toggleTab = (tab) => {
     if (activeTab === tab) {
       setActiveTab(0);
@@ -25,9 +28,19 @@ const Faq = () => {
   };
 
   return (
-    <div className={`w-11/12 mx-auto my-8`}>
-      <h2 className="text-3xl font-bold text-gray-900 mb-8">FAQ</h2>
-      <div className="mx-auto space-y-4">
+    <div className={`w-full my-8`}>
+      <div className="relative">
+        <img
+          src={`${headerbg}`}
+          alt="Demo Image 1"
+          className="w-full mb-6 md:mb-0 h-[100px]"
+        />
+        <div className="absolute  top-[30%] left-[5%]  text-gray-100 text-2xl md:text-4xl font-Poppins font-bold">
+          FAQ
+        </div>
+      </div>
+      {/* <h2 className="text-3xl font-bold text-gray-900 mb-8">FAQ</h2> */}
+      <div className="mx-auto w-11/12 my-4 space-y-4">
         {/* single Faq */}
 
         <div className="border-b border-gray-200 pb-4">
@@ -73,8 +86,8 @@ const Faq = () => {
               <p className="text-base text-gray-500">
                 If you're not satisfied with your purchase, we accept returns
                 within 30 days of delivery. To initiate a return, please email
-                 at viralproduction.studios@gmail.com with your order number and a
-                brief explanation of why you're returning the item.
+                at viralproduction.studios@gmail.com with your order number and
+                a brief explanation of why you're returning the item.
               </p>
             </div>
           )}
@@ -171,8 +184,9 @@ const Faq = () => {
             <div className="mt-4">
               <p className="text-base text-gray-500">
                 You can contact our customer support team by emailing us at
-                viralproduction.studios@gmail.com, or by calling us at +91 95601 54974
-                between the hours of 9am and 5pm EST, Monday through Friday.
+                viralproduction.studios@gmail.com, or by calling us at +91 95601
+                54974 between the hours of 9am and 5pm EST, Monday through
+                Friday.
               </p>
             </div>
           )}
