@@ -15,19 +15,22 @@ import ClothesForMen from "../components/All-Products/ClothesForMen";
 import ClothesForWoman from "../components/All-Products/ClothesForWoman";
 import Cosmetics from "../components/All-Products/Cosmetics";
 import Books from "../components/All-Products/Books";
+import Categories from "../components/Layout/Categories";
 
 const ProductsPage = () => {
   const [searchParams] = useSearchParams();
   const categoryData = searchParams.get("category");
   const { allProducts, isLoading } = useSelector((state) => state.products);
   const [data, setData] = useState([]);
+  const navbar = true;
 
   useEffect(() => {
     if (categoryData === null) {
       setData(allProducts);
     } else {
       const filteredData =
-        allProducts && allProducts.filter((product) => product.category === categoryData);
+        allProducts &&
+        allProducts.filter((product) => product.category === categoryData);
       setData(filteredData);
     }
     // window.scrollTo(0,0);
@@ -38,38 +41,42 @@ const ProductsPage = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        <div className="bg-[#E7F2F9]">
-          <Header />
-          <div className={`${styles.section} mt-8`}>
-            {categoryData ? (
-              // Render this block if a category is specified
-              <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-4 lg:gap-[25px] xl:grid-cols-5 xl:gap-[30px] mb-12">
-                {data && data.map((product, index) => (
-                  <ProductCard data={product} key={index} />
-                ))}
-              </div>
-            ) : (
-              // Render these components if no category is specified
-              <>
-                <TrendingDiscounts />
-                <BestSeller />
-                <NewRelease />
-                <TrendingElectronics />
-                <TrendingDiscounts_2 />
-                <ClothesForMen/>
-                <ClothesForWoman/>
-                <Cosmetics/>
-                <Books/>
-              </>
-            )}
-            {data && data.length === 0 && (
-              <h1 className="text-center w-full pb-[100px] text-[20px]">
-                No products Found!
-              </h1>
-            )}
+        <>
+          <Header navbar = {navbar} />
+          <div className="bg-[#E7F2F9]">
+            <Categories />
+            <TrendingDiscounts category={categoryData} />
+            <div className={`${styles.section} mt-8`}>
+              {categoryData ? (
+                // Render this block if a category is specified
+                <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-4 lg:gap-[25px] xl:grid-cols-5 xl:gap-[30px] mb-12">
+                  {data &&
+                    data.map((product, index) => (
+                      <ProductCard data={product} key={index} />
+                    ))}
+                </div>
+              ) : (
+                // Render these components if no category is specified
+                <>
+                  <BestSeller />
+                  <NewRelease />
+                  <TrendingElectronics />
+                  <TrendingDiscounts_2 />
+                  <ClothesForMen />
+                  <ClothesForWoman />
+                  <Cosmetics />
+                  <Books />
+                </>
+              )}
+              {data && data.length === 0 && (
+                <h1 className="text-center w-full pb-[100px] text-[20px]">
+                  No products Found!
+                </h1>
+              )}
+            </div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
+        </>
       )}
     </>
   );

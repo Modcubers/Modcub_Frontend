@@ -18,7 +18,7 @@ import Wishlist from "../Wishlist/Wishlist";
 import { RxCross1 } from "react-icons/rx";
 import modcubimage from "../../Assests/new_modcub.png";
 
-const Header = ({ activeHeading }) => {
+const Header = ({ activeHeading,navbar }) => {
   const { isAuthenticated, user } = useSelector((state) => state.user);
   const { isSeller } = useSelector((state) => state.seller);
   const { wishlist } = useSelector((state) => state.wishlist);
@@ -54,7 +54,7 @@ const Header = ({ activeHeading }) => {
 
   return (
     <>
-      <div className={`${styles.section}  bg-[#E7F2F9]`}>
+      <div className={`${styles.section}`}>
         <div className="hidden 800px:h-[90px] 800px:flex items-center justify-between">
           <div>
             <Link to="/">
@@ -100,7 +100,7 @@ const Header = ({ activeHeading }) => {
               <h1
                 className={`${
                   isAuthenticated ? "hidden" : "block"
-                } text-[#000000] flex items-center hover:underline`}
+                } text-black flex items-center hover:underline`}
               >
                 Login
               </h1>
@@ -120,10 +120,10 @@ const Header = ({ activeHeading }) => {
       <div
         className={`${
           active === true ? "shadow-sm fixed top-0 left-0 z-10" : null
-        } transition hidden w-full h-[70px] 800px:flex items-center justify-end bg-[#E7F2F9]`}
+        } transition hidden w-full h-[70px] items-center justify-end bg-[#043773] ${navbar ? "hidden" : "800px:flex" }`}
       >
         <div
-          className={`w-11/12 mx-auto relative float-right ${styles.noramlFlex} justify-between`}
+          className={`w-11/12 mx-auto relative float-right ${styles.noramlFlex} justify-between `}
         >
           {/* categories */}
           {/* <div onClick={() => setDropDown(!dropDown)}>
@@ -151,13 +151,13 @@ const Header = ({ activeHeading }) => {
             <Navbar active={activeHeading} />
           </div>
 
-          <div className="flex">
+          <div className={`${isAuthenticated ? "flex" : "hidden"}`}>
             <div className={`${styles.noramlFlex}`}>
               <div
                 className="relative cursor-pointer mr-[15px]"
                 onClick={() => setOpenWishlist(true)}
               >
-                <AiOutlineHeart size={30} className=" text-black" />
+                <AiOutlineHeart size={30} className="text-white" />
                 <span className="absolute right-0 top-0 rounded-full bg-orange-400 w-4 h-4 top right p-0 m-0 text-white font-mono text-[12px] leading-tight text-center">
                   {wishlist && wishlist.length}
                 </span>
@@ -169,7 +169,7 @@ const Header = ({ activeHeading }) => {
                 className="relative cursor-pointer mr-[15px]"
                 onClick={() => setOpenCart(true)}
               >
-                <AiOutlineShoppingCart size={30} className=" text-black" />
+                <AiOutlineShoppingCart size={30} className=" text-white" />
                 <span className="absolute right-0 top-0 rounded-full bg-orange-400 w-4 h-4 top right p-0 m-0 text-white font-mono text-[12px] leading-tight text-center">
                   {cart && cart.length}
                 </span>
@@ -185,7 +185,7 @@ const Header = ({ activeHeading }) => {
                   >
                     <img
                       src={`${user?.avatar?.url}`}
-                      className="w-[35px] h-[35px] rounded-full"
+                      className="w-[50px] h-[35px] rounded-full"
                       alt=""
                     />
                   </Link>

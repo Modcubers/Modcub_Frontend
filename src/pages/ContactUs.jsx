@@ -1,106 +1,115 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { useSearchParams } from "react-router-dom";
 import Footer from "../components/Layout/Footer";
 import Header from "../components/Layout/Header";
-import Loader from "../components/Layout/Loader";
-import ProductCard from "../components/Route/ProductCard/ProductCard";
-import styles from "../styles/styles";
+import contactusimg from "../Assests/Images/contactus.png";
+import {
+  AiFillMail,
+  AiFillPhone,
+  AiFillEnvironment,
+  AiFillTwitterSquare,
+  AiFillInstagram,
+  AiFillYoutube,
+} from "react-icons/ai";
 
 const ContactUs = () => {
-    // Placeholder data until backend integration
-    const demoImages = [
-        "https://www.maidwale.com/images/about/istockphoto-1283119095-170667a.jpg",
-        "https://www.maidwale.com/images/about/istockphoto-1283119095-170667a.jpg",
-        "https://www.maidwale.com/images/about/istockphoto-1283119095-170667a.jpg",
-    ];
+  // Placeholder data until backend integration
+  const demoImages = [
+    "https://www.maidwale.com/images/about/istockphoto-1283119095-170667a.jpg",
+    "https://www.maidwale.com/images/about/istockphoto-1283119095-170667a.jpg",
+    "https://www.maidwale.com/images/about/istockphoto-1283119095-170667a.jpg",
+  ];
 
-    return (
-        <>
-            <div className="bg-[#E7F2F9]">
-                <Header activeHeading={0} />
-                <div className="container mx-auto py-8 bg-white">
-                    <div className="max-w-4xl mx-auto px-4">
-                        <h1 className="text-3xl font-bold mb-4">
-                            Welcome to Modcub contact Us
-                        </h1>
-                        <h3>Rajat Khanna</h3>
-                        <h4>Email: <a href="viralproduction.studios@gmail.com">viralproduction.studios@gmail.com</a></h4>
-                        <h4>phoneno:+91 95601 54974</h4>
-                        <p className="text-lg mb-6">
-                            Welcome to Modcub, your vibrant multivendor
-                            e-commerce destination curated by the passionate
-                            team at Viral Production Studio. We're not just
-                            another marketplace; we're a dynamic hub where
-                            creativity meets convenience, dedicated to
-                            championing the talents of independent sellers from
-                            around the globe.
-                        </p>
-                        <img
-                            src={`${demoImages[0]}`}
-                            alt="Demo Image 1"
-                            className="w-full h-auto rounded-md mb-6"
-                        />
-                        <p className="text-lg mb-6">
-                            At the heart of Modcub is Viral Production Studio, a
-                            forward-thinking collective committed to fostering
-                            innovation and originality in the digital sphere.
-                            With a keen eye for emerging trends and a commitment
-                            to excellence, our team tirelessly curates a diverse
-                            array of products that inspire and delight.
-                        </p>
-
-                        <p className="text-lg mb-6">
-                            Our vision is to redefine the online shopping
-                            experience by connecting discerning shoppers with
-                            unique products that spark joy and inspire
-                            imagination. By empowering independent sellers and
-                            fostering collaboration, we create a vibrant
-                            ecosystem where creativity thrives and boundaries
-                            are broken.
-                        </p>
-                        <p className="text-lg mb-6">
-                            Quality is our top priority. Every product featured
-                            on Modcub undergoes a rigorous selection
-                            process to ensure it meets our standards of
-                            excellence. From the finest materials to impeccable
-                            craftsmanship, we stand behind the quality and
-                            authenticity of each item available for purchase.
-                        </p>
-
-                        <p className="text-lg mb-6">
-                            We believe in the power of small businesses and
-                            independent creators to make a big impact. That's
-                            why we're dedicated to providing a platform where
-                            sellers can showcase their talents and reach a
-                            global audience. With customizable storefronts and
-                            marketing resources, we're here to help you turn
-                            your passion into profit.
-                        </p>
-                        <p className="text-lg mb-6">
-                            Shopping with Modcub is a seamless experience. Our
-                            user-friendly interface, advanced search filters,
-                            personalized recommendations, and secure payment
-                            options make it easy to find and enjoy your new
-                            favorites. Plus, with fast and reliable shipping,
-                            your treasures will be on their way to you in no
-                            time.
-                        </p>
-                        <p className="text-lg mb-6">
-                            Join the Modcub community today and discover a world
-                            of possibilities. Whether you're a seller looking to
-                            expand your reach or a shopper in search of
-                            something special, we invite you to be a part of our
-                            growing community of creators and connoisseurs.
-                            Welcome to Modcub. Welcome to the future of
-                            e-commerce.
-                        </p>
-                    </div>
-                </div>
-                <Footer />
+  return (
+    <>
+      <Header navbar={true} />
+      <div className="bg-[#E7F2F9]">
+        <div className="w-full mx-auto bg-[#124888]">
+          <div className="w-full mx-auto h-[300px] flex items-center justify-between max-800px:h-[200px]">
+            <div className="flex justify-center items-center w-[50%]">
+              <h1 className="text-6xl font-semibold text-white max-800px:text-2xl">
+                Get in Touch
+              </h1>
             </div>
-        </>
-    );
+            <img src={contactusimg} alt="" className="h-[300px] max-800px:h-[200px]" />
+          </div>
+        </div>
+        <div className="flex mt-[-50px] max-800px:flex-col">
+          <div className="w-11/12 800px:w-[40%] mx-auto bg-white p-4 mb-4 flex justify-center flex-col items-center ">
+            <h1 className="text-2xl font-semibold text-left w-full">
+              Contact Us
+            </h1>
+            <div className="flex flex-col justify-center w-full p-4">
+              <a href="#" className="flex items-center my-2">
+                <AiFillEnvironment className="text-lg mr-2" />
+                11752/4, Sat Nagar, Karol Bagh, New Delhi-110005
+              </a>
+              <a href="#" className="flex items-center my-2">
+                <AiFillMail className="text-lg mr-2" />
+                viralproduction.studios@gmail.com
+              </a>
+              <a href="#" className="flex items-center my-2">
+                <AiFillPhone className="text-lg mr-2" />
+                9560154974
+              </a>
+            </div>
+            <div className="flex justify-around w-full">
+              <a href="#" className="">
+                <AiFillTwitterSquare className="text-6xl"></AiFillTwitterSquare>
+              </a>
+              <a href="#" className="">
+                <AiFillInstagram className="text-6xl"></AiFillInstagram>
+              </a>
+              <a href="#" className="">
+                <AiFillYoutube className="text-6xl"></AiFillYoutube>
+              </a>
+            </div>
+          </div>
+          <div className="w-11/12 800px:w-[40%] mx-auto bg-white p-4 mb-4 flex justify-center flex-col items-center ">
+            <h1 className="text-2xl font-semibold text-left w-full">
+              Get In Touch
+            </h1>
+            <form
+              action=""
+              className="flex justify-center items-center flex-col w-[80%]"
+            >
+              <div className="w-full my-4">
+                {/* <label htmlFor="name">Name</label> */}
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  className="bg-gray-300 w-full border-none rounded-sm"
+                />
+              </div>
+              <div className="w-full my-4">
+                {/* <label htmlFor="">Email</label> */}
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  className="bg-gray-300 w-full border-none rounded-sm"
+                />
+              </div>
+              <div className="w-full my-4">
+                {/* <label htmlFor="message">Message</label> */}
+                <textarea
+                  name="message"
+                  id=""
+                  rows={5}
+                  placeholder="Message"
+                  className="bg-gray-300 w-full border-none rounded-sm"
+                ></textarea>
+              </div>
+              <button className="h-[40px] w-[150px] bg-[#005DC9] border-none rounded-lg text-white">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    </>
+  );
 };
 
 export default ContactUs;

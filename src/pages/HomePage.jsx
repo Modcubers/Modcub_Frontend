@@ -16,20 +16,22 @@ import Books from "../components/Route/Trending_Items/Books";
 
 const HomePage = () => {
   return (
-    <div className="bg-[#E7F2F9]">
+    <>
       <Header activeHeading={1} />
-      <Hero />
-      <NewArrivals />
-      <TrendingElectronics />
-      <TrendingCloths />
-      <TrendingDiscounts />
-      <TrendingCosmetics />
-      <TrendingShoes />
-      <TrendingDiscounts_2 />
-      <FeaturedProduct />
-      <Books />
-      <Footer />
-    </div>
+      <div className="bg-[#E7F2F9]">
+        <Hero />
+        <NewArrivals />
+        <TrendingElectronics />
+        <TrendingCloths />
+        <TrendingDiscounts />
+        <TrendingCosmetics />
+        <TrendingShoes />
+        <TrendingDiscounts_2 />
+        <FeaturedProduct />
+        <Books />
+        <Footer />
+      </div>
+    </>
   );
 };
 

@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import styles from "../../styles/styles";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { RxAvatar } from "react-icons/rx";
 import axios from "axios";
 import { server } from "../../server";
@@ -13,7 +13,7 @@ const Singup = () => {
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
   const [avatar, setAvatar] = useState(null);
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
   const handleFileInputChange = (e) => {
     const reader = new FileReader();
@@ -31,14 +31,14 @@ const Singup = () => {
     e.preventDefault();
 
     axios
-      .post(`${server}/user/create-user`, { name, email, password,avatar})
+      .post(`${server}/user/create-user`, { name, email, password, avatar })
       .then((res) => {
         toast.success(res.data.message);
         setName("");
         setEmail("");
         setPassword("");
         setAvatar(null);
-        navigate("/login")
+        navigate("/login");
       })
       .catch((error) => {
         toast.error(error.response.data.message);
@@ -46,19 +46,18 @@ const Singup = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-      <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-          Register as a new user
+    <div className="min-h-screen bg-[#053C5F] flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+      {/* <div className="sm:mx-auto sm:w-full sm:max-w-md"></div> */}
+      <div className="mt-8 bg-[#1a4d78] rounded-lg sm:mx-auto sm:w-full sm:max-w-md">
+        <h2 className="mt-6 text-center text-3xl font-semibold text-white">
+          User Registration
         </h2>
-      </div>
-      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+        <div className=" py-8 px-4  sm:rounded-lg sm:px-10">
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-semibold text-white"
               >
                 Full Name
               </label>
@@ -67,6 +66,7 @@ const Singup = () => {
                   type="text"
                   name="text"
                   autoComplete="name"
+                  placeholder="John"
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -78,7 +78,7 @@ const Singup = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-semibold text-white"
               >
                 Email address
               </label>
@@ -86,6 +86,7 @@ const Singup = () => {
                 <input
                   type="email"
                   name="email"
+                  placeholder="example@gmail.com"
                   autoComplete="email"
                   required
                   value={email}
@@ -98,7 +99,7 @@ const Singup = () => {
             <div>
               <label
                 htmlFor="password"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-semibold text-white"
               >
                 Password
               </label>
@@ -108,6 +109,7 @@ const Singup = () => {
                   name="password"
                   autoComplete="current-password"
                   required
+                  placeholder="***********"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
@@ -131,7 +133,7 @@ const Singup = () => {
             <div>
               <label
                 htmlFor="avatar"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-semibold text-white"
               ></label>
               <div className="mt-2 flex items-center">
                 <span className="inline-block h-8 w-8 rounded-full overflow-hidden">
@@ -142,12 +144,12 @@ const Singup = () => {
                       className="h-full w-full object-cover rounded-full"
                     />
                   ) : (
-                    <RxAvatar className="h-8 w-8" />
+                    <RxAvatar className="h-8 w-8 text-white" />
                   )}
                 </span>
                 <label
                   htmlFor="file-input"
-                  className="ml-5 flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
+                  className="ml-5 flex items-center justify-center px-4 py-2 border border-gray-300 bg-[#064EA4]  rounded-md shadow-sm text-sm font-semibold text-white hover:border-[#064EA4]"
                 >
                   <span>Upload a file</span>
                   <input
@@ -161,19 +163,37 @@ const Singup = () => {
                 </label>
               </div>
             </div>
+            <div className={`flex items-center`}>
+              <input
+                type="checkbox"
+                name="terms"
+                id="terms"
+                className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+              />
+              <label
+                htmlFor="terms"
+                className="ml-2 block text-semibold text-white text-md"
+              >
+                Terms And conditions which you should follow to continue in this
+                platform with out this you can go further, please read all the
+                terms and conditions <a href="#" className="underline">Read More</a>
+              </label>
+            </div>
 
-            <div>
+            <div className="flex justify-center items-center">
               <button
                 type="submit"
-                className="group relative w-full h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+                className="group relative w-[50%] h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-semibold rounded-md text-white bg-[#064EA4]"
               >
                 Submit
               </button>
             </div>
             <div className={`${styles.noramlFlex} w-full`}>
-              <h4>Already have an account?</h4>
-              <Link to="/login" className="text-blue-600 pl-2">
-                Sign In
+              <h4 className="text-white font-semibold">
+                Already have an account?
+              </h4>
+              <Link to="/login" className="text-white pl-2 hover:underline">
+                LOGIN
               </Link>
             </div>
           </form>

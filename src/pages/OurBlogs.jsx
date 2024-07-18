@@ -19,8 +19,8 @@ const OurBlogs = () => {
 
     return (
         <>
+                <Header activeHeading={0} navbar={true} />
             <div className="bg-[#E7F2F9]">
-                <Header activeHeading={0} />
                 <div className="relative">
                     <img
                         src={`${demoImages[0]}`}
@@ -35,7 +35,7 @@ const OurBlogs = () => {
                     </div>
                 </div>
 
-                <div className="bg-white container mx-auto py-8 flex flex-col md:flex-row">
+                <div className=" container mx-auto py-8 flex flex-col md:flex-row">
                     <div className="max-w-4xl mx-auto px-4">
                         <Blog />
                         {/* <Blog />

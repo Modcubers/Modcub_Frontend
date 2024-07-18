@@ -16,20 +16,20 @@ const ShopCreate = () => {
   const [avatar, setAvatar] = useState(null);
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-     if(phoneNumber.length !==10){
-      toast.error("Phone number must be 10 digits long ")
-      return ;
-     }
-     
-     if (zipCode.length !== 6) {
+    if (phoneNumber.length !== 10) {
+      toast.error("Phone number must be 10 digits long ");
+      return;
+    }
+
+    if (zipCode.length !== 6) {
       toast.error("Zip code must be 6 digits long");
       return;
     }
-    
+
     axios
       .post(`${server}/shop/create-shop`, {
         name,
@@ -49,7 +49,7 @@ const ShopCreate = () => {
         setZipCode();
         setAddress("");
         setPhoneNumber();
-        navigate("/shop-login")
+        navigate("/shop-login");
       })
       .catch((error) => {
         toast.error(error.response.data.message);
@@ -64,24 +64,23 @@ const ShopCreate = () => {
         setAvatar(reader.result);
       }
     };
-    setAvatar(e.target.files[0])
+    setAvatar(e.target.files[0]);
     reader.readAsDataURL(e.target.files[0]);
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-      <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-          Register as a seller
+    <div className="min-h-screen bg-[#053C5F] flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+      {/* <div className="sm:mx-auto sm:w-full sm:max-w-md"></div> */}
+      <div className="mt-8 bg-[#1a4d78] rounded-lg sm:mx-auto sm:w-full sm:max-w-[35rem]">
+        <h2 className="mt-6 text-center text-3xl font-semibold text-white">
+          Seller Registration
         </h2>
-      </div>
-      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-[35rem]">
-        <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+        <div className=" py-8 px-4 sm:rounded-lg sm:px-10">
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-semibold text-white"
               >
                 Shop Name
               </label>
@@ -90,6 +89,7 @@ const ShopCreate = () => {
                   type="name"
                   name="name"
                   required
+                  placeholder="Fashion World"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
@@ -100,7 +100,7 @@ const ShopCreate = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-semibold text-white"
               >
                 Phone Number
               </label>
@@ -108,6 +108,7 @@ const ShopCreate = () => {
                 <input
                   type="number"
                   name="phone-number"
+                  placeholder="9999999999"
                   required
                   value={phoneNumber}
                   onChange={(e) => setPhoneNumber(e.target.value)}
@@ -119,7 +120,7 @@ const ShopCreate = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-semibold text-white"
               >
                 Email address
               </label>
@@ -127,6 +128,7 @@ const ShopCreate = () => {
                 <input
                   type="email"
                   name="email"
+                  placeholder="example@gmail.com"
                   autoComplete="email"
                   required
                   value={email}
@@ -139,13 +141,14 @@ const ShopCreate = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-semibold text-white"
               >
                 Address
               </label>
               <div className="mt-1">
                 <input
                   type="address"
+                  placeholder="New Delhi"
                   name="address"
                   required
                   value={address}
@@ -158,7 +161,7 @@ const ShopCreate = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-semibold text-white"
               >
                 Zip Code
               </label>
@@ -166,6 +169,7 @@ const ShopCreate = () => {
                 <input
                   type="number"
                   name="zipcode"
+                  placeholder="111111"
                   required
                   value={zipCode}
                   onChange={(e) => setZipCode(e.target.value)}
@@ -177,7 +181,7 @@ const ShopCreate = () => {
             <div>
               <label
                 htmlFor="password"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-semibold text-white"
               >
                 Password
               </label>
@@ -185,6 +189,7 @@ const ShopCreate = () => {
                 <input
                   type={visible ? "text" : "password"}
                   name="password"
+                  placeholder="***************"
                   autoComplete="current-password"
                   required
                   value={password}
@@ -210,7 +215,7 @@ const ShopCreate = () => {
             <div>
               <label
                 htmlFor="avatar"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-semibold text-white"
               ></label>
               <div className="mt-2 flex items-center">
                 <span className="inline-block h-8 w-8 rounded-full overflow-hidden">
@@ -221,14 +226,14 @@ const ShopCreate = () => {
                       className="h-full w-full object-cover rounded-full"
                     />
                   ) : (
-                    <RxAvatar className="h-8 w-8" />
+                    <RxAvatar className="h-8 w-8 text-white" />
                   )}
                 </span>
                 <label
                   htmlFor="file-input"
-                  className="ml-5 flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
+                  className="ml-5 flex items-center justify-center px-4 py-2 border border-gray-300 bg-[#064EA4]  rounded-md shadow-sm text-sm font-semibold text-white hover:border-[#064EA4]"
                 >
-                  <span>Upload a file</span>
+                  <span className="">Upload a file</span>
                   <input
                     type="file"
                     name="avatar"
@@ -239,19 +244,40 @@ const ShopCreate = () => {
                 </label>
               </div>
             </div>
+            <div className={`flex items-center`}>
+              <input
+                type="checkbox"
+                name="terms"
+                id="terms"
+                className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+              />
+              <label
+                htmlFor="terms"
+                className="ml-2 block text-semibold text-white text-md"
+              >
+                Terms And conditions which you should follow to continue in this
+                platform with out this you can go further, please read all the
+                terms and conditions <a href="#" className="underline">Read More</a>
+              </label>
+            </div>
 
-            <div>
+            <div className="flex justify-center items-center">
               <button
                 type="submit"
-                className="group relative w-full h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+                className="group relative w-[50%] h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-semibold rounded-md text-white bg-[#064EA4]"
               >
                 Submit
               </button>
             </div>
-            <div className={`${styles.noramlFlex} w-full`}>
-              <h4>Already have an account?</h4>
-              <Link to="/shop-login" className="text-blue-600 pl-2">
-                Sign in
+            <div className={`${styles.noramlFlex} justify-center w-full`}>
+              <h4 className="text-white font-semibold">
+                Already have an account?
+              </h4>
+              <Link
+                to="/shop-login"
+                className="text-white pl-2 hover:underline"
+              >
+                LOGIN
               </Link>
             </div>
           </form>

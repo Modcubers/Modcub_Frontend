@@ -9,7 +9,7 @@ import { categoriesData, productData } from "../../static/data";
 const Navbar = ({ active }) => {
   const [dropDown, setDropDown] = useState(false);
   return (
-    <div className={`block 800px:${styles.noramlFlex}`}>
+    <div className={`block 800px:${styles.noramlFlex} `}>
       {/* {navItems &&
                 navItems.map((i, index) => (
                     <div className="flex">
@@ -29,7 +29,7 @@ const Navbar = ({ active }) => {
         <Link
           to="/"
           className={`${
-            active === 1 ? "text-orange-500" : "text-black 800px:text-[#000000]"
+            active === 1 ? "text-orange-400" : "text-white"
           } pb-[30px] 800px:pb-0 font-[500] px-6 cursor-pointer}`}
         >
           HOME
@@ -49,15 +49,15 @@ const Navbar = ({ active }) => {
             <button
               className={`${
                 active === 2
-                  ? "text-orange-500"
-                  : "text-black 800px:text-[#000000]"
+                  ? "text-orange-400"
+                  : "text-white"
               } pb-[30px] 800px:pb-0 font-[500] px-6 cursor-pointer}`}
             >
               CATEGORIES
             </button>
             <IoIosArrowDown
               size={20}
-              className="absolute left-[115px] top-1 cursor-pointer"
+              className="absolute left-[115px] top-1 cursor-pointer text-white"
               onClick={() => setDropDown(!dropDown)}
             />
             {dropDown ? (
@@ -73,7 +73,7 @@ const Navbar = ({ active }) => {
         <Link
           to="/about"
           className={`${
-            active === 3 ? "text-orange-500" : "text-black 800px:text-[#000000]"
+            active === 3 ? "text-orange-400" : "text-white"
           } pb-[30px] 800px:pb-0 font-[500] px-6 cursor-pointer}`}
         >
           ABOUT US
@@ -83,7 +83,7 @@ const Navbar = ({ active }) => {
         <Link
           to="/contactus"
           className={`${
-            active === 4 ? "text-orange-500" : "text-black 800px:text-[#000000]"
+            active === 4 ? "text-orange-400" : "text-white"
           } pb-[30px] 800px:pb-0 font-[500] px-6 cursor-pointer}`}
         >
           CONTACT US

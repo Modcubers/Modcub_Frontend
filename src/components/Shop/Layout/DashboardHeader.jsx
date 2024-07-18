@@ -6,12 +6,12 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import { Button } from "@material-ui/core";
-import modcub from "../../../Assests/modcub.jpg";
+import modcub from "../../../Assests/new_modcub.png";
 
 const DashboardHeader = () => {
     const { seller } = useSelector((state) => state.seller);
     return (
-        <div className="w-full h-[80px] bg-white shadow sticky top-0 left-0 z-30 flex items-center justify-between px-4">
+        <div className="w-full h-[80px] bg-[#E7F2F9] shadow sticky top-0 left-0 z-30 flex items-center justify-between px-4">
             <div>
                 <Link to="/dashboard">
                     <img
