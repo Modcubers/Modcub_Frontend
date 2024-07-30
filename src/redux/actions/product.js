@@ -111,3 +111,90 @@ export const getAllProducts = () => async (dispatch) => {
         });
     }
 };
+
+//edit product
+
+export const editProduct =
+    (
+        // name,
+        // description,
+        // category,
+        // tags,
+        // originalPrice,
+        // discountPrice,
+        // stock,
+        // shopId,
+        // images,
+        // id
+        newform,
+        id
+        
+    ) =>
+        async (dispatch) => {
+        console.log("🚀 ~ productIdhbsdfhjbjhbfj:", id)
+        try {
+            dispatch({
+                type: "productEditRequest",
+            });
+            for (var key of newform.entries()) {
+                console.log(key[0] + ', ' + key[1])
+            }
+
+            console.log(newform.entries());
+
+            const { data } = await axios.put(
+                `${server}/product/update-product/${id}`,
+                // name,
+                // description,
+                // category,
+                // tags,
+                // originalPrice,
+                // discountPrice,
+                // stock,
+                // shopId,
+                // images
+                newform,
+                {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    },
+                }
+                
+            );
+
+            dispatch({
+                type: "productEditSuccess",
+                payload: data.product,
+            });
+        } catch (error) {
+            dispatch({
+                type: "productEditFail",
+                payload: error.response.data.message,
+            });
+        }
+    };
+
+
+    // get product by id
+
+    export const getShopProductById = (id) => async (dispatch) => {
+        try {
+            dispatch({
+                type: "getProductById",
+            });
+    
+            const { data } = await axios.get(
+                `${server}/product/get-productdetails/${id}`
+            );
+            dispatch({
+                type: "getShopProductByIdSuccess",
+                payload: data.product,
+            });
+        } catch (error) {
+            dispatch({
+                type: "getShopProductByIdFailed",
+                payload: error.response.data.message,
+            });
+        }
+    };
+    

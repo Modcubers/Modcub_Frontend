@@ -7,12 +7,15 @@ import { getAllOrdersOfShop } from "../../redux/actions/order";
 import { server } from "../../server";
 import axios from "axios";
 import { toast } from "react-toastify";
+import OtpVerification from "./OtpVerification";
 
 const OrderDetails = () => {
     const { orders, isLoading } = useSelector((state) => state.order);
     const { seller } = useSelector((state) => state.seller);
     const dispatch = useDispatch();
     const [status, setStatus] = useState("");
+    const [showOtpModal, setShowOtpModal] = useState(false);
+    const [orderIdForOtp, setOrderIdForOtp] = useState(null);
     const navigate = useNavigate();
 
     const { id } = useParams();
@@ -24,24 +27,69 @@ const OrderDetails = () => {
     const data = orders && orders.find((item) => item._id === id);
 
     const orderUpdateHandler = async (e) => {
-        await axios
-            .put(
+        if (!status) {
+            toast.error("Please select a status");
+            return;
+        }
+        if (status === "Transferred to delivery partner") {
+            setOrderIdForOtp(id);
+            setShowOtpModal(true);
+        } else {
+        // await axios
+        //     .put(
+        //         `${server}/order/update-order-status/${id}`,
+        //         {
+        //             status,
+        //         },
+        //         { withCredentials: true }
+        //     )
+        //     .then((res) => {
+        //         toast.success("Order updated!");
+        //         navigate("/dashboard-orders");
+        //     })
+        //     .catch((error) => {
+        //         toast.error(error.response.data.message);
+        //     });
+        try {
+            await axios.put(
                 `${server}/order/update-order-status/${id}`,
-                {
-                    status,
-                },
+                { status },
                 { withCredentials: true }
-            )
-            .then((res) => {
-                toast.success("Order updated!");
-                navigate("/dashboard-orders");
-            })
-            .catch((error) => {
-                toast.error(error.response.data.message);
-            });
+            );
+            toast.success("Order updated!");
+            navigate("/dashboard-orders");
+        } catch (error) {
+            toast.error(error.response.data.message);
+        }
+    }
+
+    };
+
+    const handleOtpVerified = async () => {
+        if (!status) {
+            toast.error("Please select a status");
+            return;
+        }
+        try {
+            await axios.put(
+                `${server}/order/update-order-status/${id}`,
+                { status },
+                { withCredentials: true }
+            );
+            toast.success("Order updated!");
+            setShowOtpModal(false);
+            navigate("/dashboard-orders");
+        } catch (error) {
+            toast.error(error.response.data.message);
+        }
     };
 
     const refundOrderUpdateHandler = async (e) => {
+        if (!status) {
+            toast.error("Please select a status");
+            return;
+        }
+        
         await axios
             .put(
                 `${server}/order/order-refund-success/${id}`,
@@ -204,12 +252,20 @@ const OrderDetails = () => {
                 className={`${styles.button} mt-5 !bg-[#FCE1E6] !rounded-[4px] text-[#E94560] font-[600] !h-[45px] text-[18px]`}
                 onClick={
                     data?.status !== "Processing refund"
-                        ? orderUpdateHandler
+                        ? (data?.status) !== status && orderUpdateHandler
                         : refundOrderUpdateHandler
                 }
             >
                 Update Status
             </div>
+
+            {showOtpModal && (
+                <OtpVerification
+                    orderId={orderIdForOtp}
+                    onClose={() => setShowOtpModal(false)}
+                    onOtpVerified={handleOtpVerified}
+                />
+            )}
         </div>
     );
 };

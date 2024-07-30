@@ -58,7 +58,38 @@ export const productReducer = createReducer(initialState, {
     state.error = action.payload;
   },
   
+  
+  // get product by id
+  
+  getProductById: (state) => {
+    state.isLoading = true;
+  },
+  getShopProductByIdSuccess: (state, action) => {
+    state.isLoading = false;
+    state.productById = action.payload;
+  },
+  getShopProductByIdFailed: (state, action) => {
+    state.isLoading = false;
+    state.producterror = action.payload;
+  },
+
+  // Edit product
+  productEditRequest: (state) => {
+    state.isLoading = true;
+},
+productEditSuccess: (state, action) => {
+    state.isLoading = false;
+    state.editproduct = action.payload;
+    state.success = true;
+},
+productEditFail: (state, action) => {
+    state.isLoading = false;
+    state.error = action.payload;
+    state.success = false;
+},
+  
   clearErrors: (state) => {
     state.error = null;
   },
 });
+
