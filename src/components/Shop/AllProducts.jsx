@@ -1,14 +1,15 @@
 import { Button } from "@material-ui/core";
 import { DataGrid } from "@material-ui/data-grid";
 import React, { useEffect } from "react";
-import { AiOutlineDelete, AiOutlineEye } from "react-icons/ai";
+import { AiOutlineDelete, AiOutlineEdit, AiOutlineEye } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getAllProductsShop } from "../../redux/actions/product";
 import { deleteProduct } from "../../redux/actions/product";
 import Loader from "../Layout/Loader";
 
 const AllProducts = () => {
+    const navigate = useNavigate();
     const { products, isLoading } = useSelector((state) => state.products);
     const { seller } = useSelector((state) => state.seller);
 
@@ -21,6 +22,10 @@ const AllProducts = () => {
     const handleDelete = (id) => {
         dispatch(deleteProduct(id));
         window.location.reload();
+    };
+
+    const handleEdit = (id) => {
+        navigate(`/dashboard-update-product/${id}`);
     };
 
     const columns = [
@@ -42,7 +47,7 @@ const AllProducts = () => {
             headerName: "Stock",
             type: "number",
             minWidth: 80,
-            flex: 0.5,
+            flex: 0.6,
         },
 
         {
@@ -54,8 +59,8 @@ const AllProducts = () => {
         },
         {
             field: "Preview",
-            flex: 0.8,
-            minWidth: 100,
+            flex: 0.5,
+            minWidth: 60,
             headerName: "",
             type: "number",
             sortable: false,
@@ -72,9 +77,26 @@ const AllProducts = () => {
             },
         },
         {
+            field: "Edit",
+            flex: 0.4,
+            maxWidth: 50,
+            headerName: "",
+            type: "number",
+            sortable: false,
+            renderCell: (params) => {
+                return (
+                    <>
+                        <Button onClick={() => handleEdit(params.id)}>
+                            <AiOutlineEdit size={20} />
+                        </Button>
+                    </>
+                );
+            },
+        },
+        {
             field: "Delete",
-            flex: 0.8,
-            minWidth: 120,
+            flex: 0.5,
+            maxWidth: 50,
             headerName: "",
             type: "number",
             sortable: false,

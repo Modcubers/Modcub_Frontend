@@ -83,6 +83,7 @@ const AllProducts = () => {
                 );
             },
         },
+        
         {
             field: "delete",
             headerName: "Delete",

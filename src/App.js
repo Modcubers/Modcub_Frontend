@@ -79,6 +79,8 @@ import Review from "./pages/Review.jsx";
 import Carrers from "./pages/Carrers.jsx";
 import Help from "./pages/Help.jsx";
 import ReturCenter from "./pages/ReturnCenter.jsx";
+import ShopEditProduct from "./pages/Shop/ShopEditProduct.jsx";
+import AdminContactList from "./pages/AdminContactList.js";
 
 const App = () => {
     const [stripeApikey, setStripeApiKey] = useState("");
@@ -277,6 +279,14 @@ const App = () => {
                         </SellerProtectedRoute>
                     }
                 />
+                 <Route
+                    path="/dashboard-update-product/:id"
+                    element={
+                        <SellerProtectedRoute>
+                            <ShopEditProduct/>
+                        </SellerProtectedRoute>
+                    }
+                />
                 <Route
                     path="/dashboard-create-event"
                     element={
@@ -364,6 +374,14 @@ const App = () => {
                     element={
                         <ProtectedAdminRoute>
                             <AdminDashboardProducts />
+                        </ProtectedAdminRoute>
+                    }
+                />
+                <Route
+                    path="/contact-list"
+                    element={
+                        <ProtectedAdminRoute>
+                            <AdminContactList />
                         </ProtectedAdminRoute>
                     }
                 />
