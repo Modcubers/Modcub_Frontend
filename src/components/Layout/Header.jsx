@@ -95,32 +95,32 @@ const Header = ({ activeHeading,navbar }) => {
             ) : null}
           </div>
 
-          <div className="w-[150px] h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer">
-            <Link to={`${isSeller ? "/dashboard" : "/login"}`}>
+          <div className="w-[150px] h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer bg-[#005DC9]">
+            <Link to={`${isAuthenticated ? "/dashboard" : "/login"}`}>
               <h1
                 className={`${
                   isAuthenticated ? "hidden" : "block"
-                } text-black flex items-center hover:underline`}
+                } text-white flex items-center hover:underline`}
               >
                 Login
               </h1>
             </Link>
           </div>
 
-          <div className="w-[150px] h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer bg-[#005DC9]">
+          {/* <div className="w-[150px] h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer bg-[#005DC9]">
             <Link to={`${isSeller ? "/dashboard" : "/shop-create"}`}>
               <h1 className="text-[#fff] flex items-center">
                 {isSeller ? "Go Dashboard" : "Become Seller"}{" "}
                 <IoIosArrowForward className="ml-1" />
               </h1>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
       <div
         className={`${
           active === true ? "shadow-sm fixed top-0 left-0 z-10" : null
-        } transition hidden w-full h-[70px] items-center justify-end bg-[#043773] ${navbar ? "hidden" : "800px:flex" }`}
+        } transition hidden w-full h-[40px] items-center justify-end bg-[#043773] ${navbar ? "hidden" : "800px:flex" }`}
       >
         <div
           className={`w-11/12 mx-auto relative float-right ${styles.noramlFlex} justify-between `}
