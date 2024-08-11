@@ -5,7 +5,7 @@ import discountimg from "../../Assests/Images/jeans.png";
 const TrendingDiscounts_2 = () => {
   return (
     <div
-      className={`w-full h-[300px] flex justify-evenly max-400px:justify-between max-sm:justify-between items-center bg-[#435D6C] p-6 rounded-sm mb-12 shadow-xl mt-5`}
+      className={`w-full h-[300px] max-450px:h-[150px] flex justify-evenly max-400px:justify-between max-sm:justify-between items-center bg-[#435D6C] p-6 rounded-sm mb-12 shadow-xl mt-5`}
       id="categories"
     >
       <img

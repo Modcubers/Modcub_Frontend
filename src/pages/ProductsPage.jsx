@@ -63,7 +63,7 @@ const ProductsPage = () => {
                   <TrendingElectronics />
                   <TrendingDiscounts_2 />
                   <ClothesForMen />
-                  <ClothesForWoman />
+                  {/* <ClothesForWoman /> */}
                   <Cosmetics />
                   <Books />
                 </>
