@@ -66,7 +66,7 @@ const ProductCard = ({ data, isEvent }) => {
     <>
       <div
         className="min-w-[250px] max-h-[350px] bg-white rounded-lg m-3  p-3 relative cursor-pointer duration-[0.5s] ease-in-out hover:shadow-[0_0_25px_-10px_rgba(0,0,0,0.3)] 
-      max-800px:min-w-[200px] max-800px:max-h-[290px] max-450px:min-w-[100px] max-450px:max-h-[230px] max-450px:m-1 max-450px:p-1"
+      max-800px:min-w-[200px] max-800px:max-h-[290px] max-450px:min-w-[120px] max-450px:max-h-[230px] max-450px:m-1 max-450px:p-1 max-800px:border"
       >
         <div className="w-full h-full flex flex-col justify-end max-450px:justify-center">
           <Link
@@ -93,7 +93,7 @@ const ProductCard = ({ data, isEvent }) => {
                 : `/product/${data._id}`
             }`}
           >
-            <h4 className="pb-3 font-[500] max-1000px:h-[50px] max-1000px:overflow-y-hidden max-800px:text-md max-450px:text-[12px] max-450px:h-[40px]">
+            <h4 className="pb-3 mt-2 font-[500] max-1000px:h-[50px] max-1000px:overflow-y-hidden max-800px:text-md max-450px:text-[12px] max-450px:h-[40px]">
               {data.name.length > 40
                 ? data.name.slice(0, 45) + "..."
                 : data.name}
@@ -132,7 +132,7 @@ const ProductCard = ({ data, isEvent }) => {
           </Link>
           <button
             type="button"
-            className={`bg-[#005DC9] text-white h-[40px] w-[150px] rounded-lg max-800px:h-[35px] max-800px:w-[120px] max-450px:h-[25px] max-450px:text-xs max-450px:w-[100px]  ${
+            className={`bg-[#005DC9] text-white h-[40px] w-[150px] rounded-lg max-800px:h-[35px] max-800px:w-[120px] max-450px:h-[25px] max-450px:text-xs max-450px:w-[100px] max-450px:w-full ${
               isInCart ? "cursor-not-allowed bg-gray-500" : ""
             }`}
             onClick={() => addToCartHandler(data._id)}

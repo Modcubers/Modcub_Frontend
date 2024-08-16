@@ -35,7 +35,7 @@ const StoreLocation = () => {
                 </div> */}
 
       <div className="container bg-[#E7F2F9] mx-auto py-8 flex flex-col md:flex-row">
-        <div className="w-9/12 mx-auto px-4 text-center">
+        <div className="w-11/12 mx-auto px-4 text-justify">
           <h1 className="text-3xl font-bold mb-4">Store Location</h1>
           <p className="text-lg mb-6">
             Welcome to Modcub your vibrant mutivendor e -commerce destination
@@ -45,7 +45,7 @@ const StoreLocation = () => {
             sellers from around the globe.
           </p>
 
-          <div className="flex justify-between">
+          <div className="flex justify-between max-450px:flex-col">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.379334729269!2d77.18193167514353!3d28.64835847565607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d02998cd7f811%3A0x9c2d0e5136470489!2s11752%2F4%2C%20Block%205A%2C%20Sat%20Nagar%2C%20Karol%20Bagh%2C%20New%20Delhi%2C%20Delhi%2C%20110005!5e0!3m2!1sen!2sin!4v1721126709743!5m2!1sen!2sin"
               title="Google Maps Embedded Content"
@@ -55,9 +55,10 @@ const StoreLocation = () => {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              className="max-450px:w-full"
             />
 
-            <div className="h-[350px] w-[400px] p-8 bg-gray-400 flex justify-center items-start flex-col">
+            <div className="h-[350px] w-[400px] p-8 bg-gray-400 flex justify-center items-start flex-col max-450px:w-full">
               <h1 className="font-semibold text-white text-2xl">Location:</h1>
               <p className="text-left font-semibold text-white text-xl">11752/4, Sat Nagar, Karol Bagh, New Delhi-110005</p>
             </div>

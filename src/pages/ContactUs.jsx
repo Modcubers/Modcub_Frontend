@@ -107,13 +107,13 @@ const ContactUs = () => {
               </a>
             </div>
             <div className="flex justify-around w-full">
-              <a href="#" className="">
+              <a href="https://x.com/InModcub" target="_blank" className="">
                 <AiFillTwitterSquare className="text-6xl"></AiFillTwitterSquare>
               </a>
-              <a href="#" className="">
+              <a href="https://www.instagram.com/modcub_in" target="_blank" className="">
                 <AiFillInstagram className="text-6xl"></AiFillInstagram>
               </a>
-              <a href="#" className="">
+              <a href="https://www.youtube.com/@Modcub-by6zj" target="_blank" className="">
                 <AiFillYoutube className="text-6xl"></AiFillYoutube>
               </a>
             </div>

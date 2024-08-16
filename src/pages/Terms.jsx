@@ -12,7 +12,7 @@ const Terms = () => {
   ];
   return (
     <>
-        <Header activeHeading={0} navbar={true} />
+      <Header activeHeading={0} navbar={true} />
       <div className="bg-[#E7F2F9]">
         {/* <div className="relative">
           <img
@@ -29,7 +29,7 @@ const Terms = () => {
         </div> */}
 
         <div className="container mx-auto py-8 flex flex-col md:flex-row">
-          <div className=" max-w-4xl m-auto px-7">
+          <div className=" max-w-4xl m-auto px-7 text-justify">
             <h1 className="text-3xl font-bold mb-4">TERMS OF USE</h1>
             <p className="mb-4">
               This document is an electronic record in terms of Information
@@ -462,7 +462,7 @@ const Terms = () => {
               </p>
             </div>
           </div>
-          <div className="w-1/4 ml-8">
+          <div className="w-1/4 ml-8 max-1000px:hidden">
             <SidebarLink />
           </div>
         </div>

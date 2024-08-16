@@ -41,6 +41,9 @@ const Login = () => {
     <div className="min-h-screen bg-[#053C5F] flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       {/* <div className="sm:mx-auto sm:w-full sm:max-w-md"></div> */}
       <div className="p-4 rounded-xl sm:mx-auto sm:w-full sm:max-w-md bg-[#1a4d78]">
+        <Link to="/" className="text-white font-semibold pl-2 hover:underline">
+          Home
+        </Link>
         <h2 className="text-center text-3xl font-semibold text-white">
           Login Here
         </h2>
@@ -142,12 +145,6 @@ const Login = () => {
             </div>
           </form>
         </div>
-        <Link
-          to="/"
-          className="text-white font-semibold pl-2 hover:underline"
-        >
-          Home
-        </Link>
       </div>
     </div>
   );

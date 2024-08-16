@@ -8,7 +8,7 @@ import {
   AiOutlineMail,
   AiOutlinePhone,
   AiOutlineQuestionCircle,
-  AiFillDashboard
+  AiFillDashboard,
 } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import {
@@ -63,17 +63,19 @@ const Footer = () => {
               <AiFillFacebook size={25} className="cursor-pointer" />
             </a>
 
-            <a href="https://twitter.com/Rajat_khanna123" target="/">
+            <a href="https://x.com/InModcub" target="/">
               <AiOutlineTwitter
                 size={25}
                 style={{ marginLeft: "15px", cursor: "pointer" }}
               />
             </a>
+            <a href="https://www.instagram.com/modcub_in" target="/">
+              <AiFillInstagram
+                size={25}
+                style={{ marginLeft: "15px", cursor: "pointer" }}
+              />
+            </a>
 
-            <AiFillInstagram
-              size={25}
-              style={{ marginLeft: "15px", cursor: "pointer" }}
-            />
             <a
               href="https://youtube.com/@Modcub-by6zj?si=NqLR1sfIz3Ej_EQf"
               target="/"
@@ -166,7 +168,10 @@ const Footer = () => {
       </div>
 
       <div className="w-full flex justify-center items-center mb-10">
-        <Link to={`${isSeller ? "/dashboard" : "/shop-create"}`} onClick={() => window.scrollTo(0, 0)} >
+        <Link
+          to={`${isSeller ? "/dashboard" : "/shop-create"}`}
+          onClick={() => window.scrollTo(0, 0)}
+        >
           <button className="bg-[#005DC9] h-[50px] w-[200px] rounded-lg flex items-center justify-evenly px-3">
             {isSeller ? "Go Dashboard" : "Become Seller"}{" "}
           </button>
@@ -174,8 +179,19 @@ const Footer = () => {
       </div>
 
       <div className="w-full flex justify-evenly items-center mb-10">
-        <Link onClick={() => window.scrollTo(0, 0)} className="flex justify-start items-center">For Advertisement</Link>
-        <Link to={"/help"} onClick={() => window.scrollTo(0, 0)} className="flex justify-evenly items-center"><AiOutlineQuestionCircle /> Help Center</Link>
+        <Link
+          onClick={() => window.scrollTo(0, 0)}
+          className="flex justify-start items-center"
+        >
+          For Advertisement
+        </Link>
+        <Link
+          to={"/help"}
+          onClick={() => window.scrollTo(0, 0)}
+          className="flex justify-evenly items-center"
+        >
+          <AiOutlineQuestionCircle /> Help Center
+        </Link>
       </div>
 
       <div

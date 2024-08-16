@@ -95,7 +95,7 @@ const Header = ({ activeHeading,navbar }) => {
             ) : null}
           </div>
 
-          <div className="w-[150px] h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer bg-[#005DC9]">
+          <div className={`w-[150px] h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer ${isAuthenticated ? "bg-white" : "bg-[#005DC9]" }`}>
             <Link to={`${isAuthenticated ? "/dashboard" : "/login"}`}>
               <h1
                 className={`${
@@ -307,21 +307,19 @@ const Header = ({ activeHeading,navbar }) => {
               </div>
 
               <Navbar active={activeHeading} />
-              <div className={`${styles.button} ml-4 !rounded-[4px]`}>
+              {/* <div className={`${styles.button} ml-4 !rounded-[4px]`}>
                 <Link to="/shop-create">
                   <h1 className="text-[#fff] flex items-center">
                     Become Seller <IoIosArrowForward className="ml-1" />
                   </h1>
                 </Link>
-              </div>
-              <br />
-              <br />
-              <br />
+              </div> */}
+            
 
-              <div className="flex w-full justify-center">
+              <div className={`${styles.button} ml-4 !rounded-[4px] ${isAuthenticated ? "bg-white" : "bg-[#005DC9]" }`}>
                 {isAuthenticated ? (
                   <div>
-                    <Link to="/profile" className=" bg-black">
+                    <Link to="/profile" className="bg-black">
                       <img
                         src={`${user.avatar?.url}`}
                         alt=""
@@ -333,15 +331,9 @@ const Header = ({ activeHeading,navbar }) => {
                   <>
                     <Link
                       to="/login"
-                      className="text-[18px] pr-[10px] text-[#000000b7]"
+                      className="text-[#fff] flex items-center"
                     >
-                      Login /
-                    </Link>
-                    <Link
-                      to="/sign-up"
-                      className="text-[18px] text-[#000000b7]"
-                    >
-                      Sign up
+                      Login
                     </Link>
                   </>
                 )}

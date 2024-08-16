@@ -16,17 +16,17 @@ const Privacy = () => {
       <Header navbar={true} />
       <div className="bg-[#E7F2F9]">
         <div className="container mx-auto py-8  flex flex-col md:flex-row">
-          <div className="max-w-4xl mx-auto px-4">
-            <h1 className="text-3xl font-bold mb-4 text-gray-700">
+          <div className="max-w-4xl mx-auto px-4 text-justify">
+            <h1 className="text-3xl font-bold mb-4 text-black">
               Privacy Policy
             </h1>
-            <p className="mb-4 text-gray-500">
+            <p className="mb-4">
               We value the trust you place in us. That’s why we insist upon the
               highest standards for secure transactions and customer information
               privacy. Please read the following statement to learn about our
               information gathering and dissemination practices.
             </p>
-            <p className="mb-4 text-gray-500">
+            <p className="mb-4">
               <strong>Note:</strong> Our privacy policy is subject to change at
               any time without notice. To make sure you are aware of any
               changes, please review this policy periodically. By visiting our
@@ -41,7 +41,7 @@ const Privacy = () => {
               1. Collection of Personally Identifiable Information and other
               Information
             </h2>
-            <p className="mb-4 text-gray-500">
+            <p className="mb-4">
               When you use our website, we collect and store your personal
               information which is provided by you from time to time. Our
               primary goal in doing so is to provide you a safe, efficient,
@@ -49,7 +49,7 @@ const Privacy = () => {
               services and features that most likely meet your needs, and to
               customize our website to make your experience safer and easier.
             </p>
-            <p className="mb-4 text-gray-500">
+            <p className="mb-4">
               <strong>
                 More importantly, while doing so we collect personal information
                 from you that we consider necessary for achieving this purpose.
@@ -62,10 +62,10 @@ const Privacy = () => {
                 particular service or feature on the website.
               </strong>
             </p>
-            <h2 className="text-xl font-bold mb-2 text-gray-700">
+            <h2 className="text-xl font-bold mb-2">
               2. Use of Demographic / Profile Data / Your Information
             </h2>
-            <p className="mb-4 text-gray-500">
+            <p className="mb-4">
               We use personal information to provide the services you request.
               To the extent we use your personal information to market to you,
               we will provide you the ability to opt-out of such uses. We use
@@ -78,7 +78,7 @@ const Privacy = () => {
               conditions; and as otherwise described to you at the time of
               collection.
             </p>
-            <p className="mb-4 text-gray-500">
+            <p className="mb-4">
               <strong>
                 In our efforts to continually improve our product and service
                 offerings, we collect and analyze demographic and profile data
@@ -88,10 +88,10 @@ const Privacy = () => {
                 identify you and to gather broad demographic information.
               </strong>
             </p>
-            <h2 className="text-xl font-bold mb-2 text-gray-700">
+            <h2 className="text-xl font-bold mb-2">
               3. Sharing of personal information
             </h2>
-            <p className="mb-4 text-gray-500">
+            <p className="mb-4">
               We may share personal information with our other corporate
               entities and affiliates. These entities and affiliates may market
               to you as a result of such sharing unless you explicitly opt-out.
@@ -123,20 +123,20 @@ const Privacy = () => {
             </p>
 
             {/* Additional Points */}
-            <h2 className="text-xl font-bold mb-2 text-gray-700">
+            <h2 className="text-xl font-bold mb-2">
               4. Links to Other Sites/Apps
             </h2>
-            <p className="mb-4 text-gray-500">
+            <p className="mb-4">
               Our website links to other websites/Apps that may collect
               personally identifiable information about you. Mntra is not
               responsible for the privacy practices or the content of those
               linked websites/Apps.
             </p>
 
-            <h2 className="text-xl font-bold mb-2 text-gray-700">
+            <h2 className="text-xl font-bold mb-2">
               5. Security Precautions
             </h2>
-            <p className="mb-4 text-gray-500">
+            <p className="mb-4">
               Our website has stringent security measures in place to protect
               the loss, misuse, and alteration of the information under our
               control. Whenever you change or access your account information,
@@ -145,10 +145,10 @@ const Privacy = () => {
               it against unauthorized access.
             </p>
 
-            <h2 className="text-xl font-bold mb-2 text-gray-700">
+            <h2 className="text-xl font-bold mb-2">
               6. Choice/Opt-Out
             </h2>
-            <p className="mb-4 text-gray-500">
+            <p className="mb-4">
               We provide all users with the opportunity to opt-out of receiving
               non-essential (promotional, marketing-related) communications from
               us on behalf of our partners, and from us in general, after
@@ -157,10 +157,10 @@ const Privacy = () => {
               unsubscribe.
             </p>
 
-            <h2 className="text-xl font-bold mb-2 text-gray-700">
+            <h2 className="text-xl font-bold mb-2">
               7. Advertisements on the Website
             </h2>
-            <p className="mb-4 text-gray-500">
+            <p className="mb-4">
               We may use third-party advertising companies to serve ads when you
               visit our website. These companies may use information (not
               including your name, address, email address, or telephone number)
@@ -169,10 +169,10 @@ const Privacy = () => {
               you.
             </p>
 
-            <h2 className="text-xl font-bold mb-2 text-gray-700">
+            <h2 className="text-xl font-bold mb-2">
               8. Your Consent
             </h2>
-            <p className="mb-4 text-gray-500">
+            <p className="mb-4">
               By using the website or by providing your information, you consent
               to the collection and use of the information you disclose on the
               website in accordance with this Privacy Policy, including but not
@@ -184,29 +184,29 @@ const Privacy = () => {
             </p>
             {/* Add more sections with similar formatting */}
             {/* You can format the content using appropriate HTML tags */}
-            <h2 className="text-xl font-bold mb-2 text-gray-700">
+            <h2 className="text-xl font-bold mb-2">
               9. Grievance Officer
             </h2>
-            <p className="mb-4 text-gray-500">
+            <p className="mb-4 ">
               In accordance with Information Technology Act 2000 and rules made
               there under, the name and contact details of the Grievance Officer
               are provided below:
             </p>
-            <p className="mb-4 text-gray-500">
+            <p className="mb-4">
               Mr. Viral production studios Pvt Ltd. ground floor, Sat Nagar
               Karol Bagh, New Delhi- Email: viralproductionstudios@gmail.com
               Time: Mon – Sat (9:00 – 18:00)
             </p>
-            <h2 className="text-xl font-bold mb-2 text-gray-700">
+            <h2 className="text-xl font-bold mb-2">
               10. Questions?
             </h2>
-            <p className="mb-4 text-gray-500">
+            <p className="mb-4">
               Please contact us regarding any questions regarding this
               statement.
             </p>
           </div>
 
-          <div className="w-1/4 ml-8">
+          <div className="w-1/4 ml-8 max-1000px:hidden">
             <SidebarLink />
           </div>
         </div>

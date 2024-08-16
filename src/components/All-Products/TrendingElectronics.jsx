@@ -24,7 +24,7 @@ const TrendingElectronics = () => {
 
   return (
     <div
-      className={`w-full bg-white p-6 rounded-lg mb-12 shadow-xl mt-5 overflow-hidden`}
+      className={`w-full bg-white p-6 rounded-lg mb-12 shadow-xl mt-5 overflow-hidden max-450px:p-2`}
     >
       <div className="flex justify-between">
         <h1 className="text-black font-semibold text-xl">Electronics</h1>

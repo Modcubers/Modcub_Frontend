@@ -29,7 +29,7 @@ const Navbar = ({ active }) => {
         <Link
           to="/"
           className={`${
-            active === 1 ? "text-orange-400" : "text-white"
+            active === 1 ? "text-orange-400" : "text-white max-800px:text-black"
           } pb-[30px] 800px:pb-0 font-[500] px-6 cursor-pointer}`}
         >
           HOME
@@ -50,7 +50,7 @@ const Navbar = ({ active }) => {
               className={`${
                 active === 2
                   ? "text-orange-400"
-                  : "text-white"
+                  : "text-white max-800px:text-black"
               } pb-[30px] 800px:pb-0 font-[500] px-6 cursor-pointer}`}
             >
               CATEGORIES
@@ -73,7 +73,7 @@ const Navbar = ({ active }) => {
         <Link
           to="/about"
           className={`${
-            active === 3 ? "text-orange-400" : "text-white"
+            active === 3 ? "text-orange-400" : "text-white max-800px:text-black"
           } pb-[30px] 800px:pb-0 font-[500] px-6 cursor-pointer}`}
         >
           ABOUT US
@@ -83,7 +83,7 @@ const Navbar = ({ active }) => {
         <Link
           to="/contactus"
           className={`${
-            active === 4 ? "text-orange-400" : "text-white"
+            active === 4 ? "text-orange-400" : "text-white max-800px:text-black"
           } pb-[30px] 800px:pb-0 font-[500] px-6 cursor-pointer}`}
         >
           CONTACT US
