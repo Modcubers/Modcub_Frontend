@@ -1,6 +1,5 @@
-import { React, useState } from "react";
+import React, { useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import styles from "../../styles/styles";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { server } from "../../server";
@@ -11,35 +10,31 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
+  const [loading, setLoading] = useState(false); // Add loading state
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Set loading to true when submission starts
 
-    await axios
-      .post(
+    try {
+      const res = await axios.post(
         `${server}/user/login-user`,
-        {
-          email,
-          password,
-        },
-        {
-          withCredentials: true,
-        }
-      )
-      .then((res) => {
-        localStorage.setItem("token", res.data.token);
-        toast.success("Login Success!");
-        navigate("/");
-        window.location.reload(true);
-      })
-      .catch((err) => {
-        toast.error(err.response.data.message);
-      });
+        { email, password },
+        { withCredentials: true }
+      );
+      localStorage.setItem("token", res.data.token);
+      toast.success("Login Success!");
+      navigate("/");
+      window.location.reload(true);
+    } catch (err) {
+      toast.error(err.response.data.message);
+    } finally {
+      setLoading(false); // Set loading to false after request is complete
+    }
   };
 
   return (
     <div className="min-h-screen bg-[#053C5F] flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-      {/* <div className="sm:mx-auto sm:w-full sm:max-w-md"></div> */}
       <div className="p-4 rounded-xl sm:mx-auto sm:w-full sm:max-w-md bg-[#1a4d78]">
         <Link to="/" className="text-white font-semibold pl-2 hover:underline">
           Home
@@ -102,8 +97,8 @@ const Login = () => {
                 )}
               </div>
             </div>
-            <div className={`${styles.noramlFlex} justify-between`}>
-              <div className={`${styles.noramlFlex}`}>
+            <div className="flex justify-between">
+              <div className="flex">
                 <input
                   type="checkbox"
                   name="remember-me"
@@ -119,7 +114,7 @@ const Login = () => {
               </div>
               <div className="text-sm">
                 <Link
-                  to="/forgot-password" // Link to the forgot password page
+                  to="/forgot-password"
                   className="font-medium text-white hover:underline"
                 >
                   FORGOT PASSWORD?
@@ -130,11 +125,12 @@ const Login = () => {
               <button
                 type="submit"
                 className="group relative w-[50%] h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-lg font-semibold rounded-md text-white bg-[#1758A5]"
+                disabled={loading} // Disable button when loading
               >
-                Login
+                {loading ? "Loading..." : "Login"}
               </button>
             </div>
-            <div className={`${styles.noramlFlex} w-full`}>
+            <div className="flex w-full">
               <h4 className="text-white">Don’t have an account yet? </h4>
               <Link
                 to="/sign-up"

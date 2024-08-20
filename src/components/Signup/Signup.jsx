@@ -1,18 +1,18 @@
-import { React, useState } from "react";
+import React, { useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import styles from "../../styles/styles";
 import { Link, useNavigate } from "react-router-dom";
 import { RxAvatar } from "react-icons/rx";
 import axios from "axios";
 import { server } from "../../server";
 import { toast } from "react-toastify";
 
-const Singup = () => {
+const Signup = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
   const [avatar, setAvatar] = useState(null);
+  const [loading, setLoading] = useState(false); // Add loading state
   const navigate = useNavigate();
 
   const handleFileInputChange = (e) => {
@@ -29,34 +29,39 @@ const Singup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Set loading to true when submission starts
 
-    axios
-      .post(`${server}/user/create-user`, { name, email, password, avatar })
-      .then((res) => {
-        toast.success(res.data.message);
-        setName("");
-        setEmail("");
-        setPassword("");
-        setAvatar(null);
-        navigate("/login");
-      })
-      .catch((error) => {
-        toast.error(error.response.data.message);
+    try {
+      await axios.post(`${server}/user/create-user`, {
+        name,
+        email,
+        password,
+        avatar,
       });
+      toast.success("Account created successfully!");
+      setName("");
+      setEmail("");
+      setPassword("");
+      setAvatar(null);
+      navigate("/login");
+    } catch (error) {
+      toast.error(error.response.data.message);
+    } finally {
+      setLoading(false); // Set loading to false after request is complete
+    }
   };
 
   return (
     <div className="min-h-screen bg-[#053C5F] flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-      {/* <div className="sm:mx-auto sm:w-full sm:max-w-md"></div> */}
       <div className="mt-8 bg-[#1a4d78] rounded-lg sm:mx-auto sm:w-full sm:max-w-md">
         <h2 className="mt-6 text-center text-3xl font-semibold text-white">
           User Registration
         </h2>
-        <div className=" py-8 px-4  sm:rounded-lg sm:px-10">
+        <div className="py-8 px-4 sm:rounded-lg sm:px-10">
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label
-                htmlFor="email"
+                htmlFor="name"
                 className="block text-sm font-semibold text-white"
               >
                 Full Name
@@ -64,7 +69,7 @@ const Singup = () => {
               <div className="mt-1">
                 <input
                   type="text"
-                  name="text"
+                  name="name"
                   autoComplete="name"
                   placeholder="John"
                   required
@@ -149,7 +154,7 @@ const Singup = () => {
                 </span>
                 <label
                   htmlFor="file-input"
-                  className="ml-5 flex items-center justify-center px-4 py-2 border border-gray-300 bg-[#064EA4]  rounded-md shadow-sm text-sm font-semibold text-white hover:border-[#064EA4]"
+                  className="ml-5 flex items-center justify-center px-4 py-2 border border-gray-300 bg-[#064EA4] rounded-md shadow-sm text-sm font-semibold text-white hover:border-[#064EA4]"
                 >
                   <span>Upload a file</span>
                   <input
@@ -163,20 +168,23 @@ const Singup = () => {
                 </label>
               </div>
             </div>
-            <div className={`flex items-center`}>
+            
+            <div className="flex items-center">
               <input
                 type="checkbox"
                 name="terms"
                 id="terms"
                 className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                required
               />
               <label
                 htmlFor="terms"
                 className="ml-2 block text-semibold text-white text-md"
               >
-                Terms And conditions which you should follow to continue in this
-                platform with out this you can go further, please read all the
-                terms and conditions <a href="#" className="underline">Read More</a>
+                I agree to the{" "}
+                <a href="#" className="underline">
+                  Terms and Conditions
+                </a>
               </label>
             </div>
 
@@ -184,11 +192,12 @@ const Singup = () => {
               <button
                 type="submit"
                 className="group relative w-[50%] h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-semibold rounded-md text-white bg-[#064EA4]"
+                disabled={loading} // Disable button when loading
               >
-                Submit
+                {loading ? "Loading..." : "Submit"}
               </button>
             </div>
-            <div className={`${styles.noramlFlex} w-full`}>
+            <div className="flex w-full">
               <h4 className="text-white font-semibold">
                 Already have an account?
               </h4>
@@ -203,4 +212,4 @@ const Singup = () => {
   );
 };
 
-export default Singup;
+export default Signup;

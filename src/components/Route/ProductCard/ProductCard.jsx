@@ -93,7 +93,7 @@ const ProductCard = ({ data, isEvent }) => {
                 : `/product/${data._id}`
             }`}
           >
-            <h4 className="pb-3 mt-2 font-[500] max-1000px:h-[50px] max-1000px:overflow-y-hidden max-800px:text-md max-450px:text-[12px] max-450px:h-[40px]">
+            <h4 className="h-[50px] pb-3 mt-2 font-[500] max-1000px:h-[50px] max-1000px:overflow-y-hidden max-800px:text-md max-450px:text-[12px] max-450px:h-[40px]">
               {data.name.length > 40
                 ? data.name.slice(0, 45) + "..."
                 : data.name}
