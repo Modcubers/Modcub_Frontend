@@ -38,6 +38,9 @@ const ShopLogin = () => {
     <div className="min-h-screen bg-[#053C5F] flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       {/* <div className="sm:mx-auto sm:w-full sm:max-w-md"></div> */}
       <div className="p-4 rounded-xl sm:mx-auto sm:w-full sm:max-w-md bg-[#1a4d78]">
+        <Link to="/" className="text-white font-semibold pl-2 hover:underline">
+          Home
+        </Link>
         <h2 className="text-center text-3xl font-semibold text-white">
           Seller Login
         </h2>
@@ -130,7 +133,10 @@ const ShopLogin = () => {
             </div>
             <div className={`${styles.noramlFlex} w-full`}>
               <h4 className="text-white">Don’t have an account yet? </h4>
-              <Link to="/shop-create" className="text-white font-semibold pl-2 hover:underline">
+              <Link
+                to="/shop-create"
+                className="text-white font-semibold pl-2 hover:underline"
+              >
                 REGISTER HERE
               </Link>
             </div>
