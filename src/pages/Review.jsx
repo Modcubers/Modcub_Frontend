@@ -33,8 +33,8 @@ const Review = () => {
         </div>
 
         <div className="container  mx-auto py-8 flex flex-col md:flex-row">
-          <div className="max-w-4xl mx-auto px-4">
-            <h1 className="text-3xl font-bold mb-4">Welcome to Modcub</h1>
+          <div className="max-w-4xl mx-auto px-4 text-justify">
+            <h1 className="text-2xl font-bold mb-4">Welcome to Modcub</h1>
             <p className="text-lg mb-6">
               Welcome to Modcub, your vibrant multivendor e-commerce destination
               curated by the passionate team at Viral Production Studio. We're
@@ -89,7 +89,7 @@ const Review = () => {
           </div>
 
           {/* Show sidebar only on medium and larger screens */}
-          <div className="w-full md:w-1/4 ml-0 md:ml-8">
+          <div className="w-full md:w-1/4 ml-0 md:ml-8 max-1000px:hidden">
             <SidebarLink />
           </div>
         </div>

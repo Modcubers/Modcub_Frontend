@@ -2,10 +2,10 @@ import React from 'react'
 import styles from '../../styles/styles'
 
 const CheckoutSteps = ({active}) => {
-    console.log(active);
+    // console.log(active);
   return (
     <div className='w-full flex justify-center'>
-        <div className="w-[90%] 800px:w-[50%] flex items-center flex-wrap">
+        <div className="w-[100%] 800px:w-[50%] flex items-center flex-wrap max-450px:mx-3">
                <div className={`${styles.noramlFlex}`}>
                 <div className={`${styles.cart_button}`}>
                        <span className={`${styles.cart_button_text}`}>1.Shipping</span>

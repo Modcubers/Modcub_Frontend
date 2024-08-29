@@ -71,7 +71,10 @@ const ShopCreate = () => {
   return (
     <div className="min-h-screen bg-[#053C5F] flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       {/* <div className="sm:mx-auto sm:w-full sm:max-w-md"></div> */}
-      <div className="mt-8 bg-[#1a4d78] rounded-lg sm:mx-auto sm:w-full sm:max-w-[35rem]">
+      <div className="mt-8 p-4 bg-[#1a4d78] rounded-lg sm:mx-auto sm:w-full sm:max-w-[35rem]">
+        <Link to="/" className="text-white font-semibold pl-2 hover:underline">
+          Home
+        </Link>
         <h2 className="mt-6 text-center text-3xl font-semibold text-white">
           Seller Registration
         </h2>
@@ -257,7 +260,10 @@ const ShopCreate = () => {
               >
                 Terms And conditions which you should follow to continue in this
                 platform with out this you can go further, please read all the
-                terms and conditions <a href="#" className="underline">Read More</a>
+                terms and conditions{" "}
+                <a href="#" className="underline">
+                  Read More
+                </a>
               </label>
             </div>
 

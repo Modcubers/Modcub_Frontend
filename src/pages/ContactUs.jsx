@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../components/Layout/Footer";
 import Header from "../components/Layout/Header";
 import contactusimg from "../Assests/Images/contactus.png";
@@ -10,6 +10,11 @@ import {
   AiFillInstagram,
   AiFillYoutube,
 } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { createContact } from "../redux/actions/contact";
+import { toast } from "react-toastify";
+import {BeatLoader} from 'react-spinners'
 
 const ContactUs = () => {
   // Placeholder data until backend integration
@@ -18,6 +23,51 @@ const ContactUs = () => {
     "https://www.maidwale.com/images/about/istockphoto-1283119095-170667a.jpg",
     "https://www.maidwale.com/images/about/istockphoto-1283119095-170667a.jpg",
   ];
+
+  const { success, error, isLoading } = useSelector((state) => state.contact);
+  // const {productById,success:productSuccess, error:producterror } = useSelector((state) => state.products);
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [errors, setErrors] = useState({});
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!name) newErrors.name = "Name is required";
+    if (!email) newErrors.email = "Email is required";
+    if (!message) newErrors.message = "Message is required";
+    return newErrors;
+  };
+
+  useEffect(() => {
+    if (error) {
+      toast.error(error);
+    }
+    if (success) {
+      toast.success("Contact Added successfully!");
+      navigate("/contactus");
+      window.location.reload();
+    }
+  }, [dispatch, error, success, navigate]);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    const formErrors = validateForm();
+    if (Object.keys(formErrors).length > 0) {
+      setErrors(formErrors);
+      return;
+    }
+    dispatch(
+      createContact({
+        name,
+        email,
+        message,
+      })
+    );
+  };
 
   return (
     <>
@@ -30,7 +80,11 @@ const ContactUs = () => {
                 Get in Touch
               </h1>
             </div>
-            <img src={contactusimg} alt="" className="h-[300px] max-800px:h-[200px]" />
+            <img
+              src={contactusimg}
+              alt=""
+              className="h-[300px] max-800px:h-[200px]"
+            />
           </div>
         </div>
         <div className="flex mt-[-50px] max-800px:flex-col">
@@ -53,13 +107,13 @@ const ContactUs = () => {
               </a>
             </div>
             <div className="flex justify-around w-full">
-              <a href="#" className="">
+              <a href="https://x.com/InModcub" target="_blank" className="">
                 <AiFillTwitterSquare className="text-6xl"></AiFillTwitterSquare>
               </a>
-              <a href="#" className="">
+              <a href="https://www.instagram.com/modcub_in" target="_blank" className="">
                 <AiFillInstagram className="text-6xl"></AiFillInstagram>
               </a>
-              <a href="#" className="">
+              <a href="https://www.youtube.com/@Modcub-by6zj" target="_blank" className="">
                 <AiFillYoutube className="text-6xl"></AiFillYoutube>
               </a>
             </div>
@@ -69,8 +123,8 @@ const ContactUs = () => {
               Get In Touch
             </h1>
             <form
-              action=""
               className="flex justify-center items-center flex-col w-[80%]"
+              onSubmit={handleSubmit}
             >
               <div className="w-full my-4">
                 {/* <label htmlFor="name">Name</label> */}
@@ -79,7 +133,10 @@ const ContactUs = () => {
                   name="name"
                   placeholder="Name"
                   className="bg-gray-300 w-full border-none rounded-sm"
+                  onChange={(e) => setName(e.target.value)}
+                  value={name}
                 />
+                {errors.name && <p className="text-red-500">{errors.name}</p>}
               </div>
               <div className="w-full my-4">
                 {/* <label htmlFor="">Email</label> */}
@@ -88,7 +145,10 @@ const ContactUs = () => {
                   name="email"
                   placeholder="Email"
                   className="bg-gray-300 w-full border-none rounded-sm"
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
                 />
+                {errors.email && <p className="text-red-500">{errors.email}</p>}
               </div>
               <div className="w-full my-4">
                 {/* <label htmlFor="message">Message</label> */}
@@ -98,10 +158,19 @@ const ContactUs = () => {
                   rows={5}
                   placeholder="Message"
                   className="bg-gray-300 w-full border-none rounded-sm"
+                  onChange={(e) => setMessage(e.target.value)}
+                  value={message}
                 ></textarea>
+                {errors.message && (
+                  <p className="text-red-500">{errors.message}</p>
+                )}
               </div>
-              <button className="h-[40px] w-[150px] bg-[#005DC9] border-none rounded-lg text-white">
-                Submit
+              <button
+                className="h-[40px] w-[150px] bg-[#005DC9] border-none rounded-lg text-white"
+                type="submit"
+              >
+                {isLoading ? 
+                <BeatLoader color="#fff" /> : "Submit"}
               </button>
             </form>
           </div>

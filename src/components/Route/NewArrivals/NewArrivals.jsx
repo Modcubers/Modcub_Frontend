@@ -24,13 +24,13 @@ const NewArrivals = () => {
               {categoriesData.slice(0, halfLength).map((category) => (
                 <div
                   key={category.id}
-                  className="w-[300px] mx-5 flex justify-center items-center flex-col cursor-pointer" // Added cursor-pointer for indicating clickable
+                  className="w-[300px] mx-5 flex justify-center items-center content-between flex-col cursor-pointer" // Added cursor-pointer for indicating clickable
                   onClick={() => handleCategoryClick(category.title)} // Click event added
                 >
                   <img
                     src={category.image_Url}
                     alt={category.title}
-                    className="min-w-[200px] max-h-[200px] max-800px:min-w-[150px]"
+                    className="min-w-[200px] h-[200px] object-contain max-800px:min-w-[150px]"
                   />
                   <p className="mt">{category.title}</p>
                 </div>
@@ -51,13 +51,13 @@ const NewArrivals = () => {
               {categoriesData.slice(halfLength).map((category) => (
                 <div
                   key={category.id}
-                  className="w-[300px] mx-5 flex justify-center items-center flex-col cursor-pointer" // Added cursor-pointer for indicating clickable
+                  className="w-[300px] mx-5 flex justify-center items-center content-between flex-col cursor-pointer" // Added cursor-pointer for indicating clickable
                   onClick={() => handleCategoryClick(category.title)} // Click event added
                 >
                   <img
                     src={category.image_Url}
                     alt={category.title}
-                    className="min-w-[200px] max-h-[200px] max-800px:min-w-[150px]"
+                    className="min-w-[200px] h-[200px] object-contain max-800px:min-w-[150px]"
                   />
                   <p className="mt">{category.title}</p>
                 </div>

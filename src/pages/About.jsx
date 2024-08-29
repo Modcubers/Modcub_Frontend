@@ -35,7 +35,7 @@ const About = () => {
         </div> */}
 
         <div className="container mx-auto py-8 flex flex-col md:flex-row">
-          <div className="w-9/12 mx-auto px-4 ">
+          <div className="w-11/12 mx-auto px-4 text-justify">
             <h1 className="text-3xl font-bold mb-4">Welcome to Modcub</h1>
             <p className="text-lg mb-6">
               Welcome to Modcub, your vibrant multivendor e-commerce destination
