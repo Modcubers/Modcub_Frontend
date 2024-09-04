@@ -835,6 +835,14 @@ export const footerSupportLinks = [
     name: "Contact Us",
     link: "/contactus",
   },
+  {
+    name: "Shipping and Delivery",
+    link: "/shipping-and-delivery",
+  },
+  // {
+  //   name: "Site Map",
+  //   link: "/site-map",
+  // },
   // {
   // name: "Shipping",
   // },
