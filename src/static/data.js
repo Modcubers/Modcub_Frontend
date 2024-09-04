@@ -783,7 +783,7 @@ export const footerProductLinks = [
   },
   {
     name: "Refund Policy",
-    link: "/carrers",
+    link: "/cancelationandrefund",
   },
   {
     name: "Terms",
@@ -837,7 +837,7 @@ export const footerSupportLinks = [
   },
   {
     name: "Shipping and Delivery",
-    link: "/shipping-and-delivery",
+    link: "/shippinganddelivery",
   },
   // {
   //   name: "Site Map",
