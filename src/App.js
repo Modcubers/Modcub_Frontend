@@ -81,6 +81,8 @@ import Help from "./pages/Help.jsx";
 import ReturCenter from "./pages/ReturnCenter.jsx";
 import ShopEditProduct from "./pages/Shop/ShopEditProduct.jsx";
 import AdminContactList from "./pages/AdminContactList.js";
+import ShipingandDelivery from "./pages/ShipingandDelivery.jsx";
+import SiteMap from "./pages/SiteMap.jsx";
 
 const App = () => {
     const [stripeApikey, setStripeApiKey] = useState("");
@@ -137,6 +139,8 @@ const App = () => {
                 />
                 <Route path="/our-blogs" element={<OurBlogs />} />
                 <Route path="/review" element={<Review />} />
+                <Route path="/shipping-and-delivery" element={<ShipingandDelivery />} />
+                <Route path="/site-map" element={<SiteMap />} />
                 <Route path="/return-center" element={<ReturCenter />} />
 
                 <Route

@@ -3,6 +3,8 @@ import Footer from "../components/Layout/Footer";
 import Header from "../components/Layout/Header";
 import SidebarLink from "../components/SidebarLink";
 import corporateimg from "../Assests/Images/corporate.png";
+import ilovepdfMerged from '../Assests/ilovepdf_merged.pdf';
+
 
 const Corporate = () => {
   // Placeholder data until backend integration
@@ -51,9 +53,10 @@ const Corporate = () => {
                   Annual Return
                 </a>
                 <a
-                  href="#"
+                  href={ilovepdfMerged}
                   className="hover:text-blue-500 my-2 text-lg font-semibold"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Director Information
                 </a>
