@@ -215,7 +215,7 @@ export const categoriesData = [
     title: "Shoes",
     subTitle: "",
     image_Url:
-      "https://m.media-Modcub.com/images/I/71Qf4GyEQ9L._AC_UY1000_.jpg",
+      "https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     sizes: ["5", "6", "7", "8", "9", "10", "11"],
   },
   {
