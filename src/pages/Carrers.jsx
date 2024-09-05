@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import Footer from "../components/Layout/Footer";
@@ -15,6 +15,18 @@ const Carrers = () => {
     "https://www.maidwale.com/images/about/istockphoto-1283119095-170667a.jpg",
     "https://www.maidwale.com/images/about/istockphoto-1283119095-170667a.jpg",
   ];
+  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 600);
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setIsWideScreen(window.innerWidth >= 600);
+      };
+  
+      window.addEventListener('resize', handleResize);
+  
+      // Cleanup event listener on unmount
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
   return (
     <>
@@ -57,7 +69,7 @@ const Carrers = () => {
               below.
             </p>
             <div className="w-full flex justify-center mb-6">
-              <table className="w-3/4 border-collapse border border-gray-300  ">
+              <table className={`w-${isWideScreen ? '3/4' : 'full'}4 border-collapse border border-gray-300  `}>
                 <thead>
                   <tr className="border-b border-gray-300 bg-gray-100">
                     <td className="text-sm font-bold p-1 w-1/3">Available refund method</td>
@@ -87,8 +99,8 @@ const Carrers = () => {
                       <td className="text-sm border-b border-gray-300 p-1"> Credit Card/ Debit Card</td>
                       <td className="text-sm p-1 bg-gray-100 ">Net Banking Account (Credited to Bank Account)</td>
                     </td>
-                    <td className="text-sm  p-1 w-1/3 ">Up to 15 days Working</td>
-                    <td className="text-sm  p-1 w-1/3">Up to 15 days Working</td>
+                    <td className="text-sm  p-1 w-1/3 ">Up to 15 Working days</td>
+                    <td className="text-sm  p-1 w-1/3">Up to 15 Working days</td>
                   </tr>
 
                   <tr className="border-b border-gray-300 ">
@@ -204,7 +216,7 @@ const Carrers = () => {
               following cities:
             </p>
             <div className="w-full flex justify-center mb-6">
-              <table className="w-3/4 border-collapse border border-gray-300 ">
+              <table className={`w-${isWideScreen ? '3/4' : 'full'} border-collapse border border-gray-300 `}>
                 <tbody className="border border-gray-300">
                   <tr className="border-b border-gray-300 bg-gray-100">
                     <td className="p-1">Ahmedabad</td>
