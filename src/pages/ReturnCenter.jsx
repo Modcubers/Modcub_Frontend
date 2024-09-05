@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../components/Layout/Footer";
 import Header from "../components/Layout/Header";
 import { returnPolicy } from "../static/data";
@@ -27,12 +27,25 @@ const orders = [
 ];
 
 const ReturCenter = () => {
+    const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 600);
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setIsWideScreen(window.innerWidth >= 600);
+      };
+  
+      window.addEventListener('resize', handleResize);
+  
+      // Cleanup event listener on unmount
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+  
   return (
     <>
       <Header activeHeading={0} navbar={true} />
       <div className="bg-[#E7F2F9] p-2 pl-10">
-        <div className=" w-3/4">
-          <h1 className="text-3xl font-bold mb-4">Amazon.in Returns Policy</h1>
+      <div className={`w-${isWideScreen ? '3/4' : 'full'}`}>
+      <h1 className="text-3xl font-bold mb-4">Amazon.in Returns Policy</h1>
           <p className="text-lg mb-6">
             Information on return eligibility, timelines and other terms &
             conditions for items purchased on Amazon.in. To view this page in
