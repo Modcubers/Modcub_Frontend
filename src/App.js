@@ -129,7 +129,7 @@ const App = () => {
                 <Route path="/contactus" element={<ContactUs />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
-                <Route path="/carrers" element={<Carrers />} />
+                <Route path="/cancelationandrefund" element={<Carrers />} />
                 <Route path="/help" element={<Help />} />
                 <Route path="/store-location" element={<StoreLocation />} />
                 <Route path="/corporate" element={<Corporate />} />
@@ -139,7 +139,7 @@ const App = () => {
                 />
                 <Route path="/our-blogs" element={<OurBlogs />} />
                 <Route path="/review" element={<Review />} />
-                <Route path="/shipping-and-delivery" element={<ShipingandDelivery />} />
+                <Route path="/shippinganddelivery" element={<ShipingandDelivery />} />
                 <Route path="/site-map" element={<SiteMap />} />
                 <Route path="/return-center" element={<ReturCenter />} />
 
