@@ -20,11 +20,18 @@ const RazorpayClient = ({ amount, order }) => {
     }, [dispatch]);
     const handlePayment = async () => {
         if (!rzpLoaded) {
-            const script = document.createElement("script");
-            script.src = "https://checkout.razorpay.com/v1/checkout.js";
-            script.async = true;
-            script.onload = () => setRzpLoaded(true);
-            document.body.appendChild(script);
+            // Create a promise to handle the loading of Razorpay script
+            const loadRazorpay = new Promise((resolve) => {
+                const script = document.createElement("script");
+                script.src = "https://checkout.razorpay.com/v1/checkout.js";
+                script.async = true;
+                script.onload = () => {
+                    setRzpLoaded(true); // Update rzpLoaded state
+                    resolve(); // Resolve the promise once the script is loaded
+                };
+                document.body.appendChild(script);
+            });
+            await loadRazorpay; // Wait for the script to be loaded
         }
 
         const handleOrder = async () => {
@@ -56,7 +63,9 @@ const RazorpayClient = ({ amount, order }) => {
         };
 
         const options = {
-            key: "rzp_test_JPBKvtfFBllt9C", // Replace with your Razorpay API key
+
+          key: process.env.REACT_APP_RAZORPAY_KEY_ID, // Replace with your Razorpay API key
+         // key: "rzp_test_JPBKvtfFBllt9C", // Replace with your Razorpay API key
             amount: amount * 100, // amount in paise
             currency: "INR",
             name: "Modcub",
@@ -88,7 +97,7 @@ const RazorpayClient = ({ amount, order }) => {
                 color: "#3399cc",
             },
         };
-
+            console.log('options');
         const rzp = new window.Razorpay(options);
         rzp.open();
     };
